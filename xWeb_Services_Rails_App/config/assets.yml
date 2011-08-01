@@ -1,0 +1,34 @@
+--- 
+javascripts: 
+  hot_ping:
+  - public/framework/js/dd_belatedpng.js
+  power_extreme:
+  - public/framework/js/html5shim.js
+  prep_for_awesome: 
+  - public/framework/js/modernizr-1.7.min.js
+  awesome: 
+  - public/framework/js/ender.js
+  - public/framework/js/json2.js
+  - public/framework/js/underscore.js
+  - public/framework/js/x_backbone.js
+  - public/framework/js/raphael.js
+  - public/framework/js/drag-drop.js
+  - public/framework/helpers/*.js
+  - public/framework/templates/*.jst
+  - public/bin/models/*.js
+  - public/bin/collections/*.js
+  - public/bin/sub_apps/*.js
+  - public/bin/routers/*.js  
+  - public/bin/view_controllers/*.js
+  - public/bin/view_helpers/*.js
+  - public/bin/views/**/*.jst
+  - public/bin/*.js
+stylesheets: 
+  gorgeous: 
+  - public/framework/css/resets.css
+  - public/framework/css/common.css
+  #
+  # Stylesheets to be manualy added here..
+  #
+  - public/framework/css/helpers.css
+  - public/framework/css/print.css
