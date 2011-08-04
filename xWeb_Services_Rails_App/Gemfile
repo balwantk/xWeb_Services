@@ -13,7 +13,7 @@ gem 'json'
 gem 'barista'
 
 
-# Adding cucumber and rspec test suite
+# Adding cucumber, jasmine and rspec test suite
 group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'
@@ -23,6 +23,7 @@ group :test, :development do
   gem 'spork'
   gem 'guard-cucumber' # use $> guard init cucumber to watch files..
   gem 'launchy'    # So you can do Then show me the page
+  gem 'jasmine'
 end
 
 # Use unicorn as the web server
