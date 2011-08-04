@@ -4,6 +4,7 @@ Barista.configure do |c|
   c.output_root = Rails.root.join('public', 'bin')
   c.bare!
   
+
   # Change the root to use app/scripts
   # c.root = Rails.root.join("app", "scripts")
 

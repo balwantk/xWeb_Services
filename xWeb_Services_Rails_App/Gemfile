@@ -12,6 +12,19 @@ gem 'jammit'
 gem 'json'
 gem 'barista'
 
+
+# Adding cucumber and rspec test suite
+group :test, :development do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'rspec-rails'
+  gem 'spork'
+  gem 'guard-cucumber' # use $> guard init cucumber to watch files..
+  gem 'launchy'    # So you can do Then show me the page
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

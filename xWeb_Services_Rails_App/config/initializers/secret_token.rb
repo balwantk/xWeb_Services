@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-XWebServicesRailsApp::Application.config.secret_token = 'a3ce75d34ae92fdff74e6ff62102b6cb332d70de55249bb47f97c1531462b34183c38c5b30859c99840230b439ea4193d81832329eba02ea815591b7f2095a79'
+XWebServicesRailsApp::Application.config.secret_token = '645035c297dde1e2ec4574a8d85b4da84833e340daa85da97dab5414f566f5583ee6930796ac7c5e2b450b17a3cadd1cbe6af374f9061a0d8ad6820394a8b624'
