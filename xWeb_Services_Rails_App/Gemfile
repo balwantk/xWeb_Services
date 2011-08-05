@@ -26,12 +26,15 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'launchy'    # So you can do Then show me the page  
   gem 'rb-fsevent' # To notify of fs changes in OSX
-  gem 'rb-inotify' # To notify of fs changes in Linux
-  gem 'growl'  # Growl style notifications on OSX
-  gem 'libnotify'  # Growl style notifications on Linux
+  
+  # Giving problems..
+    # gem 'rb-inotify' # To notify of fs changes in Linux
+    # gem 'growl'  # Growl style notifications on OSX
+    # gem 'growl_notify'  # Growl style notifications on OSX
+    # gem 'libnotify'  # Growl style notifications on Linux
 
   # Back end guards
-  gem 'spork'
+  gem 'spork', '~> 0.9.0.rc'
   gem 'guard-spork'  
   gem 'cucumber-rails'
   gem 'guard-cucumber'  
@@ -44,7 +47,7 @@ group :test, :development do
   gem 'therubyracer' # To use V8 as the CS compiler
   gem 'guard-sass' 
   gem 'jasmine'  
-  gem 'guard-jasmine-headless-webkit' 
+ # gem 'guard-jasmine-headless-webkit' 
 end
 
 # Use unicorn as the web server
