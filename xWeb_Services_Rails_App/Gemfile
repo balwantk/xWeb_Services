@@ -7,23 +7,44 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 gem 'haml'
-gem 'sass'
-gem 'jammit'
+gem 'jammit'  # Do we need this with guard?
 gem 'json'
-gem 'barista'
+# gem 'barista' # Do we need this with guard?
+# gem 'sass'    # Do we need this with guard?
 
+# TODO: Split into separate test environments like :cucumber, :rpsec, etc etc!
 
 # Adding cucumber, jasmine and rspec test suite
 group :test, :development do
+  
+  # Test and dev prereqs
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'cucumber-rails'
+  gem 'guard'
   gem 'cucumber'
-  gem 'rspec-rails'
+  gem 'rspec'
+  gem 'factory_girl_rails'
+  gem 'launchy'    # So you can do Then show me the page  
+  gem 'rb-fsevent' # To notify of fs changes in OSX
+  gem 'rb-inotify' # To notify of fs changes in Linux
+  gem 'growl'  # Growl style notifications on OSX
+  gem 'libnotify'  # Growl style notifications on Linux
+
+  # Back end guards
   gem 'spork'
-  gem 'guard-cucumber' # use $> guard init cucumber to watch files..
-  gem 'launchy'    # So you can do Then show me the page
-  gem 'jasmine'
+  gem 'guard-spork'  
+  gem 'cucumber-rails'
+  gem 'guard-cucumber'  
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  
+  # Front end guards
+  gem 'guard-jammit'
+  gem 'guard-coffeescript'
+  gem 'therubyracer' # To use V8 as the CS compiler
+  gem 'guard-sass' 
+  gem 'jasmine'  
+  gem 'guard-jasmine-headless-webkit' 
 end
 
 # Use unicorn as the web server
