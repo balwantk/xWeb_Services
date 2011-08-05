@@ -46,7 +46,6 @@ group :test, :development do
   gem 'guard-coffeescript'
   gem 'therubyracer' # To use V8 as the CS compiler
   gem 'guard-sass' 
-  gem 'jasmine'  
   gem 'guard-jasmine-headless-webkit' 
 end
 
