@@ -11,11 +11,15 @@
 #   - dist/**/*.js
 #
 src_files:
-  - hot_ping.js
-  - power_extreme.js
-  - prep_for_awesome.js
-  - awesome.js
-  - meat.js
+  - stage/framework/js/dd_belatedpng.js
+  - stage/framework/js/html5shim.js
+  - stage/framework/js/modernizr-1.7.min.js 
+  - stage/framework/js/ender.js
+  - stage/framework/js/json2.js
+  - stage/framework/js/underscore.js
+  - stage/framework/js/x_backbone.js
+  - stage/framework/js/drag-drop.js
+  - app/**/*.js
 
 # stylesheets
 #
@@ -66,7 +70,7 @@ spec_files:
 #
 # src_dir: public
 #
-src_dir: public/assets
+src_dir: 
 
 # spec_dir
 #
@@ -77,4 +81,4 @@ src_dir: public/assets
 #
 # spec_dir: spec/javascripts
 #
-spec_dir: stage/spec_bin
+spec_dir: spec

@@ -2,15 +2,17 @@
 # More info at https://github.com/guard/guard#readme
 
 group 'css' do
- guard 'sass', :input => 'app', :output => 'stage/bin'
+ guard 'sass', :input => 'app', :output => 'stage/app_bin'
 end
 
 group 'js' do
-  guard 'coffeescript', :bare => true, :input => 'app', :output => 'stage/app_bin'
-  guard 'coffeescript', :bare => true, :input => 'spec', :output => 'stage/spec_bin'
-  guard 'jammit' 
+  # guard 'coffeescript', :bare => true, :input => 'app', :output => 'stage/app_bin'
+  # guard 'coffeescript', :bare => true, :input => 'spec', :output => 'stage/spec_bin'
+  guard 'jammit' do
+    watch('config/assets.yml')
+  end
   guard 'jasmine-headless-webkit' do
-    watch(%r{^stage/app_bin/(.*)\..*}) { |m| newest_js_file("stage/spec_bin/#{m[1]}_spec") }
+    watch(%r{^app/(.*)\..*}) { |m| newest_js_file("spec/#{m[1]}_spec") }
   end
 end
 

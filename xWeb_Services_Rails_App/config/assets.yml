@@ -11,11 +11,10 @@ javascripts:
   - stage/framework/js/json2.js
   - stage/framework/js/underscore.js
   - stage/framework/js/x_backbone.js
-  - stage/framework/js/drag-drop.js
-  meat:
-  - stage/app_bin/views/**/*.jst
-  - stage/app_bin/**/*.js
-  
+  - stage/framework/js/drag-drop.js  
+  - app/**/*.js 
+  - app/views/**/*.jst
+    
 stylesheets: 
   gorgeous: 
   - stage/framework/css/resets.css
