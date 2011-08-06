@@ -29,8 +29,8 @@ group :test, :development do
   
   # Giving problems..
     # gem 'rb-inotify' # To notify of fs changes in Linux
-    # gem 'growl'  # Growl style notifications on OSX
-    # gem 'growl_notify'  # Growl style notifications on OSX
+ gem 'growl'  # Growl style notifications on OSX
+ # gem 'growl_notify'  # Growl style notifications on OSX
     # gem 'libnotify'  # Growl style notifications on Linux
 
   # Back end guards
@@ -42,9 +42,10 @@ group :test, :development do
   gem 'guard-rspec'
   
   # Front end guards
+  gem 'coffee-script'
   gem 'guard-jammit'
   gem 'guard-coffeescript'
-  gem 'therubyracer' # To use V8 as the CS compiler
+  # gem 'therubyracer' # To use V8 as the CS compiler
   gem 'guard-sass' 
   gem 'guard-jasmine-headless-webkit' 
 end

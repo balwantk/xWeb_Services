@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
+
+<!--[if lt IE 7 ]> <html class="no-js ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if gte IE 9]> <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if lt IE 9]><%= include_javascripts :power_extreme %></script><![endif]-->
+
+<html class="no-js" lang="en">
 <head>
-  <title>XWebServicesRailsApp</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  
+  <title>You just found Xipcraft!</title>
+  
+  <meta charset="utf-8">
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <!--<meta name="fragment" content="!">-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+  
+  <link rel="shortcut icon" href="images/framework/favicon.ico">
+  <link rel="apple-touch-icon" href="images/framework/apple-touch-icon.png">
+  
+  <%= include_stylesheets :gorgeous %>
+  <%= include_javascripts :prep_for_awesome %>
   <%= csrf_meta_tag %>
+  <%= yield :head %>
 </head>
 <body>
-
-<%= yield %>
-
+  <%= yield %>
+  <%= include_javascripts :awesome %>
+  <!--[if lt IE 7 ]><%= include_javascripts :hot_ping %><![endif]-->
+  <script>
+    var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
 </body>
 </html>

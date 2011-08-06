@@ -2,26 +2,19 @@
 # More info at https://github.com/guard/guard#readme
 
 group 'sass' do
-  # TODO Add SASS and Compass guards here FW here
+ guard 'sass', :input => 'app', :output => 'stage/bin'
 end
 
 group 'js' do
-  
-  guard 'coffeescript', :input => 'app/assets/javascripts'
-  # TODO: Multiple inputs
-  
-  guard 'jammit' do
-    watch('^public/javascripts/(.*)\.js')
-    watch('^public/stylesheets/(.*)\.css')
-  end
-  
+  guard 'coffeescript', :bare => true, :input => 'app', :output => 'stage/app_bin'
+  guard 'coffeescript', :bare => true, :input => 'spec', :output => 'stage/spec_bin'
+  guard 'jammit' 
   guard 'jasmine-headless-webkit' do
-    watch(%r{^app/assets/javascripts/(.*)\..*}) { |m| newest_js_file("spec/javascripts/#{m[1]}_spec") }
+    watch(%r{^stage/app_bin/(.*)\..*}) { |m| newest_js_file("stage/spec_bin/#{m[1]}_spec") }
   end
 end
 
-
-group 'rspec' do
+group 'rails' do
   guard 'spork' do
     watch('config/application.rb')
     watch('config/environment.rb')
@@ -39,16 +32,6 @@ group 'rspec' do
     watch(%r{^lib/(.+)\.rb})                           { |m| "spec/lib/#{m[1]}_spec.rb" }
     watch(%r{^app/controllers/(.+)_(controller)\.rb})  { |m| ["spec/routing/#{m[1]}_routing_spec.rb", "spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb", "spec/acceptance/#{m[1]}_spec.rb"] }
   end
-end
-
-group 'cuke' do
-  guard 'spork' do
-    watch('config/application.rb')
-    watch('config/environment.rb')
-    watch(%r{^config/environments/.*\.rb$})
-    watch(%r{^config/initializers/.*\.rb$})
-    watch('spec/spec_helper.rb')
-  end
 
   guard 'cucumber', :cli => "--drb --profile guard" do
     watch(%r{^features/.+\.feature$})
@@ -57,5 +40,9 @@ group 'cuke' do
   end
 end
 
-
-
+# guard 'coffeescript', :input => 'app/assets'
+# guard 'sass', :input => 'app/assets'
+# guard 'jammit' do
+#   watch('^public/javascripts/(.*)\.js')
+#   watch('^public/stylesheets/(.*)\.css')
+# end
