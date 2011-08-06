@@ -1,7 +1,7 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
-group 'sass' do
+group 'css' do
  guard 'sass', :input => 'app', :output => 'stage/bin'
 end
 
@@ -40,9 +40,3 @@ group 'rails' do
   end
 end
 
-# guard 'coffeescript', :input => 'app/assets'
-# guard 'sass', :input => 'app/assets'
-# guard 'jammit' do
-#   watch('^public/javascripts/(.*)\.js')
-#   watch('^public/stylesheets/(.*)\.css')
-# end

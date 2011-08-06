@@ -12,14 +12,14 @@ javascripts:
   - stage/framework/js/underscore.js
   - stage/framework/js/x_backbone.js
   - stage/framework/js/drag-drop.js
-  - stage/bin/views/**/*.jst
-  - stage/bin/**/*.js
-  - stage/spec/**/*.js
+  meat:
+  - stage/app_bin/views/**/*.jst
+  - stage/app_bin/**/*.js
   
 stylesheets: 
   gorgeous: 
   - stage/framework/css/resets.css
   - stage/framework/css/common.css
-  - stage/bin/styles/**/*.css
+  - stage/app_bin/styles/**/*.css
   - stage/framework/css/helpers.css
   - stage/framework/css/print.css
