@@ -5,7 +5,7 @@
         <text>You%20found%20Xipcraft%21%0Ahttp%3A//www.xipcraft.com</text>
       </controlProperties>
     </control>
-    <control controlID="77" controlTypeID="com.balsamiq.mockups::Image" x="535" y="105" w="147" h="61" measuredW="200" measuredH="80" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::Image" x="535" y="105" w="147" h="61" measuredW="77" measuredH="79" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <src>../../../Xipcraft_Presence_and_Showcase/xmvc/public/images/home/xipcraft-logo-small.png</src>
         <text/>
@@ -23,11 +23,11 @@
         <text>Dynamic%20greeting..</text>
       </controlProperties>
     </control>
-    <control controlID="182" controlTypeID="com.balsamiq.mockups::Label" x="1058" y="86" w="131" h="19" measuredW="118" measuredH="19" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="182" controlTypeID="com.balsamiq.mockups::Label" x="1022" y="86" w="167" h="19" measuredW="162" measuredH="19" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <color>6710886</color>
         <size>10</size>
-        <text>We%27re%20hiring%21%20%5BApply%20here.%5D</text>
+        <text>Like%20what%20we%20do%3F%20%5BSpread%20the%20love.%5D</text>
       </controlProperties>
     </control>
     <control controlID="187" controlTypeID="com.balsamiq.mockups::CallOut" x="20" y="21" w="-1" h="-1" measuredW="188" measuredH="40" zOrder="6" locked="false" isInGroup="-1">
@@ -45,7 +45,7 @@
         <text>p</text>
       </controlProperties>
     </control>
-    <control controlID="190" controlTypeID="com.balsamiq.mockups::CallOut" x="1022" y="58" w="-1" h="-1" measuredW="36" measuredH="39" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="190" controlTypeID="com.balsamiq.mockups::CallOut" x="1022" y="58" w="-1" h="-1" measuredW="36" measuredH="40" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <text>p</text>
       </controlProperties>
@@ -105,7 +105,7 @@
         <text>.carousel%23information</text>
       </controlProperties>
     </control>
-    <control controlID="213" controlTypeID="com.balsamiq.mockups::Canvas" x="249" y="305" w="720" h="243" measuredW="100" measuredH="70" zOrder="4" locked="true" isInGroup="-1">
+    <control controlID="213" controlTypeID="com.balsamiq.mockups::Canvas" x="249" y="305" w="720" h="296" measuredW="100" measuredH="70" zOrder="4" locked="true" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <borderColor>10066329</borderColor>
@@ -129,29 +129,29 @@
         <text>h5</text>
       </controlProperties>
     </control>
-    <control controlID="219" controlTypeID="com.balsamiq.mockups::PointyButton" x="838" y="554" w="116" h="-1" measuredW="100" measuredH="27" zOrder="24" locked="false" isInGroup="-1">
+    <control controlID="219" controlTypeID="com.balsamiq.mockups::PointyButton" x="838" y="616" w="116" h="-1" measuredW="100" measuredH="27" zOrder="24" locked="false" isInGroup="-1">
       <controlProperties>
         <href>visitor_technology_view%26bm%3Bvisitor_technology_view.bmml%26bm%3Bvisitor_technology_view.bmml%26bm%3Bvisitor_technology_view.bmml</href>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22786%2C548%2C902%2C575%22%20href%3D%22visitor_technology_view.bmml%22%20alt%3D%22visitor_technology_view%22%20id%3D%22219%22/%3E</map>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22786%2C610%2C902%2C637%22%20href%3D%22visitor_technology_view.bmml%22%20alt%3D%22visitor_technology_view%22%20id%3D%22219%22/%3E</map>
         <text>Our%20Products</text>
       </controlProperties>
     </control>
-    <control controlID="220" controlTypeID="com.balsamiq.mockups::PointyButton" x="262" y="554" w="58" h="-1" measuredW="48" measuredH="27" zOrder="25" locked="false" isInGroup="-1">
+    <control controlID="220" controlTypeID="com.balsamiq.mockups::PointyButton" x="262" y="616" w="58" h="-1" measuredW="48" measuredH="27" zOrder="25" locked="false" isInGroup="-1">
       <controlProperties>
         <direction>left</direction>
         <href>visitor_home_view%26bm%3Bvisitor_home_view.bmml%26bm%3Bvisitor_home_view.bmml%26bm%3Bvisitor_home_view.bmml</href>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22210%2C548%2C268%2C575%22%20href%3D%22visitor_home_view.bmml%22%20alt%3D%22visitor_home_view%22%20id%3D%22220%22/%3E</map>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22210%2C610%2C268%2C637%22%20href%3D%22visitor_home_view.bmml%22%20alt%3D%22visitor_home_view%22%20id%3D%22220%22/%3E</map>
         <text>Back</text>
       </controlProperties>
     </control>
-    <control controlID="221" controlTypeID="com.balsamiq.mockups::Label" x="737" y="559" w="101" h="20" measuredW="96" measuredH="19" zOrder="26" locked="false" isInGroup="-1">
+    <control controlID="221" controlTypeID="com.balsamiq.mockups::Label" x="737" y="621" w="101" h="20" measuredW="96" measuredH="19" zOrder="26" locked="false" isInGroup="-1">
       <controlProperties>
         <color>6710886</color>
         <size>10</size>
         <text>On%20to%20the%20next%20bit%3A</text>
       </controlProperties>
     </control>
-    <control controlID="223" controlTypeID="__group__" x="589" y="557" w="32" h="24" measuredW="32" measuredH="24" zOrder="27" locked="false" isInGroup="-1">
+    <control controlID="223" controlTypeID="__group__" x="589" y="619" w="32" h="24" measuredW="32" measuredH="24" zOrder="27" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
         <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="8" y="0" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="0" locked="false" isInGroup="223">
           <controlProperties>
@@ -184,72 +184,43 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="225" controlTypeID="com.balsamiq.mockups::CallOut" x="464" y="630" w="-1" h="-1" measuredW="36" measuredH="39" zOrder="29" locked="false" isInGroup="-1">
+    <control controlID="225" controlTypeID="com.balsamiq.mockups::CallOut" x="464" y="630" w="-1" h="-1" measuredW="36" measuredH="40" zOrder="29" locked="false" isInGroup="-1">
       <controlProperties>
         <text>p</text>
       </controlProperties>
     </control>
-    <control controlID="226" controlTypeID="com.balsamiq.mockups::Label" x="281" y="320" w="-1" h="-1" measuredW="148" measuredH="24" zOrder="30" locked="false" isInGroup="-1">
+    <control controlID="227" controlTypeID="com.balsamiq.mockups::Label" x="279" y="441" w="-1" h="-1" measuredW="162" measuredH="24" zOrder="30" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
-        <text>User%20centric%20simplicity</text>
+        <text>Embrace%20new%20technology</text>
       </controlProperties>
     </control>
-    <control controlID="227" controlTypeID="com.balsamiq.mockups::Label" x="517" y="426" w="-1" h="-1" measuredW="151" measuredH="24" zOrder="31" locked="false" isInGroup="-1">
-      <controlProperties>
-        <size>14</size>
-        <text>Responsive%20to%20interface</text>
-      </controlProperties>
-    </control>
-    <control controlID="229" controlTypeID="com.balsamiq.mockups::Label" x="517" y="320" w="-1" h="-1" measuredW="156" measuredH="24" zOrder="32" locked="false" isInGroup="-1">
-      <controlProperties>
-        <size>14</size>
-        <text>Continuous%20improvement</text>
-      </controlProperties>
-    </control>
-    <control controlID="230" controlTypeID="__group__" x="425" y="611" w="368" h="28" measuredW="368" measuredH="28" zOrder="33" locked="false" isInGroup="-1">
-      <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextInput" x="127" y="0" w="241" h="-1" measuredW="203" measuredH="28" zOrder="0" locked="false" isInGroup="230">
-          <controlProperties>
-            <color>16776960</color>
-            <size>14</size>
-            <text>Enter%20your%20Ticket%20Code%20here...</text>
-          </controlProperties>
-        </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="2" w="-1" h="-1" measuredW="112" measuredH="24" zOrder="1" locked="false" isInGroup="230">
-          <controlProperties>
-            <size>14</size>
-            <text>Here%20for%20a%20demo%3F</text>
-          </controlProperties>
-        </control>
-      </groupChildrenDescriptors>
-    </control>
-    <control controlID="232" controlTypeID="com.balsamiq.mockups::Paragraph" x="296" y="249" w="588" h="44" measuredW="200" measuredH="140" zOrder="34" locked="false" isInGroup="-1">
+    <control controlID="232" controlTypeID="com.balsamiq.mockups::Paragraph" x="296" y="249" w="588" h="44" measuredW="200" measuredH="140" zOrder="31" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
         <bold>false</bold>
         <color>6710886</color>
         <italic>true</italic>
         <size>14</size>
-        <text>We%20feel%20that%20any%20product%20or%20service%20should%20be%20easy%20to%20use%2C%20to%20make%20it%20a%20great%20experience.%20We%20believe%20that%20making%20it%20simpler%20is%20making%20it%20better.</text>
+        <text>We%20feel%20that%20any%20product%20or%20service%20should%20be%20easy%20to%20use%2C%20to%20make%20it%20a%20great%20experience.%20%0AOur%20key%20values%20when%20building%20any%20product%20are%3A</text>
       </controlProperties>
     </control>
-    <control controlID="233" controlTypeID="com.balsamiq.mockups::Label" x="783" y="320" w="-1" h="-1" measuredW="113" measuredH="24" zOrder="35" locked="false" isInGroup="-1">
+    <control controlID="234" controlTypeID="com.balsamiq.mockups::Label" x="279" y="335" w="-1" h="-1" measuredW="140" measuredH="24" zOrder="32" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
-        <text>Delivering%20it%20fast</text>
+        <text>Innovate%20for%20the%20user</text>
       </controlProperties>
     </control>
-    <control controlID="234" controlTypeID="com.balsamiq.mockups::Label" x="281" y="426" w="-1" h="-1" measuredW="159" measuredH="24" zOrder="36" locked="false" isInGroup="-1">
+    <control controlID="235" controlTypeID="com.balsamiq.mockups::Label" x="646" y="335" w="161" h="24" measuredW="158" measuredH="24" zOrder="33" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
-        <text>Utility%3A%20online%20and%20offine</text>
+        <text>Keep%20the%20design%20friendly</text>
       </controlProperties>
     </control>
-    <control controlID="235" controlTypeID="com.balsamiq.mockups::Label" x="783" y="426" w="118" h="24" measuredW="113" measuredH="24" zOrder="37" locked="false" isInGroup="-1">
+    <control controlID="236" controlTypeID="com.balsamiq.mockups::Label" x="646" y="446" w="192" h="24" measuredW="164" measuredH="24" zOrder="34" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
-        <text>Delivering%20it%20well</text>
+        <text>Make%20it%20better%2C%20everyday</text>
       </controlProperties>
     </control>
   </controls>

@@ -1,6 +1,8 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
+# Modified for Xipcraft Rails xMVC
+
 group 'css' do
  guard 'sass', :input => 'app', :output => 'stage/app_bin'
 end

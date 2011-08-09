@@ -7,45 +7,39 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 gem 'haml'
-gem 'jammit'  # Do we need this with guard?
+gem 'jammit'
 gem 'json'
-# gem 'barista' # Do we need this with guard?
-# gem 'sass'    # Do we need this with guard?
 
-# TODO: Split into separate test environments like :cucumber, :rpsec, etc etc!
-
-# Adding cucumber, jasmine and rspec test suite
 group :test, :development do
+    
+  # UNCOMMENT IF RUNNING LINUX
+  # gem 'rb-inotify' # To notify of fs changes in Linux
+  # gem 'libnotify'  # Growl style notifications on Linux
+  ##################
   
-  # Test and dev prereqs
+  # COMMENT IF RUNNING LINUX
+  gem 'rb-fsevent' # To notify of fs changes in OSX
+  gem 'growl'  # Growl style notifications on OSX
+  ##################
+  
   gem 'capybara'
   gem 'database_cleaner'
   gem 'guard'
   gem 'cucumber'
+  gem 'jasmine'
   gem 'rspec'
   gem 'factory_girl_rails'
-  gem 'launchy'    # So you can do Then show me the page  
-  gem 'rb-fsevent' # To notify of fs changes in OSX
-  
-  # Giving problems..
-    # gem 'rb-inotify' # To notify of fs changes in Linux
- gem 'growl'  # Growl style notifications on OSX
- # gem 'growl_notify'  # Growl style notifications on OSX
-    # gem 'libnotify'  # Growl style notifications on Linux
-
-  # Back end guards
+  gem 'launchy'    # So you can do Then show me the page
   gem 'spork', '~> 0.9.0.rc'
   gem 'guard-spork'  
   gem 'cucumber-rails'
   gem 'guard-cucumber'  
   gem 'rspec-rails'
   gem 'guard-rspec'
-  
-  # Front end guards
   gem 'coffee-script'
   gem 'guard-jammit'
   gem 'guard-coffeescript'
-  # gem 'therubyracer' # To use V8 as the CS compiler
+  gem 'therubyracer' # To use V8 as the CS compiler
   gem 'guard-sass' 
   gem 'guard-jasmine-headless-webkit' 
 end

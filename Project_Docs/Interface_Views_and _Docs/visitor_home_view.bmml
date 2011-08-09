@@ -5,7 +5,7 @@
         <text>You%20found%20Xipcraft%21%0Ahttp%3A//www.xipcraft.com</text>
       </controlProperties>
     </control>
-    <control controlID="77" controlTypeID="com.balsamiq.mockups::Image" x="549" y="106" w="147" h="61" measuredW="200" measuredH="80" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::Image" x="549" y="106" w="147" h="61" measuredW="77" measuredH="79" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <src>../../../Xipcraft_Presence_and_Showcase/xmvc/public/images/home/xipcraft-logo-small.png</src>
         <text/>
@@ -185,12 +185,12 @@
         <text>These%20are%20collapsed%20DIVs%20of%20the%20details%20carousel..%20Background%20Images%20should%20dynamically%20swell%20and%20contract%20with%20page%20width..</text>
       </controlProperties>
     </control>
-    <control controlID="185" controlTypeID="com.balsamiq.mockups::CallOut" x="281" y="174" w="-1" h="-1" measuredW="44" measuredH="45" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="185" controlTypeID="com.balsamiq.mockups::CallOut" x="281" y="174" w="-1" h="-1" measuredW="44" measuredH="40" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <text>h2</text>
       </controlProperties>
     </control>
-    <control controlID="186" controlTypeID="com.balsamiq.mockups::CallOut" x="278" y="239" w="-1" h="-1" measuredW="43" measuredH="40" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="186" controlTypeID="com.balsamiq.mockups::CallOut" x="278" y="239" w="-1" h="-1" measuredW="43" measuredH="39" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <text>h3</text>
       </controlProperties>
@@ -205,7 +205,7 @@
         <text>img</text>
       </controlProperties>
     </control>
-    <control controlID="189" controlTypeID="com.balsamiq.mockups::CallOut" x="29" y="58" w="-1" h="-1" measuredW="36" measuredH="40" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="189" controlTypeID="com.balsamiq.mockups::CallOut" x="29" y="58" w="-1" h="-1" measuredW="36" measuredH="39" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
         <text>p</text>
       </controlProperties>
@@ -275,7 +275,7 @@
         <text>div%20%3E%20section</text>
       </controlProperties>
     </control>
-    <control controlID="206" controlTypeID="com.balsamiq.mockups::CallOut" x="594" y="293" w="-1" h="-1" measuredW="102" measuredH="45" zOrder="26" locked="false" isInGroup="-1">
+    <control controlID="206" controlTypeID="com.balsamiq.mockups::CallOut" x="594" y="293" w="-1" h="-1" measuredW="102" measuredH="40" zOrder="26" locked="false" isInGroup="-1">
       <controlProperties>
         <text>div%20%3E%20section</text>
       </controlProperties>
@@ -305,7 +305,7 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="214" controlTypeID="com.balsamiq.mockups::CallOut" x="464" y="630" w="-1" h="-1" measuredW="36" measuredH="40" zOrder="33" locked="false" isInGroup="-1">
+    <control controlID="214" controlTypeID="com.balsamiq.mockups::CallOut" x="464" y="630" w="-1" h="-1" measuredW="36" measuredH="45" zOrder="33" locked="false" isInGroup="-1">
       <controlProperties>
         <text>p</text>
       </controlProperties>
@@ -331,8 +331,11 @@
       </controlProperties>
     </control>
     <control controlID="220" controlTypeID="__group__" x="426" y="602" w="368" h="28" measuredW="368" measuredH="28" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+      </controlProperties>
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextInput" x="127" y="0" w="241" h="-1" measuredW="203" measuredH="28" zOrder="0" locked="false" isInGroup="220">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextInput" x="127" y="0" w="241" h="-1" measuredW="222" measuredH="28" zOrder="0" locked="false" isInGroup="220">
           <controlProperties>
             <color>16776960</color>
             <size>14</size>
