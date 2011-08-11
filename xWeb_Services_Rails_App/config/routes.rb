@@ -1,4 +1,8 @@
 XWebServicesRailsApp::Application.routes.draw do
+  get "home/index"
+  match "/home" => "home#index"
+  root :to => "home#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

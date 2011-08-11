@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'haml'
 gem 'jammit'
 gem 'json'
+gem 'compass'
 
 group :test, :development do
     
@@ -22,6 +23,7 @@ group :test, :development do
   gem 'growl'  # Growl style notifications on OSX
   ##################
   
+  gem 'guard-compass'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'guard'
@@ -41,6 +43,7 @@ group :test, :development do
   gem 'guard-coffeescript'
   gem 'therubyracer' # To use V8 as the CS compiler
   gem 'guard-sass' 
+  gem 'jasmine'
   gem 'guard-jasmine-headless-webkit' 
 end
 

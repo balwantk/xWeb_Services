@@ -1,24 +1,24 @@
 --- 
 javascripts: 
   hot_ping:
-  - stage/framework/js/dd_belatedpng.js
+  - public/framework/js/dd_belatedpng.js
   power_extreme:
-  - stage/framework/js/html5shim.js
+  - public/framework/js/html5shim.js
   prep_for_awesome: 
-  - stage/framework/js/modernizr-1.7.min.js
+  - public/framework/js/modernizr-1.7.min.js
   awesome: 
-  - stage/framework/js/ender.js
-  - stage/framework/js/json2.js
-  - stage/framework/js/underscore.js
-  - stage/framework/js/x_backbone.js
-  - stage/framework/js/drag-drop.js  
-  - app/**/*.js 
+  - public/framework/js/ender.js
+  - public/framework/js/json2.js
+  - public/framework/js/underscore.js
+  - public/framework/js/x_backbone.js
+  - public/framework/js/drag-drop.js  
+  - public/javascripts/**/*.js 
   - app/views/**/*.jst
     
 stylesheets: 
   gorgeous: 
-  - stage/framework/css/resets.css
-  - stage/framework/css/common.css
-  - stage/app_bin/styles/**/*.css
-  - stage/framework/css/helpers.css
-  - stage/framework/css/print.css
+  - public/framework/css/resets.css
+  - public/framework/css/common.css
+  - public/stylesheets/**/*.css
+  - public/framework/css/helpers.css
+  - public/framework/css/print.css

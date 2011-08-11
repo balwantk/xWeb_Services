@@ -10,6 +10,18 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
+    when /^Xipcraft's home page$/
+      '/'
+    when /^Xipcraft's hash home page$/
+      '/#!home'
+    when /^Xipcraft's products page$/
+      '/#!products'
+    when /^Xipcraft's values page$/
+      '/#!values'
+    when /^Xipcraft's team page$/
+      '/'
+    when /^Xipcraft's contact page$/
+      '/#!contact'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

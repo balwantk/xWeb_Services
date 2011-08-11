@@ -11,15 +11,16 @@
 #   - dist/**/*.js
 #
 src_files:
-  - stage/framework/js/dd_belatedpng.js
-  - stage/framework/js/html5shim.js
-  - stage/framework/js/modernizr-1.7.min.js 
-  - stage/framework/js/ender.js
-  - stage/framework/js/json2.js
-  - stage/framework/js/underscore.js
-  - stage/framework/js/x_backbone.js
-  - stage/framework/js/drag-drop.js
-  - app/**/*.js
+  - public/framework/js/dd_belatedpng.js
+  - public/framework/js/html5shim.js
+  - public/framework/js/modernizr-1.7.min.js 
+  - public/framework/js/ender.js
+  - public/framework/js/json2.js
+  - public/framework/js/underscore.js
+  - public/framework/js/x_backbone.js
+  - public/framework/js/drag-drop.js
+  - public/framework/js/sinon.js
+  - public/javascripts/**/*.js
 
 # stylesheets
 #

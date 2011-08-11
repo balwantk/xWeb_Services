@@ -60,7 +60,7 @@
         <text>label</text>
       </controlProperties>
     </control>
-    <control controlID="196" controlTypeID="com.balsamiq.mockups::CallOut" x="804" y="626" w="-1" h="-1" measuredW="59" measuredH="40" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="196" controlTypeID="com.balsamiq.mockups::CallOut" x="804" y="626" w="-1" h="-1" measuredW="59" measuredH="39" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
         <text>input</text>
       </controlProperties>
@@ -136,11 +136,11 @@
         <text>Our%20Products</text>
       </controlProperties>
     </control>
-    <control controlID="220" controlTypeID="com.balsamiq.mockups::PointyButton" x="262" y="616" w="58" h="-1" measuredW="48" measuredH="27" zOrder="25" locked="false" isInGroup="-1">
+    <control controlID="220" controlTypeID="com.balsamiq.mockups::PointyButton" x="262" y="616" w="65" h="-1" measuredW="48" measuredH="27" zOrder="25" locked="false" isInGroup="-1">
       <controlProperties>
         <direction>left</direction>
         <href>visitor_home_view%26bm%3Bvisitor_home_view.bmml%26bm%3Bvisitor_home_view.bmml%26bm%3Bvisitor_home_view.bmml</href>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22210%2C610%2C268%2C637%22%20href%3D%22visitor_home_view.bmml%22%20alt%3D%22visitor_home_view%22%20id%3D%22220%22/%3E</map>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22210%2C610%2C275%2C637%22%20href%3D%22visitor_home_view.bmml%22%20alt%3D%22visitor_home_view%22%20id%3D%22220%22/%3E</map>
         <text>Back</text>
       </controlProperties>
     </control>

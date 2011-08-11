@@ -4,19 +4,23 @@
 # Modified for Xipcraft Rails xMVC
 
 group 'css' do
- guard 'sass', :input => 'app', :output => 'stage/app_bin'
+ # guard 'sass', :input => 'app', :output => 'public/app_bin'
+ guard 'compass' do
+   watch(/^app\/(.*)\.s[ac]ss/)
+ end
 end
 
-group 'js' do
-  # guard 'coffeescript', :bare => true, :input => 'app', :output => 'stage/app_bin'
-  # guard 'coffeescript', :bare => true, :input => 'spec', :output => 'stage/spec_bin'
-  guard 'jammit' do
-    watch('config/assets.yml')
-  end
-  guard 'jasmine-headless-webkit' do
-    watch(%r{^app/(.*)\..*}) { |m| newest_js_file("spec/#{m[1]}_spec") }
-  end
-end
+# group 'js' do
+#   # guard 'coffeescript', :bare => true, :input => 'app', :output => 'stage/app_bin'
+#   # guard 'coffeescript', :bare => true, :input => 'spec', :output => 'stage/spec_bin'
+#   # guard 'jammit' do
+#   #   watch('config/assets.yml')
+#   # end
+#   guard 'jasmine-headless-webkit' do
+#     # watch(%r{^app/(.*)\..*}) { |m| newest_js_file("spec/#{m[1]}_spec") }
+#     watch(%r{^app/(.*)\..*}) { |m| "spec/#{m[1]}_spec" }
+#   end
+# end
 
 group 'rails' do
   guard 'spork' do
@@ -43,4 +47,6 @@ group 'rails' do
     watch(%r{^features/step_definitions/(.+)_steps\.rb$}) { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'features' }
   end
 end
+
+
 

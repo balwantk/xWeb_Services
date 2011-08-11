@@ -1,22 +1,11 @@
 /**
  * HTML5 ✰ Boilerplate
- *
- * style.css contains a reset, font normalization and some base styles.
- *
- * Credit is left where credit is due.
- * Much inspiration was taken from these projects:
- * - yui.yahooapis.com/2.8.1/build/base/base.css
- * - camendesign.com/design/
- * - praegnanz.de/weblog/htmlcssjs-kickstart
  */
-
-
-/**
- * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
- * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
- * html5doctor.com/html-5-reset-stylesheet/
- */
+/**/
 *{outline:0!important}
+:focus { outline: 0; }
+/**/
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
@@ -40,81 +29,63 @@ footer, header, hgroup, menu, nav, section {
 }
 
 blockquote, q { quotes: none; }
-
 blockquote:before, blockquote:after,
 q:before, q:after { content: ""; content: none; }
-
 ins { background-color: #ff9; color: #000; text-decoration: none; }
-
 mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
-
 del { text-decoration: line-through; }
-
 abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
-
 table { border-collapse: collapse; border-spacing: 0; }
-
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-
 input, select { vertical-align: middle; }
 
-
-/**
- * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
- */
-
-body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+body { font:13px/1.231 sans-serif; *font-size:small; }
 select, input, textarea, button { font:99% sans-serif; }
-
-/* Normalize monospace sizing:
-   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
-
-/**
- * Minimal base styles.
- */
-
-/* Always force a scrollbar in non-IE */
-html { height:100%;-webkit-font-smoothing:antialiased;overflow-y: scroll; }
-
-/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+html { overflow-y: scroll; }
 a:hover, a:active { outline: none; }
-a img{border:0}
-figure{position:relative}
-figure img{width:100%}
-a,input{outline:none}
-
 ul, ol { margin-left: 2em; }
 ol { list-style-type: decimal; }
-
-/* Remove margins for navigation lists */
 nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
-
 small { font-size: 85%; }
 strong, th { font-weight: bold; }
-
 td { vertical-align: top; }
-
-/* Set sub, sup without affecting line-height: gist.github.com/413930 */
 sub, sup { font-size: 75%; line-height: 0; position: relative; }
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
-
-pre {
-  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
-  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
-  padding: 15px;
-}
-
-textarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-
-.ie6 legend, .ie7 legend { margin-left: -7px; } 
-
-/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+textarea { overflow: auto; } 
 input[type="radio"] { vertical-align: text-bottom; }
 input[type="checkbox"] { vertical-align: bottom; }
+
+
+
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
 .ie7 input[type="checkbox"] { vertical-align: baseline; }
 .ie6 input { vertical-align: text-bottom; }
 
-
+/**/
+* html.ie6 legend { margin:0px -8px 16px 0; padding:0; }
+.ie sup, .ie sup { vertical-align:text-top; }
+sub { vertical-align:text-bottom; }
+html.ie7 > body p code { *white-space: normal; }
+hr.ie6, hr.ie7  { margin:-8px auto 11px; }
+img.ie { -ms-interpolation-mode:bicubic; }
+.ie .clearfix,.ie .container { display:inline-block; }
+* html.ie .clearfix,
+* html.ie .container { height:1%; }
+.ie fieldset { padding-top:0; }
+.ie legend { margin-top:-0.2em; margin-bottom:1em; margin-left:-0.5em; }
+.ie label { vertical-align:middle; position:relative; top:-0.25em; }
+.ie input.text, .ie input.title, .ie textarea { background-color:#fff; border:1px solid #bbb; }
+.ie input.text:focus, .ie input.title:focus { border-color:#666; }
+.ie input.text, .ie input.title, .ie textarea, .ie select { margin:0.5em 0; }
+.ie input.checkbox, .ie input.radio { position:relative; top:.25em; }
+.ie form.inline div, .ie form.inline p { vertical-align:middle; }
+.ie form.inline input.checkbox, .ie form.inline input.radio,
+.ie form.inline input.button, .ie form.inline button {
+  margin:0.5em 0;
+}
+.ie button,.ie input.button { position:relative;top:0.25em; }
+/**/
