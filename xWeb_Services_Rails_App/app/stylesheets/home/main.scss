@@ -1,5 +1,5 @@
 @import "compass/layout.scss";
-@include sticky-footer(28px, "div#main", "footer.content", "footer.page_end");
+@include sticky-footer(28px, "div.content_container", "footer.content", "footer.page_end");
 
 @mixin wrapper {
   margin: 0 auto;

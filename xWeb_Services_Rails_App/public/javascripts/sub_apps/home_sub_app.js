@@ -1,10 +1,11 @@
 var HomeSubApp = {
-    init: function () {
-      var homeSubAppRouter = new HomeSubAppRouter;
-      if (Backbone.history.options == undefined) {
-        Backbone.history.start();
-        
-      }
-      return true
+  init: function () {
+    homeRouter = new HomeRouter;
+    if (Backbone.history.options == undefined) {
+      Backbone.history.start();    
     }
+  }
 }
+
+// Declare the router globally..
+var homeRouter
