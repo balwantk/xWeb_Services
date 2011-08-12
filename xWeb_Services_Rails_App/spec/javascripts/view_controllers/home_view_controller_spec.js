@@ -1,4 +1,4 @@
-describe("HomeSubApp.ViewController", function() {
+describe("HomeSubAppViewController", function() {
   it("should instantiate with the correct template and events", function() {
     
   });

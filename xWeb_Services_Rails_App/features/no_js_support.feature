@@ -1,6 +1,6 @@
 Feature: No JS support
   As a site visitor
-  I want to see information when I visit with a non-JS browser
+  I want to see some information when I visit with a non-JS browser
   So that I know that i've not been forgotten
   
   
