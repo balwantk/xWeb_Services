@@ -8,4 +8,5 @@ describe("contact from visitor model", function() {
   it("should have the REST url defined", function() {
     // expect(model.url)toBe(the_correct_url);
   });
+  
 });

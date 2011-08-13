@@ -6,3 +6,4 @@ describe HomeController do
     response.should render_template("index")
   end
 end
+

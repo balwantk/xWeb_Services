@@ -8,7 +8,7 @@ describe("ContactViewController", function() {
     
   });
   
-  it("should be extended with a message object that contains the visitor's form data", function() {
+  it("should be extended/injected with a message hash that contains the visitor's form data", function() {
     
   });
   
@@ -31,7 +31,7 @@ describe("ContactViewController", function() {
       
       });
     
-      it("it should enter field data into message object if args are valid", function() {
+      it("it should enter field data into message hash of VCO if args are valid", function() {
       
       });
       
@@ -100,6 +100,10 @@ describe("ContactViewController", function() {
         it("should give the me an acknowledgement of successful send and render any other text", function() {
           
         });
+        it("should display correct backend validation error when validation fails at BE  ", function() {
+          
+        });
+        
         
       });
     });    

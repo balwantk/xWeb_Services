@@ -1,4 +1,6 @@
 XWebServicesRailsApp::Application.routes.draw do
+  get "message/create"
+
   get "home/index"
   match "/home" => "home#index"
   root :to => "home#index"
