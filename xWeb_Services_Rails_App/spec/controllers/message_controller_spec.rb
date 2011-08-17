@@ -3,7 +3,7 @@ require 'spec_helper'
 describe MessageController do
 
   describe "creating message" do
-    it "should parse the message hash"
+    it "should parse the message hash and extract its component"
     
     it "should create message model"
     
