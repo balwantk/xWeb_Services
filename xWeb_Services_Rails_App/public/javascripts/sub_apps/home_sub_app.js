@@ -1,3 +1,6 @@
+// Declare the router globally..
+var homeRouter
+
 var HomeSubApp = {
   init: function () {
     homeRouter = new HomeRouter;
@@ -7,5 +10,4 @@ var HomeSubApp = {
   }
 }
 
-// Declare the router globally..
-var homeRouter
+

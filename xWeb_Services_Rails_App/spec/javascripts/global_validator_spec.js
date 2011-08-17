@@ -139,13 +139,12 @@ describe("Global validator function that returns true/string/object on successfu
         
     });
   
- 
+  });
   
   it("should validate names or fields like company", function() {
     
   });
-  
-  
+   
   it("should validate requests", function() {
     
   });
