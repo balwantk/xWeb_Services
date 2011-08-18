@@ -1,26 +1,25 @@
-label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+/*label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
 button, input, select, textarea { margin: 0; }
 
 
-/*
+
   TODO Typography goes here:
-*/
-/* --------------------------------------------------------------
+
+ --------------------------------------------------------------
 
    typography.css
    * Sets up some sensible default typography.
 
--------------------------------------------------------------- */
+-------------------------------------------------------------- 
 input:valid, textarea:valid   {  }
 input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
-::-moz-selection{ background: #741b47; color:#fff; text-shadow: none; }
-::selection { background:#741b47; color:#fff; text-shadow: none; }
-
+::-moz-selection{ background: #fef193; color:#444; text-shadow: none; }
+::selection { background:#fef193; color:#444; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #FF5E99; }
 button {  width: auto; overflow: visible; }
 body, select, input, textarea { color: #222; }
 h1, h2, h3, h4, h5, h6 { font-weight: none; }
 a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
-
+*/

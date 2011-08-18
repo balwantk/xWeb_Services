@@ -1,0 +1,252 @@
+/* @author: Balwant K.
+---------------------------------------- */
+
+@import "blueprint/reset";
+@import "partials/base";
+@import "blueprint";
+@import "partials/helpers";
+@import "partials/typography";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+
+body {
+  font-family: georgia, serif;
+  background-color: #fafafa;
+  background-image: url('../images/background_textile.gif');
+  
+  ::-moz-selection { 
+    background: #ffffa7; 
+    color:#222; 
+    text-shadow: none; 
+  }
+  
+  ::selection { 
+    background:#ffffa7; 
+    color:#222; 
+    text-shadow: none; 
+  }
+
+  
+  a {
+    color: #333;
+    text-decoration: none;
+    &:link { 
+      -webkit-tap-highlight-color: #ffffa7; 
+    }
+    &:hover {  
+      color: #222; 
+      background:#ffffa7;
+      border-bottom: 2px solid #666;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+  
+  label, input[type="button"], input[type="submit"], input[type="image"], button { 
+    cursor: pointer; 
+  }
+  
+  button, input, select, textarea { 
+    margin: 0; 
+  }
+}
+
+#main {
+  @include container;   
+  //@include showgrid;
+  
+  #xipcraft_branding {
+    @include column(24, true); 
+    margin-top: 3*1.6*$vgh;   
+    h1 {@include visuallyhidden;}
+    p {
+      text-align: center;
+      a {
+        &:hover { 
+          position: relative; 
+          top: -1px; 
+          background: none;
+          border-bottom: none;
+        }
+        &:active {
+          position: relative; 
+          top: 1px; 
+          background: none;
+        }
+      }
+    }
+  }
+  
+  #what_and_why {
+    @include column(24, true);
+    margin-top: 0.4*$vgh;
+    margin-bottom: 15px;
+    h2 {
+      a {
+        border-bottom: 3px solid #666;
+      }
+    }
+    #work_desription {
+      margin-top: 15px;
+    }
+  }  
+  
+  .divider {
+    @include column(24, true);
+    div {
+      border-bottom: 3px dashed #741b47;
+      height: 16px;
+      @include wrapper(100px);
+    }
+  }
+  
+  nav {
+    @include column(24, true);
+    
+    ul {
+      list-style-type: none;
+      margin-top: 0.5*$vgh;
+      margin-bottom: -5.5px;
+      li {     
+        text-align: center;
+        font-size: 0.69*$vgh;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+        line-height: 2.3;
+        a {
+          color: #666;
+          &:hover {
+            color: #222;
+          }
+        }
+         
+        span {
+          a {
+            color: #333;
+            font-weight: bold;
+          }
+        }
+        /*
+        ---------------------------------------- */
+        
+      }
+    }
+  }
+  
+  #produce_team_contact {
+    @include column(24, true);
+    height: 22*$vgh;
+    margin-top: 1.5*$vgh;
+    @include border-radius($vgh/2);
+    @include single-box-shadow(#c9c9c9, 0px, 1px, 3px, 1px, true);   
+    background: #fff;
+
+    div {
+      position: relative;
+      left: -0*$blueprint-container-size;
+      top: 0px;
+      height: 22*$vgh;
+      width: 3*$blueprint-container-size;
+      //@include trace;
+      #produce {
+        float:left;
+        height: 22*$vgh;
+        width: $blueprint-container-size;
+        overflow: hidden;
+        
+        #produce_mascot {
+          @include column(12);
+          img {
+            margin-top: 20px;
+            margin-left: 38px;
+          }
+        }
+        
+        #produce_description {
+          @include column(12, true);
+          //@include trace;
+          padding-top: 1.5*$vgh;
+        }
+        
+      }
+      
+      #team {
+        height: 22*$vgh;
+        width:$blueprint-container-size;
+        //background: 20px 20px url('../images/what.gif') no-repeat;
+        @include trace(yellow);
+        float:left;
+      }
+      
+      #contact {
+        height: 22*$vgh;
+        width: $blueprint-container-size;
+        //background: 20px 20px url('../images/what.gif') no-repeat;
+        @include trace(green);
+        float:left;
+      }
+    }
+  }
+  
+  #the_end {
+    margin-top: 13.5px;
+    @include column(24, true);
+
+  }
+}
+/* 
+html.no-js {
+  #produce_team_contact {
+    @include column(24, true);
+    height: 3*21*$vgh;
+    margin-top: 1.5*$vgh;
+    @include border-radius($vgh/2);
+    @include single-box-shadow(#c9c9c9, 0px, 1px, 3px, 1px, true);   
+    background: #fff;
+    overflow: hidden;
+    
+    nav {
+      ul {
+        list-style-type: none;
+      }
+    }
+    
+    div {
+      position: relative;
+      left: -0*$blueprint-container-size;
+      top: 0px;
+      height: 21*$vgh;
+      width: 1*$blueprint-container-size;
+      @include trace;
+      #produce {
+        float:left;
+        height: 21*$vgh;
+        width: $blueprint-container-size;
+        background: 20px 20px url('../images/what.gif') no-repeat;
+        @include trace(red);
+        
+      }
+      
+      #team {
+        height: 21*$vgh;
+        width:$blueprint-container-size;
+        background: 20px 20px url('../images/what.gif') no-repeat;
+        @include trace(yellow);
+        float:left;
+      }
+      
+      #contact {
+        height: 21*$vgh;
+        width: $blueprint-container-size;
+        background: 20px 20px url('../images/what.gif') no-repeat;
+        @include trace(green);
+        float:left;
+      }
+    }
+  }
+}
+
+
+---------------------------------------- */

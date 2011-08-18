@@ -1,0 +1,34 @@
+// Based on HTML5 Boilerplate and other custom stuff
+
+@mixin clearfixer {
+  zoom: 1; 
+  &:before, &:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+  &:after { clear: both; }
+}
+
+@mixin trace($color: blue) {
+  background: $color;
+  opacity: 0.5;
+}
+
+@mixin wrapper($width: 960px) {
+  margin: 0 auto;
+  width: $width;
+}
+
+@mixin image-replace { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+@mixin hidden { display: none; visibility: hidden; }
+@mixin visuallyhidden { 
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  height: 1px; 
+  margin: -1px; 
+  overflow: hidden; 
+  padding: 0; 
+  position: absolute; 
+  width: 1px;
+  .focusable {
+    &:active, &:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+  }
+}
+@mixin invisible { visibility: hidden; }
