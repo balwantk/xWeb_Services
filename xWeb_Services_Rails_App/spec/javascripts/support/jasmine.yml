@@ -48,7 +48,7 @@ stylesheets:
 #   - helpers/**/*.js
 #
 helpers:
-  - javascripts/helpers/**/*.js
+  - javascripts/jasmine_da_helpers/**/*.js
 
 # spec_files
 #
