@@ -64,7 +64,7 @@ body {
     h1 {@include visuallyhidden;}
     p {
       text-align: center;
-      a {
+      a { 
         &:hover { 
           position: relative; 
           top: -1px; 
@@ -84,11 +84,7 @@ body {
     @include column(24, true);
     margin-top: 0.4*$vgh;
     margin-bottom: 15px;
-    h2 {
-      a {
-        border-bottom: 3px solid #666;
-      }
-    }
+    
     #work_desription {
       margin-top: 15px;
     }

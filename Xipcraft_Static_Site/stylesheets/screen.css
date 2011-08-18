@@ -204,14 +204,10 @@ body button, body input, body select, body textarea {
   overflow-x: hidden;
 }
 /* line 88, ../sass/screen.scss */
-#main #what_and_why h2 a {
-  border-bottom: 3px solid #666;
-}
-/* line 92, ../sass/screen.scss */
 #main #what_and_why #work_desription {
   margin-top: 15px;
 }
-/* line 97, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 #main .divider {
   display: inline;
   float: left;
@@ -222,14 +218,14 @@ body button, body input, body select, body textarea {
 * html #main .divider {
   overflow-x: hidden;
 }
-/* line 99, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 #main .divider div {
   border-bottom: 3px dashed #741b47;
   height: 16px;
   margin: 0 auto;
   width: 100px;
 }
-/* line 106, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 #main nav {
   display: inline;
   float: left;
@@ -240,13 +236,13 @@ body button, body input, body select, body textarea {
 * html #main nav {
   overflow-x: hidden;
 }
-/* line 109, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 #main nav ul {
   list-style-type: none;
   margin-top: 11.25px;
   margin-bottom: -5.5px;
 }
-/* line 113, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 #main nav ul li {
   text-align: center;
   font-size: 15.525px;
@@ -255,20 +251,20 @@ body button, body input, body select, body textarea {
   /*
   ---------------------------------------- */
 }
-/* line 118, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 #main nav ul li a {
   color: #666;
 }
-/* line 120, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 #main nav ul li a:hover {
   color: #222;
 }
-/* line 126, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 #main nav ul li span a {
   color: #333;
   font-weight: bold;
 }
-/* line 138, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 #main #produce_team_contact {
   display: inline;
   float: left;
@@ -292,7 +288,7 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact {
   overflow-x: hidden;
 }
-/* line 146, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 #main #produce_team_contact div {
   position: relative;
   left: 0px;
@@ -300,14 +296,14 @@ body button, body input, body select, body textarea {
   height: 495px;
   width: 2880px;
 }
-/* line 153, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 #main #produce_team_contact div #produce {
   float: left;
   height: 495px;
   width: 960px;
   overflow: hidden;
 }
-/* line 159, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 #main #produce_team_contact div #produce #produce_mascot {
   display: inline;
   float: left;
@@ -318,12 +314,12 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact div #produce #produce_mascot {
   overflow-x: hidden;
 }
-/* line 161, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 #main #produce_team_contact div #produce #produce_mascot img {
   margin-top: 20px;
   margin-left: 38px;
 }
-/* line 167, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 #main #produce_team_contact div #produce #produce_description {
   display: inline;
   float: left;
@@ -335,7 +331,7 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact div #produce #produce_description {
   overflow-x: hidden;
 }
-/* line 175, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 #main #produce_team_contact div #team {
   height: 495px;
   width: 960px;
@@ -343,7 +339,7 @@ body button, body input, body select, body textarea {
   opacity: 0.5;
   float: left;
 }
-/* line 183, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 #main #produce_team_contact div #contact {
   height: 495px;
   width: 960px;
@@ -351,7 +347,7 @@ body button, body input, body select, body textarea {
   opacity: 0.5;
   float: left;
 }
-/* line 193, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 #main #the_end {
   margin-top: 13.5px;
   display: inline;
