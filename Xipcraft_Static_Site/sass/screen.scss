@@ -26,8 +26,7 @@ body {
     color:#222; 
     text-shadow: none; 
   }
-
-  
+ 
   a {
     color: #333;
     text-decoration: none;
@@ -60,7 +59,7 @@ body {
   
   #xipcraft_branding {
     @include column(24, true); 
-    margin-top: 3*1.6*$vgh;   
+    margin-top: 1.6*$vgh;   
     h1 {@include visuallyhidden;}
     p {
       text-align: center;
@@ -134,18 +133,60 @@ body {
   #produce_team_contact {
     @include column(24, true);
     height: 22*$vgh;
-    margin-top: 1.5*$vgh;
+    margin-top: 1.3*$vgh;
     @include border-radius($vgh/2);
     @include single-box-shadow(#c9c9c9, 0px, 1px, 3px, 1px, true);   
-    background: #fff;
+    //background: #fff;
+    //overflow: scroll;
+    
 
-    div {
+    div.showcase {
       position: relative;
-      left: -0*$blueprint-container-size;
+      left: -2*$blueprint-container-size;
       top: 0px;
-      height: 22*$vgh;
-      width: 3*$blueprint-container-size;
       //@include trace;
+      height: 22*$vgh;
+      width: 4*$blueprint-container-size;
+      
+  
+      p {
+        
+        a {
+          color: #741b47;
+          border-bottom: 2px solid #741b47;
+          cursor: pointer;
+          &:hover {
+            color: #222;
+            border-bottom: 2px solid #222;
+          }
+        }
+        line-height: 1.15*1.5;
+        font-size: 0.69*$vgh;
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+        margin-top:18px;
+        padding: 0px 10px 0px 10px;
+        color: #666;
+      }
+      
+      h2+p {
+        margin-top:12px;
+      }
+      
+      h2 {
+        padding: 0px 10px 0px 10px;
+        text-align: left;
+        line-height: 1.08;
+        font-size: 1.5*$vgh*0.83;
+      }
+      
+      h3 {
+        margin-top: 24px;
+        padding: 0px 10px 0px 10px;
+        text-align: left;
+        line-height: 1.08;
+        font-size: 1.2*$vgh*0.83;
+      }
+      
       #produce {
         float:left;
         height: 22*$vgh;
@@ -162,8 +203,11 @@ body {
         
         #produce_description {
           @include column(12, true);
-          //@include trace;
-          padding-top: 1.5*$vgh;
+          padding-top: 1.45*$vgh;
+          
+          nav {
+            @include column(12, true);
+          }
         }
         
       }
@@ -171,16 +215,79 @@ body {
       #team {
         height: 22*$vgh;
         width:$blueprint-container-size;
-        //background: 20px 20px url('../images/what.gif') no-repeat;
-        @include trace(yellow);
+        overflow: hidden;
         float:left;
+        
+        #motto {
+          //@include trace(green);
+          padding-top: 4px;
+          margin-bottom: 18px;
+          h2 {
+            text-align: center;
+            padding: 18px 0px 9px 0px;
+            border-bottom: 3px solid #999;
+            font-style: italic;
+            @include wrapper(380px);
+          }
+          @include column(24, true);
+        }
+      
+        #bk {
+          @include column(12);
+          //@include trace(orange);
+          #bk_pic {
+            @include column(12, true);
+            @include trace(grey);
+            height: 7*$vgh;
+          }
+          #bk_bio {
+            @include column(12, true);
+            //@include trace(grey);
+            height: 8*$vgh;
+          }
+        }
+        
+        #du {
+          @include column(12, true);
+          //@include trace(blue);
+          #du_pic {
+            @include column(12, true);
+            @include trace(grey);
+            height: 7*$vgh;
+          }
+          #du_bio {
+            @include column(12, true);
+            //@include trace(grey);
+            height: 8*$vgh;
+          }
+        }
+      
+        nav {
+          padding-top: 18px;
+          p {
+            text-align: center;
+            span {
+              font-weight: bold;
+              color: #333;
+            }
+          }
+          @include column(24, true);
+        }
+      
       }
+      
       
       #contact {
         height: 22*$vgh;
         width: $blueprint-container-size;
-        //background: 20px 20px url('../images/what.gif') no-repeat;
-        @include trace(green);
+        //@include trace(green);
+        float:left;
+      }
+      
+      #jobs {
+        height: 22*$vgh;
+        width: $blueprint-container-size;
+        @include trace;
         float:left;
       }
     }

@@ -67,7 +67,7 @@ h2 {
   line-height: 1.08;
 }
 
-/* line 15, ../sass/partials/_typography.scss */
+/* line 13, ../sass/partials/_typography.scss */
 body section hgroup div h3, body footer hgroup div h3 {
   text-align: center;
   line-height: 1.24;
@@ -77,7 +77,7 @@ body section hgroup div h3, body footer hgroup div h3 {
   color: #666;
 }
 
-/* line 28, ../sass/partials/_typography.scss */
+/* line 26, ../sass/partials/_typography.scss */
 body footer p {
   line-height: 1.24;
   font-size: 10px;
@@ -105,55 +105,55 @@ body ::selection {
   color: #222;
   text-shadow: none;
 }
-/* line 31, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 body a {
   color: #333;
   text-decoration: none;
 }
-/* line 34, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 body a:link {
   -webkit-tap-highlight-color: #ffffa7;
 }
-/* line 37, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 body a:hover {
   color: #222;
   background: #ffffa7;
   border-bottom: 2px solid #666;
 }
-/* line 42, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 body a:active {
   position: relative;
   top: 1px;
 }
-/* line 48, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 body label, body input[type="button"], body input[type="submit"], body input[type="image"], body button {
   cursor: pointer;
 }
-/* line 52, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 body button, body input, body select, body textarea {
   margin: 0;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 #main {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 61, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 #main #xipcraft_branding {
   display: inline;
   float: left;
   margin-right: 0;
   width: 960px;
-  margin-top: 108.0px;
+  margin-top: 36px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #main #xipcraft_branding {
   overflow-x: hidden;
 }
-/* line 64, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 #main #xipcraft_branding h1 {
   border: 0;
   clip: rect(0 0 0 0);
@@ -173,24 +173,24 @@ body button, body input, body select, body textarea {
   position: static;
   width: auto;
 }
-/* line 65, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 #main #xipcraft_branding p {
   text-align: center;
 }
-/* line 68, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 #main #xipcraft_branding p a:hover {
   position: relative;
   top: -1px;
   background: none;
   border-bottom: none;
 }
-/* line 74, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 #main #xipcraft_branding p a:active {
   position: relative;
   top: 1px;
   background: none;
 }
-/* line 83, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 #main #what_and_why {
   display: inline;
   float: left;
@@ -203,11 +203,11 @@ body button, body input, body select, body textarea {
 * html #main #what_and_why {
   overflow-x: hidden;
 }
-/* line 88, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 #main #what_and_why #work_desription {
   margin-top: 15px;
 }
-/* line 93, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 #main .divider {
   display: inline;
   float: left;
@@ -218,14 +218,14 @@ body button, body input, body select, body textarea {
 * html #main .divider {
   overflow-x: hidden;
 }
-/* line 95, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 #main .divider div {
   border-bottom: 3px dashed #741b47;
   height: 16px;
   margin: 0 auto;
   width: 100px;
 }
-/* line 102, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 #main nav {
   display: inline;
   float: left;
@@ -236,13 +236,13 @@ body button, body input, body select, body textarea {
 * html #main nav {
   overflow-x: hidden;
 }
-/* line 105, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 #main nav ul {
   list-style-type: none;
   margin-top: 11.25px;
   margin-bottom: -5.5px;
 }
-/* line 109, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 #main nav ul li {
   text-align: center;
   font-size: 15.525px;
@@ -251,27 +251,27 @@ body button, body input, body select, body textarea {
   /*
   ---------------------------------------- */
 }
-/* line 114, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 #main nav ul li a {
   color: #666;
 }
-/* line 116, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 #main nav ul li a:hover {
   color: #222;
 }
-/* line 122, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 #main nav ul li span a {
   color: #333;
   font-weight: bold;
 }
-/* line 134, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 #main #produce_team_contact {
   display: inline;
   float: left;
   margin-right: 0;
   width: 960px;
   height: 495px;
-  margin-top: 33.75px;
+  margin-top: 29.25px;
   -moz-border-radius: 11.25px;
   -webkit-border-radius: 11.25px;
   -o-border-radius: 11.25px;
@@ -282,72 +282,243 @@ body button, body input, body select, body textarea {
   -webkit-box-shadow: inset 0px 1px 3px 1px #c9c9c9;
   -o-box-shadow: inset 0px 1px 3px 1px #c9c9c9;
   box-shadow: inset 0px 1px 3px 1px #c9c9c9;
-  background: #fff;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #main #produce_team_contact {
   overflow-x: hidden;
 }
-/* line 142, ../sass/screen.scss */
-#main #produce_team_contact div {
+/* line 143, ../sass/screen.scss */
+#main #produce_team_contact div.showcase {
   position: relative;
-  left: 0px;
+  left: -1920px;
   top: 0px;
   height: 495px;
-  width: 2880px;
+  width: 3840px;
 }
-/* line 149, ../sass/screen.scss */
-#main #produce_team_contact div #produce {
+/* line 152, ../sass/screen.scss */
+#main #produce_team_contact div.showcase p {
+  line-height: 1.725;
+  font-size: 15.525px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  margin-top: 18px;
+  padding: 0px 10px 0px 10px;
+  color: #666;
+}
+/* line 154, ../sass/screen.scss */
+#main #produce_team_contact div.showcase p a {
+  color: #741b47;
+  border-bottom: 2px solid #741b47;
+  cursor: pointer;
+}
+/* line 158, ../sass/screen.scss */
+#main #produce_team_contact div.showcase p a:hover {
+  color: #222;
+  border-bottom: 2px solid #222;
+}
+/* line 171, ../sass/screen.scss */
+#main #produce_team_contact div.showcase h2 + p {
+  margin-top: 12px;
+}
+/* line 175, ../sass/screen.scss */
+#main #produce_team_contact div.showcase h2 {
+  padding: 0px 10px 0px 10px;
+  text-align: left;
+  line-height: 1.08;
+  font-size: 28.013px;
+}
+/* line 182, ../sass/screen.scss */
+#main #produce_team_contact div.showcase h3 {
+  margin-top: 24px;
+  padding: 0px 10px 0px 10px;
+  text-align: left;
+  line-height: 1.08;
+  font-size: 22.41px;
+}
+/* line 190, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #produce {
   float: left;
   height: 495px;
   width: 960px;
   overflow: hidden;
 }
-/* line 155, ../sass/screen.scss */
-#main #produce_team_contact div #produce #produce_mascot {
+/* line 196, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #produce #produce_mascot {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 475px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div #produce #produce_mascot {
+* html #main #produce_team_contact div.showcase #produce #produce_mascot {
   overflow-x: hidden;
 }
-/* line 157, ../sass/screen.scss */
-#main #produce_team_contact div #produce #produce_mascot img {
+/* line 198, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #produce #produce_mascot img {
   margin-top: 20px;
   margin-left: 38px;
 }
-/* line 163, ../sass/screen.scss */
-#main #produce_team_contact div #produce #produce_description {
+/* line 204, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #produce #produce_description {
   display: inline;
   float: left;
   margin-right: 0;
   width: 475px;
-  padding-top: 33.75px;
+  padding-top: 32.625px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div #produce #produce_description {
+* html #main #produce_team_contact div.showcase #produce #produce_description {
   overflow-x: hidden;
 }
-/* line 171, ../sass/screen.scss */
-#main #produce_team_contact div #team {
+/* line 208, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #produce #produce_description nav {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 475px;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #produce #produce_description nav {
+  overflow-x: hidden;
+}
+/* line 215, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team {
   height: 495px;
   width: 960px;
-  background: yellow;
+  overflow: hidden;
+  float: left;
+}
+/* line 221, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team #motto {
+  padding-top: 4px;
+  margin-bottom: 18px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 960px;
+}
+/* line 225, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team #motto h2 {
+  text-align: center;
+  padding: 18px 0px 9px 0px;
+  border-bottom: 3px solid #999;
+  font-style: italic;
+  margin: 0 auto;
+  width: 380px;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #team #motto {
+  overflow-x: hidden;
+}
+/* line 235, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team #bk {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 475px;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #team #bk {
+  overflow-x: hidden;
+}
+/* line 238, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team #bk #bk_pic {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 475px;
+  background: grey;
+  opacity: 0.5;
+  height: 157.5px;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #team #bk #bk_pic {
+  overflow-x: hidden;
+}
+/* line 243, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team #bk #bk_bio {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 475px;
+  height: 180px;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #team #bk #bk_bio {
+  overflow-x: hidden;
+}
+/* line 250, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team #du {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 475px;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #team #du {
+  overflow-x: hidden;
+}
+/* line 253, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team #du #du_pic {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 475px;
+  background: grey;
+  opacity: 0.5;
+  height: 157.5px;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #team #du #du_pic {
+  overflow-x: hidden;
+}
+/* line 258, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team #du #du_bio {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 475px;
+  height: 180px;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #team #du #du_bio {
+  overflow-x: hidden;
+}
+/* line 265, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team nav {
+  padding-top: 18px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 960px;
+}
+/* line 267, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team nav p {
+  text-align: center;
+}
+/* line 269, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team nav p span {
+  font-weight: bold;
+  color: #333;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #team nav {
+  overflow-x: hidden;
+}
+/* line 280, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #contact {
+  height: 495px;
+  width: 960px;
+  float: left;
+}
+/* line 287, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #jobs {
+  height: 495px;
+  width: 960px;
+  background: blue;
   opacity: 0.5;
   float: left;
 }
-/* line 179, ../sass/screen.scss */
-#main #produce_team_contact div #contact {
-  height: 495px;
-  width: 960px;
-  background: green;
-  opacity: 0.5;
-  float: left;
-}
-/* line 189, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 #main #the_end {
   margin-top: 13.5px;
   display: inline;
