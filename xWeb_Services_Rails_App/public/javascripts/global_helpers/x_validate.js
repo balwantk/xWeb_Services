@@ -1,5 +1,6 @@
 var xValidate = {
-   email:function(email_id_to_validate){
+   
+  email:function(email_id_to_validate){
    
         var result_hash = {};
         email_id_to_validate = xHelper.stripStartEndSpaces(email_id_to_validate);
@@ -79,6 +80,10 @@ var xValidate = {
            result_hash.result = false;
            result_hash.error = "domain part contaning invalid special character";
            return result_hash;
+        }else if(/[A-Z]/.test(domainPart)){   
+           result_hash.result = false;
+           result_hash.error = "domain part should not contain upper case character";
+           return result_hash;
         }else if(domainPart.charAt(0)== '-'){
           result_hash.result = false;
           result_hash.error = "domain part should not start with character -";
@@ -93,16 +98,66 @@ var xValidate = {
           return result_hash;
         }
 
-
-       //&& (/[a-z0-9]+/.test(domainPart))
-        if(/[A-Za-z0-9! # $ % * \/ ? ^ ` { | }]+/.test(localPart)){
+        if((/[A-Za-z0-9! # $ % * \/ ? ^ ` { | }]+/.test(localPart)) 
+                    && (/[a-z]+/.test(domainPart))
+                    && (/[0-9]*/.test(domainPart))
+                    && (/[.]+/.test(domainPart))
+                    && (/[-]*/.test(domainPart))){
           result_hash.result = true;
           result_hash.processed_value = email_id_to_validate;
         }
+        return result_hash;
+    },
+    
+    name:function(name_to_validate) {
+      var result_hash = {};
+      if(name_to_validate.length < 1){
+          result_hash.result = false;
+          result_hash.error = "too short";
+          return result_hash;
+      }else if(/[0-9]+/.test(name_to_validate)){
+          result_hash.result = false;
+          result_hash.error = "should not contain numbers";
+          return result_hash;
+      }else if(/[! # $ % * \/ ? ^ ` , - _ . { | } \s]+/.test(name_to_validate)){
+          result_hash.result = false;
+          result_hash.error = "should not contain non-alpha characters";
+          return result_hash; 
+      }else if(/[a-zA-Z]+/.test(name_to_validate)){
+          result_hash.result = true;
+          result_hash.processed_value = name_to_validate;
+          return result_hash; 
+      }  
       return result_hash;
+    },
+    cellNumber:function(cell_number_to_validate){
+      result_hash = {};
+      if(cell_number_to_validate.length < 10){
+          result_hash.result = false;
+          result_hash.error = "should be minimum 10 numbers";
+          return result_hash;
+      } else if(cell_number_to_validate.length > 10){
+          result_hash.result = false;
+          result_hash.error = "should be maximum 10 numbers";
+          return result_hash;
+    
+      }else if(/[a-zA-Z]+/.test(cell_number_to_validate)){
+          result_hash.result = false;
+          result_hash.error = "should not contain letters";
+          return result_hash; 
+      }else if(/[! + # $ % * \/ ? ^ ` , \- _ . { | } \s]+/.test(cell_number_to_validate)){
+          result_hash.result = false;
+          result_hash.error = "should not contain non-alpha characters";
+          return result_hash; 
+      }else if(/[0-9]+/.test(cell_number_to_validate)){
+          result_hash.result = true;
+          result_hash.processed_value = cell_number_to_validate;
+          return result_hash; 
+      }
+      
+    },
+    landlineNumber:function(landline_number_to_validate){
+      return xValidate.cellNumber(landline_number_to_validate)
     }
-
-  
-  
-
+ 
 }

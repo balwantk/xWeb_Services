@@ -3,17 +3,8 @@ describe("Global validator function that returns true/string/object on successfu
   it("should be defined", function(){
     expect(xValidate).toBeDefined();
   });
-    
-  describe("Email validation", function() {
-     
-    
-    
-    it("should be defined", function () {
-      
-      expect(xValidate.email).toBeDefined();
   
-    });
-    /* The local-part of an email address may be up to 64 characters long and 
+  /* The local-part of an email address may be up to 64 characters long and 
     # the domain name may have a maximum of 253 characters
     
     # Valid characters that can be used in a local-partr 
@@ -32,14 +23,23 @@ describe("Global validator function that returns true/string/object on successfu
     # standards-permissible characters: ! # $ % * / ? ^ ` { | } ~
     */
     
+  describe("Email validation", function() {
     
-    
+    it("should be defined", function () {
+      
+      expect(xValidate.email).toBeDefined();
+  
+    });
+    it("should not allow empty string", function () {
+      
+      expect(xValidate.email("")).toEqual({"result":false,"error":"too short (min 6)"});
+  
+    });  
     it("should allow starting and ending space characters and return validated/processed value", function() {
-      // Input of " a@xipcraft.com " should return  {"result":true,"processed_value":"a@xipcraft.com"}
-      // Input of "  a@xipcraft.com  " should return  {"result":true,"processed_value":"a@xipcraft.com"}
-      // Input of " a@xipcraft.com" should return  {"result":true,"processed_value":"a@xipcraft.com"}
-      // Input of "a@xipcraft.com " should return {"result":true,"processed_value":"a@xipcraft.com"}
-      // expect(xValidate.email(' a@xipcraft.com ')).toEqual( {"result":true,"processed_value":"a@xipcraft.com"})
+      expect(xValidate.email(" a@xipcraft.com ")).toEqual( {"result":true,"processed_value":"a@xipcraft.com"})
+      expect(xValidate.email("   a@xipcraft.com  ")).toEqual( {"result":true,"processed_value":"a@xipcraft.com"})
+      expect(xValidate.email(" a@xipcraft.com")).toEqual( {"result":true,"processed_value":"a@xipcraft.com"})
+      expect(xValidate.email("a@xipcraft.com ")).toEqual( {"result":true,"processed_value":"a@xipcraft.com"})
                       
     });
     it("should be minimum 6 characters length", function() {
@@ -67,8 +67,7 @@ describe("Global validator function that returns true/string/object on successfu
     });
     
     it("should allow valid email address", function() {
-      // Input of "hiphop.faker@xipcraft.com" should return {"result":true,"processed_value":"hiphop.faker@xipcraft.com"}
-      //expect(xValidate.email('hiphop.faker@xipcraft.com')).toEqual( {"result":true,"processed_value":"hiphop.faker@xipcraft.com"})
+       expect(xValidate.email('hiphop.faker@xipcraft.com')).toEqual( {"result":true,"processed_value":"hiphop.faker@xipcraft.com"})
     });
     
    
@@ -161,30 +160,89 @@ describe("Global validator function that returns true/string/object on successfu
         });
         
         it("should contain any of [a-z] and . and - characters and [0-9] numbers", function() {
-          // Input of "a@xipcraft09.com" should return  {"result":true,"processed_value":"a@xipcraft09.com"}  
-          // Input of "a@xipcraf-t09.com" should return  {"result":true,"processed_value":"a@xipcraf-t09.com"}  
-          //expect(xValidate.email("a@xipcraft09.com")).toEqual({"result":true,"processed_value":"a@xipcraft09.com"})
-          //expect(xValidate.email("a@xipcraf-t09.com")).toEqual({"result":true,"processed_value":"a@xipcraf-t09.com"})
-          //expect(xValidate.email("a@xipcraf-t09.com")).toEqual({"result":false,"processed_value":"a@xipcraf-t09.com"})
+          expect(xValidate.email("a@XipCraft09.com")).toEqual({"result":false,"error":"domain part should not contain upper case character"})
+          expect(xValidate.email("a@xipcraf-t09.com")).toEqual({"result":true,"processed_value":"a@xipcraf-t09.com"})
+          expect(xValidate.email("a@xipcraf.t09.com")).toEqual({"result":true,"processed_value":"a@xipcraf.t09.com"})
         });
         
     });
   
   });
+  describe("First and Last name validation", function() {
+    
+    it("should be defined", function () {
+      
+      expect(xValidate.name).toBeDefined();
   
-  it("should validate names or fields like company", function() {
+    });
+    it("should not allow empty name", function() {
+      expect(xValidate.name("")).toEqual({"result":false,"error":"too short"});
+    });
+    it("should not allow numbers", function() {
+       expect(xValidate.name("abc12d453ef")).toEqual({"result":false,"error":"should not contain numbers"});
+    });
+    it("should not allow special characters", function() {
+       expect(xValidate.name("a_b-c,e. f")).toEqual({"result":false,"error":"should not contain non-alpha characters"});
+    });
+    it("should allow only characters [a-zA-Z]", function() {
+       expect(xValidate.name("xipcraft")).toEqual({"result":true,"processed_value":"xipcraft"});
+    });
     
   });
-   
+  
+  describe("Cell number validation", function() {
+    it("should be defined", function () {
+      expect(xValidate.cellNumber).toBeDefined();
+  
+    });
+    it("should be minimum and maximum 10  numbers", function () {
+      expect(xValidate.cellNumber("123456789")).toEqual({"result":false,"error":"should be minimum 10 numbers"});
+      expect(xValidate.cellNumber("1111123456789")).toEqual({"result":false,"error":"should be maximum 10 numbers"});
+      expect(xValidate.cellNumber("1123456789")).toEqual({"result":true,"processed_value":"1123456789"});
+    });
+    
+    it("should not allow characters", function () {
+      expect(xValidate.cellNumber("a123456789")).toEqual({"result":false,"error":"should not contain letters"});
+  
+    });
+    it("should not allow special characters", function () {
+      expect(xValidate.cellNumber("1-23456789")).toEqual({"result":false,"error":"should not contain non-alpha characters"});
+      expect(xValidate.cellNumber("+123456789")).toEqual({"result":false,"error":"should not contain non-alpha characters"});
+  
+    });
+    it("should allow only numbers", function () {
+      expect(xValidate.cellNumber("1234567899")).toEqual({"result":true,"processed_value":"1234567899"});
+    });
+      
+  });
+  
+  describe("Landline number validation", function() {
+    it("should be defined", function () {
+      expect(xValidate.landlineNumber).toBeDefined();
+  
+    });
+    it("should be minimum and maximum 10  numbers", function () {
+      expect(xValidate.landlineNumber("202605259")).toEqual({"result":false,"error":"should be minimum 10 numbers"});
+      expect(xValidate.landlineNumber("000202605259")).toEqual({"result":false,"error":"should be maximum 10 numbers"});
+      expect(xValidate.landlineNumber("2026052591")).toEqual({"result":true,"processed_value":"2026052591"});
+    });
+    
+    it("should not allow characters", function () {
+      expect(xValidate.landlineNumber("a123456789")).toEqual({"result":false,"error":"should not contain letters"});
+  
+    });
+    it("should not allow special characters", function () {
+      expect(xValidate.landlineNumber("2-02605259")).toEqual({"result":false,"error":"should not contain non-alpha characters"});
+      expect(xValidate.landlineNumber("+202605259")).toEqual({"result":false,"error":"should not contain non-alpha characters"});
+  
+    });
+    it("should allow only numbers", function () {
+      expect(xValidate.landlineNumber("2026052599")).toEqual({"result":true,"processed_value":"2026052599"});
+    });
+      
+  });
+  
   it("should validate requests", function() {
-    
-  });
-  
-  it("should validate cell numbers", function() {
-    
-  });
-  
-  it("should validate landline numbers", function() {
     
   });
   
