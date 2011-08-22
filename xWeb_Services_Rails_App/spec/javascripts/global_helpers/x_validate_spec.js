@@ -3,26 +3,7 @@ describe("Global validator function that returns true/string/object on successfu
   it("should be defined", function(){
     expect(xValidate).toBeDefined();
   });
-  
-  /* The local-part of an email address may be up to 64 characters long and 
-    # the domain name may have a maximum of 253 characters
-    
-    # Valid characters that can be used in a local-partr 
-    # Uppercase and lowercase English letters (a–z, A–Z)
-    # Digits 0 to 9
-
-    # Character . (dot, period, full stop) provided that it is not the first or last character,
-    # and provided also that it does not appear two or more times consecutively (e.g. John..Doe@example.com).
-
-    
-    # Valid characters that can be used in a domain name are:
-    # a-z
-    # 0-9
-    # - but not as a starting or ending character
-    # . as a separator for the textual portions of a domain name
-    # standards-permissible characters: ! # $ % * / ? ^ ` { | } ~
-    */
-    
+   
   describe("Email validation", function() {
     
     it("should be defined", function () {
@@ -120,6 +101,7 @@ describe("Global validator function that returns true/string/object on successfu
     
     describe("Email domain-part validation", function() {
         
+        
         it("should be maximum 253 characters long", function() {
            
             var emailId = "a@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiipppppppppppppppppppppppppppppppppppppppppppppppppppcccccccccccccccccccccccccccccrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaaaaaaaaaaaaaaaaaaaaaaffffffffffffftttttttttttttttttt.com"
@@ -168,6 +150,9 @@ describe("Global validator function that returns true/string/object on successfu
     });
   
   });
+  //TODO:space stripping in all 
+  //Name maxlenght should be 64
+  //spaces in between allowed in name
   describe("First and Last name validation", function() {
     
     it("should be defined", function () {
@@ -178,23 +163,46 @@ describe("Global validator function that returns true/string/object on successfu
     it("should not allow empty name", function() {
       expect(xValidate.name("")).toEqual({"result":false,"error":"too short"});
     });
+    
+    it("should allow starting and ending space characters and return validated/processed value", function() {
+        expect(xValidate.name(" xipcraft ")).toEqual({"result":true,"processed_value":"xipcraft"});
+        expect(xValidate.name("  xipcraft")).toEqual({"result":true,"processed_value":"xipcraft"});
+        expect(xValidate.name("xipcraft  ")).toEqual({"result":true,"processed_value":"xipcraft"});
+    });     
+    it("should allow maximum 64 characters", function() {
+        expect(xValidate.name("aaaaaaaaaabbbbbbbbbbccccccccccaaaaaaaaaabbbbbbbbbbcccccccccczzzzzzzzzz")).toEqual({"result":false,"error":"should be maximum 64 characters"});
+    });
     it("should not allow numbers", function() {
        expect(xValidate.name("abc12d453ef")).toEqual({"result":false,"error":"should not contain numbers"});
     });
-    it("should not allow special characters", function() {
+    it("should not allow special characters", function() { //- & '' allowed
        expect(xValidate.name("a_b-c,e. f")).toEqual({"result":false,"error":"should not contain non-alpha characters"});
     });
-    it("should allow only characters [a-zA-Z]", function() {
+    it("should allow only characters [a-zA-Z\s]", function() {
        expect(xValidate.name("xipcraft")).toEqual({"result":true,"processed_value":"xipcraft"});
+       expect(xValidate.name("xip craft")).toEqual({"result":true,"processed_value":"xip craft"});
     });
     
   });
   
+  
   describe("Cell number validation", function() {
+    
     it("should be defined", function () {
       expect(xValidate.cellNumber).toBeDefined();
   
     });
+     
+    it("should strip  -, spaces and []()", function () {
+      expect(xValidate.cellNumber("  123,456,7891")).toEqual({"result":true,"processed_value":"1234567891"});
+      expect(xValidate.cellNumber("123,456,7891 ")).toEqual({"result":true,"processed_value":"1234567891"});
+      expect(xValidate.cellNumber("1-234567-891")).toEqual({"result":true,"processed_value":"1234567891"});
+      expect(xValidate.cellNumber("123,456,7891")).toEqual({"result":true,"processed_value":"1234567891"});
+      expect(xValidate.cellNumber("123 456 7891")).toEqual({"result":true,"processed_value":"1234567891"});
+      expect(xValidate.cellNumber("123[456]7891")).toEqual({"result":true,"processed_value":"1234567891"});
+      expect(xValidate.cellNumber("123(456)7891")).toEqual({"result":true,"processed_value":"1234567891"});
+    });
+    
     it("should be minimum and maximum 10  numbers", function () {
       expect(xValidate.cellNumber("123456789")).toEqual({"result":false,"error":"should be minimum 10 numbers"});
       expect(xValidate.cellNumber("1111123456789")).toEqual({"result":false,"error":"should be maximum 10 numbers"});
@@ -205,18 +213,44 @@ describe("Global validator function that returns true/string/object on successfu
       expect(xValidate.cellNumber("a123456789")).toEqual({"result":false,"error":"should not contain letters"});
   
     });
-    it("should not allow special characters", function () {
+    /*it("should not allow special characters", function () {
       expect(xValidate.cellNumber("1-23456789")).toEqual({"result":false,"error":"should not contain non-alpha characters"});
       expect(xValidate.cellNumber("+123456789")).toEqual({"result":false,"error":"should not contain non-alpha characters"});
   
-    });
+  });*/
     it("should allow only numbers", function () {
       expect(xValidate.cellNumber("1234567899")).toEqual({"result":true,"processed_value":"1234567899"});
     });
       
   });
   
-  describe("Landline number validation", function() {
+  describe("Request  validation", function() {
+    it("should be defined", function() {
+      expect(xValidate.request).toBeDefined();
+    });
+    it("should not be an empty request", function () {
+        expect(xValidate.request("")).toEqual({"result":false,"error":"should not be empty"});
+          
+    });
+    it("should allow starting and ending space characters and return validated/processed value", function() {
+        expect(xValidate.request("   hi, this is a request.")).toEqual({"result":true,"processed_value":"hi, this is a request."});
+        expect(xValidate.request("   hi, this is a request.    ")).toEqual({"result":true,"processed_value":"hi, this is a request."});
+        expect(xValidate.request("hi, this is a request.    ")).toEqual({"result":true,"processed_value":"hi, this is a request."});
+    });
+    it("should not allow = ! < > / characters", function () {
+        expect(xValidate.request("hi, this is a request about  <html>")).toEqual({"result":false,"error":"should not contain characters like =!<>/"});
+        expect(xValidate.request("hi, this is a request about where != sql")).toEqual({"result":false,"error":"should not contain characters like =!<>/"});
+        expect(xValidate.request("hi, this is a request about the date 19/02/2011.")).toEqual({"result":false,"error":"should not contain characters like =!<>/"});  
+    });
+    it("should allow [a-bA-B0-9.,'-_] characters", function () {
+        expect(xValidate.request("hi, this is a request.")).toEqual({"result":true,"processed_value":"hi, this is a request."});
+        expect(xValidate.request("hi, this is a request's about this and that.")).toEqual({"result":true,"processed_value":"hi, this is a request's about this and that."});  
+        expect(xValidate.request("hi, this is a request about the date 19-02-2011.")).toEqual({"result":true,"processed_value":"hi, this is a request about the date 19-02-2011."});  
+        expect(xValidate.request("hi, this_is a request about the date 19-02-2011.")).toEqual({"result":true,"processed_value":"hi, this_is a request about the date 19-02-2011."});  
+    });
+  });
+  
+  /*describe("Landline number validation", function() {
     it("should be defined", function () {
       expect(xValidate.landlineNumber).toBeDefined();
   
@@ -240,21 +274,52 @@ describe("Global validator function that returns true/string/object on successfu
       expect(xValidate.landlineNumber("2026052599")).toEqual({"result":true,"processed_value":"2026052599"});
     });
       
-  });
+  });*/
+      
   
-  it("should validate requests", function() {
+  //TODO: ref - http://www.beachnet.com/~hstiles/cardtype.html
+  /*describe("Credit card validation", function() {
     
-  });
+    describe ("VISA card validation", function() {
+        
+        it("should be defined", function () {
+          expect(xValidate.creditCardNumber).toBeDefined();
+      
+        });
+        it("should allow only numbers", function () {
+          expect(xValidate.creditCardNumber("VISA","42A345678B982a29")).toEqual({"result":false,"error":"should contain only numbers"});
+          expect(xValidate.creditCardNumber("VISA","42;3:3+4{5}67898229")).toEqual({"result":false,"error":"should contain only numbers"});
+        });
+        it("should allow correct card type", function () {
+          expect(xValidate.creditCardNumber("InvalidType","4234567898229")).toEqual({"result":false,"error":"invalid card type"});
+          expect(xValidate.creditCardNumber("visa","4234567898229")).toEqual({"result":false,"error":"invalid card type"});
+          expect(xValidate.creditCardNumber("VISA","4234567898221")).toEqual({"result":true,"processed_value":"4234567898221"});
+        });
+        it("should validate number prefix", function () {
+          expect(xValidate.creditCardNumber("VISA","2234567898224")).toEqual({"result":false,"error":"number should start with 4"});
+          expect(xValidate.creditCardNumber("VISA","1234567898224")).toEqual({"result":false,"error":"number should start with 4"});
+          
+        });
+        it("should validate length", function () {
+          expect(xValidate.creditCardNumber("VISA","")).toEqual({"result":false,"error":"should be minimum 13 and maximum 16 digits"});
+          expect(xValidate.creditCardNumber("VISA","423456789822")).toEqual({"result":false,"error":"should be minimum 13 and maximum 16 digits"});
+          expect(xValidate.creditCardNumber("VISA","423456789822123456")).toEqual({"result":false,"error":"should be minimum 13 and maximum 16 digits"});
+        });
+        it("should allow correct card type and number", function () {
+          expect(xValidate.creditCardNumber("VISA","4234567898221")).toEqual({"result":true,"processed_value":"4234567898221"});
+          
+        });
+        
+    });
+    describe ("MASTERCARD card validation", function() {
+    
+    });
+    });*/
   
+  
+  /*
   it("should validate addresses", function() {
-    /*
-      TODO 
-    */
-  });
-  
-  it("should validate credit card numbers", function() {
-    /*
-      TODO 
-    */
-  });
+    
+    });*/
+    
 });
