@@ -1,8 +1,8 @@
-$vgh: 22.5px;
+$vgh: 18px;
 
 
 h2 {
-  font-size: 1.5*$vgh;
+  font-size: 1.5*($vgh*1.25);
   text-align: center;
   color: #333;
   line-height: 1.08;
@@ -13,10 +13,10 @@ body section, body footer {
     h3 {
       text-align: center;
       line-height: 1.24;
-      font-size: 0.69*$vgh;
+      font-size: 0.69*($vgh*1.25);
       font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
       margin-top:13px;
-      color: #666;
+      color: #555;
     }
 
   }

@@ -67,7 +67,7 @@ body.bp input.text {
 }
 /* line 88, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
 body.bp input.text:focus {
-  border: 1px solid #666666;
+  border: 1px solid #555;
 }
 /* line 90, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
 body.bp input.title {
@@ -77,7 +77,7 @@ body.bp input.title {
 }
 /* line 94, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
 body.bp input.title:focus {
-  border: 1px solid #666666;
+  border: 1px solid #555;
 }
 /* line 96, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_ie.scss */
 body.bp input.checkbox {
