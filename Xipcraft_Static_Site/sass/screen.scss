@@ -6,9 +6,12 @@
 @import "blueprint";
 @import "partials/helpers";
 @import "partials/typography";
+@import "partials/xcarousel";
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "compass/css3/transition";
+
+
 body {
   background-color: #fafafa;
   background-image: url('../images/background_textile2.gif');
@@ -48,43 +51,25 @@ body {
   
   #produce_team_contact {
     @include column(24, true);
-    height: 3*22*($vgh*1.25);
     margin-top: 1.3*($vgh*1.25);
     @include border-radius(($vgh*1.25)/2);
     @include single-box-shadow(#c9c9c9, 0px, 1px, 2px, 2px, true);   
     background: #fff;
-    //overflow: scroll;
     
-
-    div.showcase {
-      position: relative;
-      left: -0*$blueprint-container-size;
-      top: 0px;
-      //@include trace;
-      height: 22*($vgh*1.25);
-      width: 1*$blueprint-container-size; //
-      
-      
-      #produce {
-        float:left;
-        height: 22*($vgh*1.25);
-        width: $blueprint-container-size;
-        overflow: hidden;
-
-        
+    div.showcase { 
+      #produce {      
         #produce_mascot {
           @include column(12);
+          height: 495px;
           img {
             margin-top: 20px;
             margin-left: 38px;
           }
         }
         
-        #produce_description {
-          
+        #produce_description {  
           @include column(12, true);
-          padding-top: 2.2*($vgh);
-          
+          padding-top: 2.2*($vgh);      
           nav {
             @include column(12, true);
           }
@@ -93,17 +78,12 @@ body {
       }
       
       #team {
-        height: 22*($vgh*1.25);
-        width:$blueprint-container-size;
-        overflow: hidden;
-        float:left;
-        
         #motto {
           padding-top: 4px;
           margin-bottom: 2*$vgh;
           @include column(24, true);
         }
-        
+  
         .pic {
           overflow: hidden;
           @include wrapper(160px);
@@ -133,18 +113,13 @@ body {
       }
            
       #contact {
-        height: 22*($vgh*1.25);
-        width: $blueprint-container-size;
-        //@include trace(green);
-        float:left;
 
         #magic_location {
           //@include trace(green);
           padding-top: 4px;
           margin-bottom: 2*$vgh;
           @include column(24, true);
-        }
-        
+        }       
         
         #map_to_xipcraft {
           @include column(12);
@@ -181,3 +156,4 @@ body {
   }
 }
 
+@include xCarousel("#produce_team_contact","960px","#main_showcase","2880px",".show","960px","0.5s","ease-in-out");;
