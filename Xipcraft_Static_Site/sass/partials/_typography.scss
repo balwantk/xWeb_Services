@@ -1,14 +1,47 @@
 $vgh: 18px;
 
+body {
+  font-family: georgia, serif;
+  
+  ::-moz-selection { 
+    background: #ffffa7; 
+    color:#222; 
+    text-shadow: none; 
+  } 
+  ::selection { 
+    background:#ffffa7; 
+    color:#222; 
+    text-shadow: none; 
+  }
+ 
+  a {
+    color: #333;
+    text-decoration: none;
+    &:link { 
+      -webkit-tap-highlight-color: #ffffa7; 
+    }
+    &:hover {  
+      color: #222; 
+      background:#ffffa7;
+      border-bottom: 2px solid #666;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
 
-h2 {
-  font-size: $vgh*1.875;
-  text-align: center;
-  color: #333;
-  line-height: 1.08;
-}
+  h1 {
+    @include visuallyhidden;
+  }
 
-body section, body footer {
+  h2 {
+    font-size: $vgh*1.875;
+    text-align: center;
+    color: #333;
+    line-height: 1.08;
+  }
+
   hgroup div {
     h3 {
       text-align: center;
@@ -18,16 +51,174 @@ body section, body footer {
       margin-top:13px;
       color: #555;
     }
+  }
+  
+  #xipcraft_branding {
+    p {
+      text-align: center;
+      a { 
+        &:hover { 
+          position: relative; 
+          top: -1px; 
+          background: none;
+          border-bottom: none;
+        }
+        &:active {
+          position: relative; 
+          top: 1px; 
+          background: none;
+        }
+      }
+    }
+  }
+  
+  nav.main {
+    ul {
+      list-style-type: none;
+      margin-top: 0.5*($vgh*1.25);
+      margin-bottom: -5.5px;
+      li {     
+        text-align: center;
+        font-size: 0.69*($vgh*1.25);
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+        line-height: 2.3;
+        a {
+          color: #666;
+          &:hover {
+            color: #222;
+          }
+        }
+        span {
+          a {
+            color: #333;
+            font-weight: bold;
+          }
+        }       
+      }
+    }
+  }
+  
+  div.showcase {
+    p {      
+      a {
+        color: #741b47;
+        border-bottom: 2px solid #741b47;
+        cursor: pointer;
+        &:hover {
+          color: #222;
+          border-bottom: 2px solid #222;
+        }
+      }
+      line-height: 1.86;
+      font-size: 0.7*($vgh);
+      font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+      margin-top:16px;
+      color: #555;
+    }
+    
+    h2+p {
+      margin-top:18px;
+    }
+    
+    h2 {
+      //padding: 0px 0px 0px 10px;
+      text-align: left;
+      line-height: 1.08;
+      font-size: 1.5*($vgh*1.25)*0.83;
+      font-style: italic;
 
+    }
+    
+    h3 {
+      margin-top: 25px;
+      text-align: left;
+      line-height: 1.08;
+      font-size: 1.2*($vgh*1.25)*0.83;
+    }
+  
+    #produce {
+      h2 {
+        //@include trace;
+        padding: 2px 0px 9px 0px;
+        border-bottom: 3px dashed #741b47;
+        margin-left: 10px;
+        width: 415px;
+        
+      }
+      p {
+        padding: 0px 20px 0px 10px;
+      }
+    
+    }
+    
+    #team {
+      #motto {
+        h2 {
+          text-align: center;
+          padding: 18px 0px 9px 0px;
+          border-bottom: 3px dashed #741b47;
+          @include wrapper(380px);
+        }        
+      }
+      
+      .bio {
+        h3,p {
+          padding: 0px 15px 0px 15px;
+          text-align: center;            
+        }
+      }
+    }
+    
+    #contact {
+      #magic_location {
+        h2 {
+          text-align: center;
+          padding: 18px 0px 9px 0px;
+          border-bottom: 3px dashed #741b47;
+          @include wrapper(400px);
+        }
+      }
+      
+      #call_to_talk {
+        ul {
+          list-style-type: none;
+          li {
+            
+            h3 {
+              margin-top: 16px;
+            }
+            p {
+              margin-top: 4.5px;
+            }
+            span {
+              font-weight: bold;
+              color: #333;
+            }
+          }
+        }
+      }
+       
+    }
+    
+    #team, #contact {
+      nav p {
+        font-style: italic;
+        text-align: center;
+        span {
+          font-weight: bold;
+          color: #333;
+        }
+      }
+    }
+  }
+  
+  footer p {
+    line-height: 1.24;
+    font-size: 10px;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    margin: 4px;
+    color: #bababa;
+    text-align: center;
   }
 
-}
-
-body footer p {
-  line-height: 1.24;
-  font-size: 10px;
-  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-  margin: 4px;
-  color: #bababa;
-  text-align: center;
 }

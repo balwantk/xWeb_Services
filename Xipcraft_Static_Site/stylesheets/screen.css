@@ -59,16 +59,71 @@ a img {
   border: none;
 }
 
-/* line 4, ../sass/partials/_typography.scss */
-h2 {
+/* line 3, ../sass/partials/_typography.scss */
+body {
+  font-family: georgia, serif;
+}
+/* line 6, ../sass/partials/_typography.scss */
+body ::-moz-selection {
+  background: #ffffa7;
+  color: #222;
+  text-shadow: none;
+}
+/* line 11, ../sass/partials/_typography.scss */
+body ::selection {
+  background: #ffffa7;
+  color: #222;
+  text-shadow: none;
+}
+/* line 17, ../sass/partials/_typography.scss */
+body a {
+  color: #333;
+  text-decoration: none;
+}
+/* line 20, ../sass/partials/_typography.scss */
+body a:link {
+  -webkit-tap-highlight-color: #ffffa7;
+}
+/* line 23, ../sass/partials/_typography.scss */
+body a:hover {
+  color: #222;
+  background: #ffffa7;
+  border-bottom: 2px solid #666;
+}
+/* line 28, ../sass/partials/_typography.scss */
+body a:active {
+  position: relative;
+  top: 1px;
+}
+/* line 34, ../sass/partials/_typography.scss */
+body h1 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 31, ../sass/partials/_helpers.scss */
+body h1 .focusable:active, body h1 .focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* line 38, ../sass/partials/_typography.scss */
+body h2 {
   font-size: 33.75px;
   text-align: center;
   color: #333;
   line-height: 1.08;
 }
-
-/* line 13, ../sass/partials/_typography.scss */
-body section hgroup div h3, body footer hgroup div h3 {
+/* line 46, ../sass/partials/_typography.scss */
+body hgroup div h3 {
   text-align: center;
   line-height: 1.24;
   font-size: 15.75px;
@@ -76,8 +131,146 @@ body section hgroup div h3, body footer hgroup div h3 {
   margin-top: 13px;
   color: #555;
 }
-
-/* line 26, ../sass/partials/_typography.scss */
+/* line 57, ../sass/partials/_typography.scss */
+body #xipcraft_branding p {
+  text-align: center;
+}
+/* line 60, ../sass/partials/_typography.scss */
+body #xipcraft_branding p a:hover {
+  position: relative;
+  top: -1px;
+  background: none;
+  border-bottom: none;
+}
+/* line 66, ../sass/partials/_typography.scss */
+body #xipcraft_branding p a:active {
+  position: relative;
+  top: 1px;
+  background: none;
+}
+/* line 76, ../sass/partials/_typography.scss */
+body nav.main ul {
+  list-style-type: none;
+  margin-top: 11.25px;
+  margin-bottom: -5.5px;
+}
+/* line 80, ../sass/partials/_typography.scss */
+body nav.main ul li {
+  text-align: center;
+  font-size: 15.525px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  line-height: 2.3;
+}
+/* line 85, ../sass/partials/_typography.scss */
+body nav.main ul li a {
+  color: #666;
+}
+/* line 87, ../sass/partials/_typography.scss */
+body nav.main ul li a:hover {
+  color: #222;
+}
+/* line 92, ../sass/partials/_typography.scss */
+body nav.main ul li span a {
+  color: #333;
+  font-weight: bold;
+}
+/* line 102, ../sass/partials/_typography.scss */
+body div.showcase p {
+  line-height: 1.86;
+  font-size: 12.6px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  margin-top: 16px;
+  color: #555;
+}
+/* line 103, ../sass/partials/_typography.scss */
+body div.showcase p a {
+  color: #741b47;
+  border-bottom: 2px solid #741b47;
+  cursor: pointer;
+}
+/* line 107, ../sass/partials/_typography.scss */
+body div.showcase p a:hover {
+  color: #222;
+  border-bottom: 2px solid #222;
+}
+/* line 119, ../sass/partials/_typography.scss */
+body div.showcase h2 + p {
+  margin-top: 18px;
+}
+/* line 123, ../sass/partials/_typography.scss */
+body div.showcase h2 {
+  text-align: left;
+  line-height: 1.08;
+  font-size: 28.013px;
+  font-style: italic;
+}
+/* line 132, ../sass/partials/_typography.scss */
+body div.showcase h3 {
+  margin-top: 25px;
+  text-align: left;
+  line-height: 1.08;
+  font-size: 22.41px;
+}
+/* line 140, ../sass/partials/_typography.scss */
+body div.showcase #produce h2 {
+  padding: 2px 0px 9px 0px;
+  border-bottom: 3px dashed #741b47;
+  margin-left: 10px;
+  width: 415px;
+}
+/* line 148, ../sass/partials/_typography.scss */
+body div.showcase #produce p {
+  padding: 0px 20px 0px 10px;
+}
+/* line 156, ../sass/partials/_typography.scss */
+body div.showcase #team #motto h2 {
+  text-align: center;
+  padding: 18px 0px 9px 0px;
+  border-bottom: 3px dashed #741b47;
+  margin: 0 auto;
+  width: 380px;
+}
+/* line 165, ../sass/partials/_typography.scss */
+body div.showcase #team .bio h3, body div.showcase #team .bio p {
+  padding: 0px 15px 0px 15px;
+  text-align: center;
+}
+/* line 174, ../sass/partials/_typography.scss */
+body div.showcase #contact #magic_location h2 {
+  text-align: center;
+  padding: 18px 0px 9px 0px;
+  border-bottom: 3px dashed #741b47;
+  margin: 0 auto;
+  width: 400px;
+}
+/* line 183, ../sass/partials/_typography.scss */
+body div.showcase #contact #call_to_talk ul {
+  list-style-type: none;
+}
+/* line 187, ../sass/partials/_typography.scss */
+body div.showcase #contact #call_to_talk ul li h3 {
+  margin-top: 16px;
+}
+/* line 190, ../sass/partials/_typography.scss */
+body div.showcase #contact #call_to_talk ul li p {
+  margin-top: 4.5px;
+}
+/* line 193, ../sass/partials/_typography.scss */
+body div.showcase #contact #call_to_talk ul li span {
+  font-weight: bold;
+  color: #333;
+}
+/* line 204, ../sass/partials/_typography.scss */
+body div.showcase #team nav p, body div.showcase #contact nav p {
+  font-style: italic;
+  text-align: center;
+}
+/* line 207, ../sass/partials/_typography.scss */
+body div.showcase #team nav p span, body div.showcase #contact nav p span {
+  font-weight: bold;
+  color: #333;
+}
+/* line 215, ../sass/partials/_typography.scss */
 body footer p {
   line-height: 1.24;
   font-size: 10px;
@@ -87,61 +280,20 @@ body footer p {
   text-align: center;
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
 body {
-  font-family: georgia, serif;
   background-color: #fafafa;
   background-image: url("../images/background_textile2.gif");
 }
-/* line 18, ../sass/screen.scss */
-body ::-moz-selection {
-  background: #ffffa7;
-  color: #222;
-  text-shadow: none;
-}
-/* line 24, ../sass/screen.scss */
-body ::selection {
-  background: #ffffa7;
-  color: #222;
-  text-shadow: none;
-}
-/* line 30, ../sass/screen.scss */
-body a {
-  color: #333;
-  text-decoration: none;
-}
-/* line 33, ../sass/screen.scss */
-body a:link {
-  -webkit-tap-highlight-color: #ffffa7;
-}
-/* line 36, ../sass/screen.scss */
-body a:hover {
-  color: #222;
-  background: #ffffa7;
-  border-bottom: 2px solid #666;
-}
-/* line 41, ../sass/screen.scss */
-body a:active {
-  position: relative;
-  top: 1px;
-}
-/* line 47, ../sass/screen.scss */
-body label, body input[type="button"], body input[type="submit"], body input[type="image"], body button {
-  cursor: pointer;
-}
-/* line 51, ../sass/screen.scss */
-body button, body input, body select, body textarea {
-  margin: 0;
-}
 
-/* line 56, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 #main {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 60, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 #main #xipcraft_branding {
   display: inline;
   float: left;
@@ -153,44 +305,7 @@ body button, body input, body select, body textarea {
 * html #main #xipcraft_branding {
   overflow-x: hidden;
 }
-/* line 63, ../sass/screen.scss */
-#main #xipcraft_branding h1 {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-/* line 31, ../sass/partials/_helpers.scss */
-#main #xipcraft_branding h1 .focusable:active, #main #xipcraft_branding h1 .focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-/* line 64, ../sass/screen.scss */
-#main #xipcraft_branding p {
-  text-align: center;
-}
-/* line 67, ../sass/screen.scss */
-#main #xipcraft_branding p a:hover {
-  position: relative;
-  top: -1px;
-  background: none;
-  border-bottom: none;
-}
-/* line 73, ../sass/screen.scss */
-#main #xipcraft_branding p a:active {
-  position: relative;
-  top: 1px;
-  background: none;
-}
-/* line 82, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 #main #what_and_why {
   display: inline;
   float: left;
@@ -203,11 +318,11 @@ body button, body input, body select, body textarea {
 * html #main #what_and_why {
   overflow-x: hidden;
 }
-/* line 87, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 #main #what_and_why #work_desription {
   margin-top: 15px;
 }
-/* line 92, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 #main .divider {
   display: inline;
   float: left;
@@ -218,51 +333,25 @@ body button, body input, body select, body textarea {
 * html #main .divider {
   overflow-x: hidden;
 }
-/* line 94, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 #main .divider div {
   border-bottom: 3px dashed #741b47;
   height: 16px;
   margin: 0 auto;
   width: 100px;
 }
-/* line 101, ../sass/screen.scss */
-#main nav {
+/* line 45, ../sass/screen.scss */
+#main nav.main {
   display: inline;
   float: left;
   margin-right: 0;
   width: 960px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main nav {
+* html #main nav.main {
   overflow-x: hidden;
 }
-/* line 104, ../sass/screen.scss */
-#main nav ul {
-  list-style-type: none;
-  margin-top: 11.25px;
-  margin-bottom: -5.5px;
-}
-/* line 108, ../sass/screen.scss */
-#main nav ul li {
-  text-align: center;
-  font-size: 15.525px;
-  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-  line-height: 2.3;
-}
-/* line 113, ../sass/screen.scss */
-#main nav ul li a {
-  color: #666;
-}
-/* line 115, ../sass/screen.scss */
-#main nav ul li a:hover {
-  color: #222;
-}
-/* line 121, ../sass/screen.scss */
-#main nav ul li span a {
-  color: #333;
-  font-weight: bold;
-}
-/* line 132, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 #main #produce_team_contact {
   display: inline;
   float: left;
@@ -286,7 +375,7 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact {
   overflow-x: hidden;
 }
-/* line 142, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 #main #produce_team_contact div.showcase {
   position: relative;
   left: 0px;
@@ -294,62 +383,14 @@ body button, body input, body select, body textarea {
   height: 495px;
   width: 960px;
 }
-/* line 151, ../sass/screen.scss */
-#main #produce_team_contact div.showcase p {
-  line-height: 1.86;
-  font-size: 12.6px;
-  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-  margin-top: 16px;
-  color: #555;
-}
-/* line 153, ../sass/screen.scss */
-#main #produce_team_contact div.showcase p a {
-  color: #741b47;
-  border-bottom: 2px solid #741b47;
-  cursor: pointer;
-}
-/* line 157, ../sass/screen.scss */
-#main #produce_team_contact div.showcase p a:hover {
-  color: #222;
-  border-bottom: 2px solid #222;
-}
-/* line 170, ../sass/screen.scss */
-#main #produce_team_contact div.showcase h2 + p {
-  margin-top: 18px;
-}
-/* line 174, ../sass/screen.scss */
-#main #produce_team_contact div.showcase h2 {
-  text-align: left;
-  line-height: 1.08;
-  font-size: 28.013px;
-  font-style: italic;
-}
-/* line 183, ../sass/screen.scss */
-#main #produce_team_contact div.showcase h3 {
-  margin-top: 25px;
-  text-align: left;
-  line-height: 1.08;
-  font-size: 22.41px;
-}
-/* line 191, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #produce {
   float: left;
   height: 495px;
   width: 960px;
   overflow: hidden;
 }
-/* line 196, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #produce h2 {
-  padding: 2px 0px 9px 0px;
-  border-bottom: 3px dashed #741b47;
-  margin-left: 10px;
-  width: 415px;
-}
-/* line 204, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #produce p {
-  padding: 0px 20px 0px 10px;
-}
-/* line 208, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #produce #produce_mascot {
   display: inline;
   float: left;
@@ -360,12 +401,12 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact div.showcase #produce #produce_mascot {
   overflow-x: hidden;
 }
-/* line 210, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #produce #produce_mascot img {
   margin-top: 20px;
   margin-left: 38px;
 }
-/* line 216, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #produce #produce_description {
   display: inline;
   float: left;
@@ -377,7 +418,7 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact div.showcase #produce #produce_description {
   overflow-x: hidden;
 }
-/* line 221, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #produce #produce_description nav {
   display: inline;
   float: left;
@@ -388,14 +429,14 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact div.showcase #produce #produce_description nav {
   overflow-x: hidden;
 }
-/* line 228, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #team {
   height: 495px;
   width: 960px;
   overflow: hidden;
   float: left;
 }
-/* line 234, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #team #motto {
   padding-top: 4px;
   margin-bottom: 36px;
@@ -404,19 +445,35 @@ body button, body input, body select, body textarea {
   margin-right: 0;
   width: 960px;
 }
-/* line 238, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #motto h2 {
-  text-align: center;
-  padding: 18px 0px 9px 0px;
-  border-bottom: 3px dashed #741b47;
-  margin: 0 auto;
-  width: 380px;
-}
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #main #produce_team_contact div.showcase #team #motto {
   overflow-x: hidden;
 }
-/* line 248, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team .pic {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 160px;
+  -moz-box-shadow: 1px 1px 4px 1px #c9c9c9;
+  -webkit-box-shadow: 1px 1px 4px 1px #c9c9c9;
+  -o-box-shadow: 1px 1px 4px 1px #c9c9c9;
+  box-shadow: 1px 1px 4px 1px #c9c9c9;
+  border: 5px solid white;
+  height: 144px;
+}
+/* line 115, ../sass/screen.scss */
+#main #produce_team_contact div.showcase #team .bio {
+  height: 171px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 475px;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main #produce_team_contact div.showcase #team .bio {
+  overflow-x: hidden;
+}
+/* line 120, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #team #bk {
   display: inline;
   float: left;
@@ -427,36 +484,7 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact div.showcase #team #bk {
   overflow-x: hidden;
 }
-/* line 251, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #bk #bk_pic {
-  overflow: hidden;
-  margin: 0 auto;
-  width: 160px;
-  -moz-box-shadow: 1px 1px 4px 1px #c9c9c9;
-  -webkit-box-shadow: 1px 1px 4px 1px #c9c9c9;
-  -o-box-shadow: 1px 1px 4px 1px #c9c9c9;
-  box-shadow: 1px 1px 4px 1px #c9c9c9;
-  border: 5px solid white;
-  height: 144px;
-}
-/* line 260, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #bk #bk_bio {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 475px;
-  height: 171px;
-}
-/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #team #bk #bk_bio {
-  overflow-x: hidden;
-}
-/* line 264, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #bk #bk_bio * {
-  padding: 0px 15px 0px 15px;
-  text-align: center;
-}
-/* line 272, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #team #du {
   display: inline;
   float: left;
@@ -467,36 +495,7 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact div.showcase #team #du {
   overflow-x: hidden;
 }
-/* line 275, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #du #du_pic {
-  overflow: hidden;
-  margin: 0 auto;
-  width: 160px;
-  -moz-box-shadow: 1px 1px 4px 1px #c9c9c9;
-  -webkit-box-shadow: 1px 1px 4px 1px #c9c9c9;
-  -o-box-shadow: 1px 1px 4px 1px #c9c9c9;
-  box-shadow: 1px 1px 4px 1px #c9c9c9;
-  border: 5px solid white;
-  height: 144px;
-}
-/* line 283, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #du #du_bio {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 475px;
-  height: 171px;
-}
-/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #team #du #du_bio {
-  overflow-x: hidden;
-}
-/* line 286, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #du #du_bio * {
-  padding: 0px 15px 0px 15px;
-  text-align: center;
-}
-/* line 294, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #team nav {
   padding-top: 18px;
   display: inline;
@@ -504,27 +503,17 @@ body button, body input, body select, body textarea {
   margin-right: 0;
   width: 960px;
 }
-/* line 296, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team nav p {
-  font-style: italic;
-  text-align: center;
-}
-/* line 299, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team nav p span {
-  font-weight: bold;
-  color: #333;
-}
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #main #produce_team_contact div.showcase #team nav {
   overflow-x: hidden;
 }
-/* line 309, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact {
   height: 495px;
   width: 960px;
   float: left;
 }
-/* line 315, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact #magic_location {
   padding-top: 4px;
   margin-bottom: 36px;
@@ -533,19 +522,11 @@ body button, body input, body select, body textarea {
   margin-right: 0;
   width: 960px;
 }
-/* line 319, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #magic_location h2 {
-  text-align: center;
-  padding: 18px 0px 9px 0px;
-  border-bottom: 3px dashed #741b47;
-  margin: 0 auto;
-  width: 400px;
-}
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #main #produce_team_contact div.showcase #contact #magic_location {
   overflow-x: hidden;
 }
-/* line 330, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact #map_to_xipcraft {
   display: inline;
   float: left;
@@ -556,7 +537,7 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact div.showcase #contact #map_to_xipcraft {
   overflow-x: hidden;
 }
-/* line 332, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact #map_to_xipcraft #the_map {
   overflow: hidden;
   margin: 0 auto;
@@ -570,7 +551,7 @@ body button, body input, body select, body textarea {
   border: 5px solid white;
   height: 320px;
 }
-/* line 342, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact #call_to_talk {
   display: inline;
   float: left;
@@ -581,30 +562,13 @@ body button, body input, body select, body textarea {
 * html #main #produce_team_contact div.showcase #contact #call_to_talk {
   overflow-x: hidden;
 }
-/* line 344, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact #call_to_talk div {
   overflow: hidden;
   margin: 0 auto;
   width: 420px;
 }
-/* line 348, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #call_to_talk div ul {
-  list-style-type: none;
-}
-/* line 352, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #call_to_talk div ul li h3 {
-  margin-top: 16px;
-}
-/* line 355, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #call_to_talk div ul li p {
-  margin-top: 4.5px;
-}
-/* line 358, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #call_to_talk div ul li span {
-  font-weight: bold;
-  color: #333;
-}
-/* line 367, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact nav {
   padding-top: 12px;
   display: inline;
@@ -612,21 +576,11 @@ body button, body input, body select, body textarea {
   margin-right: 0;
   width: 960px;
 }
-/* line 369, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact nav p {
-  font-style: italic;
-  text-align: center;
-}
-/* line 373, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact nav p span {
-  font-weight: bold;
-  color: #333;
-}
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #main #produce_team_contact div.showcase #contact nav {
   overflow-x: hidden;
 }
-/* line 385, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 #main #the_end {
   margin-top: 13.5px;
   display: inline;
