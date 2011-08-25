@@ -1,5 +1,6 @@
+@import "partials/typography";
 @import "partials/helpers";
-@import "compass/css3/transition";
+@import "partials/xcarousel";
 
 /* Bootstrapping the page
 ---------------------------------------- */
@@ -14,31 +15,4 @@
 #contact { @include trace(blue);}
 
 
-
-.stage {
-  float: left;
-  overflow: hidden;
-  width: 960px; // Will keep changing depending on @media
-  height: 400px; // STRICTLY FOR TESTING.. Should be governed by content..
-  margin-top: 40px; // STRICTLY FOR TESTING.. Should be governed by parent el..
-  
-  .showcase {
-    overflow: hidden;
-    float: left;
-    width: 4*960px; // Will keep changing depending on @media
-    height: 400px; // STRICTLY FOR TESTING.. Should be governed by content..
-    
-    @include single-transition(left, 0.5s, ease-in-out, 0);
-    
-    position: relative;
-    left: -0*960px;
-    top: 0px;
-    
-    .show {
-      overflow: hidden;
-      float: left;
-      width: 960px; // Will keep changing depending on @media
-      height: 400px; // STRICTLY FOR TESTING.. Should be governed by content..
-    }
-  }
-}
+@include xCarousel("#produce_team_contact","960px","#main_showcase","2880px",".show","960px","0.5s","ease-in-out");

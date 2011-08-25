@@ -29,21 +29,15 @@
 ---------------------------------------- */
 
 /* xCarousel SCSS mixin usage:
+@import "partials/xcarousel"; // Path may change..
 
-@include xCarousel(
-  $stage_id,
-  $stage_width, // Can be overridden using xCarouselAdaptiveOverride and @media
-  $showcase_id,
-  $show_width,  // Can be overridden using xCarouselAdaptiveOverride and @media
-  $number_of_shows,
-  $animation_duration,
-  $animation_easing,
-  $show_class
-);
+@include xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation_duration,$animation_easing);
+
 
 ---------------------------------------- */
+@import "compass/css3/transition";
 
-@mixin xCarousel($stage_id,$stage_width,$showcase_id,$show_width,$number_of_shows,$animation_duration,$animation_easing,$show_class) {
+@mixin xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation_duration,$animation_easing) {
   
   #{$stage_id} {
     float: left;
@@ -53,13 +47,13 @@
     #{$showcase_id} {
       overflow: hidden;
       float: left;
-      width: #{$number_of_shows}*#{$show_width};
+      width: #{$showcase_width};
       position: relative;
       left: 0px;
       top: 0px;
       @include single-transition(left, #{$animation_duration}, #{$animation_easing}, 0);
 
-      #{show_class} {
+      #{$show_class} {
         overflow: hidden;
         float: left;
         width: #{$show_width};
@@ -73,22 +67,15 @@
 
 /* xCarouselAdaptiveOverride SCSS mixin usage:
 
-@include xCarouselAdaptiveOverride(
-  $stage_id,        // Specify details of the xCarousel that you want to override
-  $stage_width,     // Override using @media
-  $showcase_id,     // Specify details of the xCarousel that you want to override
-  $show_width,      // Override using @media
-  $number_of_shows, // Specify details of the xCarousel that you want to override
-  $show_class       // Specify details of the xCarousel that you want to override
-);
+@import xCarouselAdaptiveOverride($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width);
 ---------------------------------------- */
-@mixin xCarouselAdaptiveOverride($stage_id,$stage_width,$showcase_id,$show_width,$number_of_shows,$show_class) {
+@mixin xCarouselAdaptiveOverride($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width) {
   
   #{$stage_id} {
     width: #{$stage_width};
 
     #{$showcase_id} {
-      width: #{$number_of_shows}*#{$show_width};
+      width: #{$showcase_width};
 
       #{show_class} {
         width: #{$show_width};
