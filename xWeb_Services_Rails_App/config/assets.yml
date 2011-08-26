@@ -17,8 +17,8 @@ javascripts:
     
 stylesheets: 
   gorgeous: 
-  - public/framework/css/resets.css
-  - public/framework/css/common.css
+  #- public/framework/css/resets.css
+  #- public/framework/css/common.css
   - public/stylesheets/**/*.css
-  - public/framework/css/helpers.css
-  - public/framework/css/print.css
+  #- public/framework/css/helpers.css
+  #- public/framework/css/print.css
