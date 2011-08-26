@@ -1,0 +1,85 @@
+/* xCarousel: A simple light carousel mixin to be used with CSS3 transforms to enable smooth animation
+   @author: Balwant K.
+---------------------------------------- */
+
+/* HTML structure:
+   Note that the following structure is created with generic div tags. 
+   I encourage you to replace them with with more semantic HTML5 tags.
+   
+   <div id="stage_id">
+     <div id="showcase_id">
+       <div class="show_class">
+         <!-- Content elements go here...-->
+       </div>
+       <div class="show_class">
+         <!-- Content elements go here...-->
+       </div>
+       <div class="show_class">
+         <!-- Content elements go here...-->
+       </div>
+       <!-- More shows can go here...-->
+     </div>
+   </div>
+---------------------------------------- */
+
+/* Javascript control:
+
+> document.getElementById("<showcase_id>").style.left="<distance_to_show>";
+
+---------------------------------------- */
+
+/* xCarousel SCSS mixin usage:
+@import "partials/xcarousel"; // Path may change..
+
+@include xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation_duration,$animation_easing);
+
+
+---------------------------------------- */
+@import "compass/css3/transition";
+
+@mixin xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation_duration,$animation_easing) {
+  
+  #{$stage_id} {
+    float: left;
+    overflow: hidden;
+    width: #{$stage_width};
+
+    #{$showcase_id} {
+      overflow: hidden;
+      float: left;
+      width: #{$showcase_width};
+      position: relative;
+      left: 0px;
+      top: 0px;
+      @include single-transition(left, #{$animation_duration}, #{$animation_easing}, 0);
+
+      #{$show_class} {
+        overflow: hidden;
+        float: left;
+        width: #{$show_width};
+      }
+    }
+  }
+}
+
+/* A mixin to use when overriding dimentions in an Adaptive Design
+---------------------------------------- */
+
+/* xCarouselAdaptiveOverride SCSS mixin usage:
+
+@import xCarouselAdaptiveOverride($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width);
+---------------------------------------- */
+@mixin xCarouselAdaptiveOverride($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width) {
+  
+  #{$stage_id} {
+    width: #{$stage_width};
+
+    #{$showcase_id} {
+      width: #{$showcase_width};
+
+      #{show_class} {
+        width: #{$show_width};
+      }
+    }
+  }
+}
