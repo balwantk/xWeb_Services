@@ -1,4 +1,3 @@
-@wip
 Feature: Information Views
   As a site visitor
   I want information about Xipcraft
