@@ -13,15 +13,13 @@ module NavigationHelpers
     when /^Xipcraft's home page$/
       '/'
     when /^Xipcraft's hash home page$/
-      '/#!home'
-    when /^Xipcraft's products page$/
-      '/#!products'
-    when /^Xipcraft's values page$/
-      '/#!values'
+      '/#home'
+    when /^Xipcraft's produce page$/
+      '/#produce'
     when /^Xipcraft's team page$/
-      '/'
+      '/#team'
     when /^Xipcraft's contact page$/
-      '/#!contact'
+      '/#contact'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
