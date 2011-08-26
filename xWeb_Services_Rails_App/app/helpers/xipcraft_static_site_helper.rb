@@ -1,0 +1,2 @@
+module XipcraftStaticSiteHelper
+end

@@ -1,9 +1,6 @@
 XWebServicesRailsApp::Application.routes.draw do
-  get "message/create"
-
-  get "home/index"
-  match "/home" => "home#index"
-  root :to => "home#index"
+  get "xipcraft_static_site/index"
+  root :to => "xipcraft_static_site#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,5 +1,6 @@
 --- 
 javascripts: 
+  # COMMON STACK:
   hot_ping:
   - public/framework/js/dd_belatedpng.js
   power_extreme:
@@ -14,11 +15,17 @@ javascripts:
   - public/framework/js/drag-drop.js  
   - public/javascripts/**/*.js 
   - app/views/**/*.jst
+  
+  # CUSTOM PACKAGES:
+  # prep_for_xipcraft_static_site:
+  # - public/javascripts/support_bin/xipcraft_static_site_modernizr.js
     
 stylesheets: 
+  # COMMON STACK:
   gorgeous: 
-  #- public/framework/css/resets.css
-  #- public/framework/css/common.css
   - public/stylesheets/**/*.css
-  #- public/framework/css/helpers.css
-  #- public/framework/css/print.css
+  
+  # CUSTOM PACKAGES:
+  make_xipcraft_static_site_gorgeous:
+  - public/stylesheets/xipcraft_static_site.css
+  

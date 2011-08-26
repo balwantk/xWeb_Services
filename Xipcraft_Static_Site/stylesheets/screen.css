@@ -554,8 +554,6 @@ body {
   overflow: hidden;
   margin: 0 auto;
   width: 405px;
-  background: grey;
-  opacity: 0.5;
   -moz-box-shadow: 1px 1px 8px 3px #c9c9c9;
   -webkit-box-shadow: 1px 1px 8px 3px #c9c9c9;
   -o-box-shadow: 1px 1px 8px 3px #c9c9c9;
@@ -563,7 +561,7 @@ body {
   border: 5px solid white;
   height: 320px;
 }
-/* line 136, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact #call_to_talk {
   display: inline;
   float: left;
@@ -574,13 +572,13 @@ body {
 * html #main #produce_team_contact div.showcase #contact #call_to_talk {
   overflow-x: hidden;
 }
-/* line 138, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact #call_to_talk div {
   overflow: hidden;
   margin: 0 auto;
   width: 420px;
 }
-/* line 144, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 #main #produce_team_contact div.showcase #contact nav {
   padding-top: 12px;
   display: inline;
@@ -592,7 +590,7 @@ body {
 * html #main #produce_team_contact div.showcase #contact nav {
   overflow-x: hidden;
 }
-/* line 153, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 #main #the_end {
   margin-top: 13.5px;
   display: inline;
