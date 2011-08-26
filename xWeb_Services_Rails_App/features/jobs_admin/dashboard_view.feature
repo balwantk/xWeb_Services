@@ -1,5 +1,5 @@
 Feature: Dashboard view
   As a jobs admin
-  I want to visit to admin dashboard view
-  So that I can do question entries, descriptive test checking and see the employment candidate list etc.
+  I want to visit to admin dashboard view and see links to various dashboard actions
+  So that I can easelly access all admin actions in one view
   
