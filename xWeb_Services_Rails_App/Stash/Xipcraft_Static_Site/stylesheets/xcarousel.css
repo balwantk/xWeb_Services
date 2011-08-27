@@ -1,0 +1,298 @@
+/* line 3, ../sass/partials/_typography.scss */
+body {
+  font-family: georgia, serif;
+}
+/* line 6, ../sass/partials/_typography.scss */
+body ::-moz-selection {
+  background: #ffffa7;
+  color: #222;
+  text-shadow: none;
+}
+/* line 11, ../sass/partials/_typography.scss */
+body ::selection {
+  background: #ffffa7;
+  color: #222;
+  text-shadow: none;
+}
+/* line 17, ../sass/partials/_typography.scss */
+body a {
+  color: #333;
+  text-decoration: none;
+}
+/* line 20, ../sass/partials/_typography.scss */
+body a:link {
+  -webkit-tap-highlight-color: #ffffa7;
+}
+/* line 23, ../sass/partials/_typography.scss */
+body a:hover {
+  color: #222;
+  background: #ffffa7;
+  border-bottom: 2px solid #666;
+}
+/* line 28, ../sass/partials/_typography.scss */
+body a:active {
+  position: relative;
+  top: 1px;
+}
+/* line 34, ../sass/partials/_typography.scss */
+body h1 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 31, ../sass/partials/_helpers.scss */
+body h1 .focusable:active, body h1 .focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* line 38, ../sass/partials/_typography.scss */
+body h2 {
+  font-size: 33.75px;
+  text-align: center;
+  color: #333;
+  line-height: 1.08;
+}
+/* line 46, ../sass/partials/_typography.scss */
+body hgroup div h3 {
+  text-align: center;
+  line-height: 1.24;
+  font-size: 15.75px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  margin-top: 13px;
+  color: #555;
+}
+/* line 57, ../sass/partials/_typography.scss */
+body #xipcraft_branding p {
+  text-align: center;
+}
+/* line 60, ../sass/partials/_typography.scss */
+body #xipcraft_branding p a:hover {
+  position: relative;
+  top: -1px;
+  background: none;
+  border-bottom: none;
+}
+/* line 66, ../sass/partials/_typography.scss */
+body #xipcraft_branding p a:active {
+  position: relative;
+  top: 1px;
+  background: none;
+}
+/* line 76, ../sass/partials/_typography.scss */
+body nav.main ul {
+  list-style-type: none;
+  margin-top: 11.25px;
+  margin-bottom: -5.5px;
+}
+/* line 80, ../sass/partials/_typography.scss */
+body nav.main ul li {
+  text-align: center;
+  font-size: 15.525px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  line-height: 2.3;
+}
+/* line 85, ../sass/partials/_typography.scss */
+body nav.main ul li a {
+  color: #666;
+}
+/* line 87, ../sass/partials/_typography.scss */
+body nav.main ul li a:hover {
+  color: #222;
+}
+/* line 92, ../sass/partials/_typography.scss */
+body nav.main ul li span a {
+  color: #333;
+  font-weight: bold;
+}
+/* line 102, ../sass/partials/_typography.scss */
+body div.showcase p {
+  line-height: 1.86;
+  font-size: 12.6px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  margin-top: 16px;
+  color: #555;
+}
+/* line 103, ../sass/partials/_typography.scss */
+body div.showcase p a {
+  color: #741b47;
+  border-bottom: 2px solid #741b47;
+  cursor: pointer;
+}
+/* line 107, ../sass/partials/_typography.scss */
+body div.showcase p a:hover {
+  color: #222;
+  border-bottom: 2px solid #222;
+}
+/* line 119, ../sass/partials/_typography.scss */
+body div.showcase h2 + p {
+  margin-top: 18px;
+}
+/* line 123, ../sass/partials/_typography.scss */
+body div.showcase h2 {
+  text-align: left;
+  line-height: 1.08;
+  font-size: 28.013px;
+  font-style: italic;
+}
+/* line 132, ../sass/partials/_typography.scss */
+body div.showcase h3 {
+  margin-top: 25px;
+  text-align: left;
+  line-height: 1.08;
+  font-size: 22.41px;
+}
+/* line 140, ../sass/partials/_typography.scss */
+body div.showcase #produce h2 {
+  padding: 2px 0px 9px 0px;
+  border-bottom: 3px dashed #741b47;
+  margin-left: 10px;
+  width: 415px;
+}
+/* line 148, ../sass/partials/_typography.scss */
+body div.showcase #produce p {
+  padding: 0px 20px 0px 10px;
+}
+/* line 156, ../sass/partials/_typography.scss */
+body div.showcase #team #motto h2 {
+  text-align: center;
+  padding: 18px 0px 9px 0px;
+  border-bottom: 3px dashed #741b47;
+  margin: 0 auto;
+  width: 380px;
+}
+/* line 165, ../sass/partials/_typography.scss */
+body div.showcase #team .bio h3, body div.showcase #team .bio p {
+  padding: 0px 15px 0px 15px;
+  text-align: center;
+}
+/* line 174, ../sass/partials/_typography.scss */
+body div.showcase #contact #magic_location h2 {
+  text-align: center;
+  padding: 18px 0px 9px 0px;
+  border-bottom: 3px dashed #741b47;
+  margin: 0 auto;
+  width: 400px;
+}
+/* line 183, ../sass/partials/_typography.scss */
+body div.showcase #contact #call_to_talk ul {
+  list-style-type: none;
+}
+/* line 187, ../sass/partials/_typography.scss */
+body div.showcase #contact #call_to_talk ul li h3 {
+  margin-top: 16px;
+}
+/* line 190, ../sass/partials/_typography.scss */
+body div.showcase #contact #call_to_talk ul li p {
+  margin-top: 4.5px;
+}
+/* line 193, ../sass/partials/_typography.scss */
+body div.showcase #contact #call_to_talk ul li span {
+  font-weight: bold;
+  color: #333;
+}
+/* line 204, ../sass/partials/_typography.scss */
+body div.showcase #team nav p, body div.showcase #contact nav p {
+  font-style: italic;
+  text-align: center;
+}
+/* line 207, ../sass/partials/_typography.scss */
+body div.showcase #team nav p span, body div.showcase #contact nav p span {
+  font-weight: bold;
+  color: #333;
+}
+/* line 215, ../sass/partials/_typography.scss */
+body footer p {
+  line-height: 1.24;
+  font-size: 10px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  margin: 4px;
+  color: #bababa;
+  text-align: center;
+}
+
+/* xCarousel: A simple light carousel mixin to be used with CSS3 transforms to enable smooth animation
+   @author: Balwant K.
+---------------------------------------- */
+/* HTML structure:
+   Note that the following structure is created with generic div tags. 
+   I encourage you to replace them with with more semantic HTML5 tags.
+   
+   <div id="stage_id">
+     <div id="showcase_id">
+       <div class="show_class">
+         <!-- Content elements go here...-->
+       </div>
+       <div class="show_class">
+         <!-- Content elements go here...-->
+       </div>
+       <div class="show_class">
+         <!-- Content elements go here...-->
+       </div>
+       <!-- More shows can go here...-->
+     </div>
+   </div>
+---------------------------------------- */
+/* Javascript control:
+
+> document.getElementById("<showcase_id>").style.left="<distance_to_show>";
+
+---------------------------------------- */
+/* xCarousel SCSS mixin usage:
+@import "partials/xcarousel"; // Path may change..
+
+@include xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation_duration,$animation_easing);
+
+
+---------------------------------------- */
+/* A mixin to use when overriding dimentions in an Adaptive Design
+---------------------------------------- */
+/* xCarouselAdaptiveOverride SCSS mixin usage:
+
+@import xCarouselAdaptiveOverride($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width);
+---------------------------------------- */
+/* line 42, ../sass/partials/_xcarousel.scss */
+#produce_team_contact {
+  float: left;
+  overflow: hidden;
+  width: 960px;
+}
+/* line 47, ../sass/partials/_xcarousel.scss */
+#produce_team_contact #main_showcase {
+  overflow: hidden;
+  float: left;
+  width: 2880px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  -moz-transition-property: left;
+  -webkit-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -moz-transition-delay: 0;
+  -webkit-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0;
+}
+/* line 56, ../sass/partials/_xcarousel.scss */
+#produce_team_contact #main_showcase .show {
+  overflow: hidden;
+  float: left;
+  width: 960px;
+}

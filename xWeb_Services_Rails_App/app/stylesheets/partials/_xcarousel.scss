@@ -31,13 +31,13 @@
 /* xCarousel SCSS mixin usage:
 @import "partials/xcarousel"; // Path may change..
 
-@include xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation_duration,$animation_easing);
+@include xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation-toggle,$animation_duration,$animation_easing);
 
 
 ---------------------------------------- */
 @import "compass/css3/transition";
 
-@mixin xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation_duration,$animation_easing) {
+@mixin xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation-toggle,$animation_duration,$animation_easing) {
   
   #{$stage_id} {
     float: left;
@@ -51,7 +51,10 @@
       position: relative;
       left: 0px;
       top: 0px;
-      @include single-transition(left, #{$animation_duration}, #{$animation_easing}, 0);
+      
+      @if ($animation-toggle) {
+        @include single-transition(left, #{$animation_duration}, #{$animation_easing}, 0);
+      }      
 
       #{$show_class} {
         overflow: hidden;

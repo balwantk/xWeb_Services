@@ -1,27 +1,22 @@
 /* @author: Balwant K.
 ---------------------------------------- */
-/*
-  TODO Print styles
-*/
+
 @import "blueprint/reset";
-@import "partials/xipcraft_static_site/base";
+@import "partials/base";
 @import "blueprint";
-
 @import "partials/helpers";
-@import "partials/xipcraft_static_site/typography";
+@import "partials/typography";
 @import "partials/xcarousel";
-
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "compass/css3/transition";
 
 
-html{height: 100%;}
 body {
   background-color: #fafafa;
-  background-image: url('/images/xipcraft_static_site/background_textile2.gif');
-  height: 100%;
+  background-image: url('../images/background_textile2.gif');
 }
+
 
 #main {
   @include container;   
@@ -78,7 +73,8 @@ body {
           nav {
             @include column(12, true);
           }
-        }     
+        }
+        
       }
       
       #team {
@@ -117,30 +113,30 @@ body {
       }
            
       #contact {
-        #magic_location {          
+
+        #magic_location {
+          //@include trace(green);
           padding-top: 4px;         //
           margin-bottom: 2*$vgh;   //
           @include column(24, true);
         }       
         
         #map_to_xipcraft {
-          @include column(13);
+          @include column(12);
           #the_map {
             overflow: hidden;
-            width: 400px;
-            margin-left: 80px;      
+            @include wrapper(405px);
+            @include single-box-shadow(#c9c9c9, 1px, 1px, 8px, 3px, false);
             border: 5px solid white;   //
             height: 320px;   //
-            @include single-box-shadow(#c9c9c9, 1px, 1px, 8px, 3px, false);
           }
         }
         
         #call_to_talk {
-          @include column(11, true);
+          @include column(12, true);
           div {
             overflow: hidden;
-            width: 400px;
-            margin-left: 15px;
+            @include wrapper(420px);
           }
         }
 
@@ -148,38 +144,15 @@ body {
           padding-top:12px;
           @include column(24, true);
         }
-      }      
+      }
+      
     }
   }
-    
+  
   #the_end {
     margin-top: 13.5px; //
     @include column(24, true);
   }
 }
-/*
-  TODO Isolate AWD Dependencies
-*/
-/*
-  TODO Write @media stubs
-*/
-/*
-  TODO Figure out why css3 animation is framing
-*/
 
-@include xCarousel("#produce_team_contact","960px","#main_showcase","2880px",".show","960px",true,"0.3s","ease-in-out");  //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@include xCarousel("#produce_team_contact","960px","#main_showcase","2880px",".show","960px","0.5s","ease-in-out");  //
