@@ -2,27 +2,25 @@
 ---------------------------------------- */
 /*
   TODO Print styles
-  TODO Isolate AWD Dependencies
-  TODO Write @media stubs
-  TODO Figure out why css3 animation is framing
+  TODO Testing on IE and Winmo and iOS.
+  Compress HTML and CSS
+  Document code?
 */
 
   
-
-
 @import "blueprint/reset";
 @import "partials/xipcraft_static_site/base";
 @import "blueprint";
-
 @import "partials/helpers";
 @import "partials/xipcraft_static_site/typography";
 @import "partials/xcarousel";
-
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "compass/css3/transition";
 
 
+/* Base styling
+---------------------------------------- */
 html{height: 100%;}
 body {
   background-color: #fafafa;
@@ -30,11 +28,13 @@ body {
   height: 100%;
 }
 
-
-/* NO JS and less or equal to than 480px width => One Column fluid width layout:
+/*****************************************************/
+/*****************************************************/
+/* Start: Default 1col fluid layout for viewports that don't handle media queries as well as those that are less than 480px width..
 ---------------------------------------- */
 
 body {width: 98%; margin: 0 auto;}
+
 #main {
   width: 100%;    
   #xipcraft_branding {
@@ -187,17 +187,15 @@ body {width: 98%; margin: 0 auto;}
 
 @include xCarousel("#produce_team_contact","100%","#main_showcase","300%",".show","33.333333333332%",false,"0.3s","ease-in-out"); // No JS
 
-/* END: =<480
+/* End: Default layout for viewports that don't handle media queries as well as those that are less than 480px width..
 ---------------------------------------- */
+/*****************************************************/
+/*****************************************************/
 
-/* 
+/*****************************************************/
+/*****************************************************/
+/* Start: 2 Col fluid.. For everything in between real 960px and 480px
 ---------------------------------------- */
-/* 
----------------------------------------- */
-
-/* START: 2 Col fluid.. For everything in between real 960px and 480px
----------------------------------------- */
-
 
 @media screen and (min-width:480px), handheld and (min-width:480px){
 
@@ -323,14 +321,16 @@ body {width: 98%; margin: 0 auto;}
   }
 }
 
-/* END 2 Col fluid.. For everything in between real 960px and 480px
+/* End: 2 Col fluid Layout for everything in between real 960px and 480px
 ---------------------------------------- */
-/* 
----------------------------------------- */
-/* 
----------------------------------------- */
+/*****************************************************/
+/*****************************************************/
+
+/*****************************************************/
+/*****************************************************/
 /* Start: FIXED WIDTH LAYOUT FOR BIGGER SCREENS
 ----------------------------------------  */
+
 @media screen and (min-width:960px), handheld and (min-width:960px){
   
   #main {
@@ -481,25 +481,30 @@ body {width: 98%; margin: 0 auto;}
       @include column(24, true);
     }
   }
-  @include xCarousel("#produce_team_contact","auto","#main_showcase","2880px",".show","960px",true,"0.3s","ease-in-out");  //
+  @include xCarousel("#produce_team_contact","auto","#main_showcase","2880px",".show","960px",true,"0.3s","ease-in-out");
 }
- 
-
 
 /* End: FIXED WIDTH LAYOUT FOR BIGGER SCREENS
 ---------------------------------------- */
+/*****************************************************/
+/*****************************************************/
 
 
-/* NO JS Settings
----------------------------------------- 
-margin-bottom: 48px;
-@include xCarousel("#produce_team_contact","100%","#main_showcase","100%",".show","100%",false,"0.3s","ease-in-out"); // No JS
+/*****************************************************/
+/*****************************************************/
+/* Start: NO JS Settings
+---------------------------------------- */
 
-#produce {margin-bottom: 20px;}
-#team nav {@include hidden;}
-#contact {margin-top: 0px;}
-*/
-
+html.no-js {
+  @include xCarousel("#produce_team_contact","100%","#main_showcase","100%",".show","100%",false,"0.3s","ease-in-out"); // No JS
+  #produce {margin-bottom: 20px;}
+  #team nav {@include visuallyhidden;}
+  #contact {margin-top: 0px;} 
+}
+/* End: NO JS Settings
+---------------------------------------- */
+/*****************************************************/
+/*****************************************************/
 
 
 

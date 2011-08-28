@@ -15,14 +15,17 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="shortcut icon" href="images/xipcraft_static_site/favicon.ico">
   
-  <%= include_stylesheets :make_xipcraft_static_site_gorgeous %>
   <!--[if lt IE 9]><%= include_javascripts :power_extreme %></script><![endif]-->
+  <%= include_stylesheets :make_xipcraft_static_site_gorgeous %>
+  <%= include_javascripts :prep_for_xipcraft_static_site %>
+  
   <%= csrf_meta_tag %>
   <%= yield :head %>
 </head>
 <body>
   <%= yield %>
   <!--[if lt IE 7 ]><%= include_javascripts :hot_ping %><![endif]-->
+  <%= include_javascripts :awesomeness_for_xipcraft_static_site %>
   <script>
     var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;

@@ -1,4 +1,6 @@
-/* xCarousel: A simple light carousel mixin to be used with CSS3 transforms to enable smooth animation
+/* xCarousel: A simple light carousel mixin to be used with 
+              CSS3 or JS transforms to enable smooth animation
+              
    @author: Balwant K.
 ---------------------------------------- */
 
@@ -25,18 +27,15 @@
 /* Javascript control:
 
 > document.getElementById("<showcase_id>").style.left="<distance_to_show>";
-
 ---------------------------------------- */
 
 /* xCarousel SCSS mixin usage:
+
 @import "partials/xcarousel"; // Path may change..
-
 @include xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation-toggle,$animation_duration,$animation_easing);
-
-
 ---------------------------------------- */
-@import "compass/css3/transition";
 
+@import "compass/css3/transition";
 @mixin xCarousel($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width,$animation-toggle,$animation_duration,$animation_easing) {
   
   #{$stage_id} {
@@ -64,30 +63,3 @@
     }
   }
 }
-
-/* A mixin to use when overriding dimentions in an Adaptive Design
----------------------------------------- */
-
-/* xCarouselAdaptiveOverride SCSS mixin usage:
-
-@import xCarouselAdaptiveOverride($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width);
----------------------------------------- */
-@mixin xCarouselAdaptiveOverride($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width) {
-  
-  #{$stage_id} {
-    width: #{$stage_width};
-
-    #{$showcase_id} {
-      width: #{$showcase_width};
-
-      #{show_class} {
-        width: #{$show_width};
-      }
-    }
-  }
-}
-
-/* Experimental Stuff:
----------------------------------------- */
-
-//@include xCarousel("#produce_team_contact","100%","#main_showcase","300%",".show","33.33333332%",true,"0.3s","ease-in-out");  //
