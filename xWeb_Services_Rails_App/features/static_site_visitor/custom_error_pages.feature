@@ -1,8 +1,8 @@
 @wip
 Feature: Error pages
-  As a site visitor on 
-  I want to be greeted gently
-  So that I feel that the guys at xipcraft know what they're doing
+  As a site visitor 
+  I want to be greeted gently if there is an error and be educated
+  So that I know what went wrong
   
   Scenario: Visiting a non existent page 
     When I visit a non-existent page
