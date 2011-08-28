@@ -17,8 +17,10 @@ javascripts:
   - app/views/**/*.jst
   
   # CUSTOM PACKAGES:
-  # prep_for_xipcraft_static_site:
-  # - public/javascripts/support_bin/xipcraft_static_site_modernizr.js
+  prep_for_xipcraft_static_site:
+  # xCheck.forJavaScript
+  
+  awesomeness_for_xipcraft_static_site:
     
 stylesheets: 
   # COMMON STACK:
