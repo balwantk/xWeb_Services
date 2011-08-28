@@ -10,19 +10,19 @@ Feature: Error pages
       And I should be told that "We can't find the page that you are looking for..."
       And I should see "Are you sure it exists?"
       And I should see "Can we help?" 
-      And I should see a link to  "Contact us"
+      And I should see a link to "Contact us"
     
   Scenario: Internal server error
-    When I visit a non-existent page
+    When The page I visit triggers a server error
     Then I should get a "500" Status
       And I should be told that "Oops, looks like something went wrong here!"
       And I should see "We are looking into the matter."
       And I should see "Can we help?" 
-      And I should see a link to  "Contact us"
+      And I should see a link to "Contact us"
 
   Scenario: Rejected request
-    When I visit a non-existent page
+    When The page I visit is not authorized for access
     Then I should get a "422" Status
-      And I should be told that "Umm, sorry, I don't think we can do that for you..."
+      And I should be told that "Sorry, I don't think we can do that for you..."
       And I should see "Can we help?" 
-      And I should see a link to  "Contact us"
+      And I should see a link to "Contact us"

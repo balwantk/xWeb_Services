@@ -24,8 +24,15 @@ Feature: No JS support
           </nav>
         """
       And I should see the copyright notice as "<strong>&copy; Xipcraft Systems Pvt. Ltd.</strong>".
-
-  Scenario Outline: Other Views
+  
+  Scenario: Correct carousel style on JS off.
+  # TODO
+  
+  Scenario: no-js class applied on html tag
+    When I go to Xipcraft's home page
+    Then The html tag should HAVE a class of "no-js"
+  
+  Scenario Outline: Content of Other Views
     Given JS is off
       And that i am on Xipcraft's home page
     When I navigate to Xipcraft's <this_page>
