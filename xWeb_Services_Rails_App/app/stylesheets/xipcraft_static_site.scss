@@ -185,6 +185,7 @@ body {width: 98%; margin: 0 auto;}
   }
 }
 
+@include xCarousel("#produce_team_contact","100%","#main_showcase","300%",".show","33.333333333332%",false,"0.3s","ease-in-out"); // No JS
 
 /* END: =<480
 ---------------------------------------- */
@@ -196,7 +197,7 @@ body {width: 98%; margin: 0 auto;}
 
 /* START: 2 Col fluid.. For everything in between real 960px and 480px
 ---------------------------------------- */
-@include xCarousel("#produce_team_contact","100%","#main_showcase","300%",".show","33.333333333332%",false,"0.3s","ease-in-out"); // No JS
+
 
 @media screen and (min-width:480px), handheld and (min-width:480px){
 
@@ -359,12 +360,11 @@ body {width: 98%; margin: 0 auto;}
 
     #produce_team_contact {
       @include column(24, true);
-      height: 495px;
       div.showcase {        
         #produce {      
           #produce_mascot {
             @include column(12);
-            height: 495px; //
+            height: 520px; //
             overflow: hidden;
             margin: 0px;
             img {
