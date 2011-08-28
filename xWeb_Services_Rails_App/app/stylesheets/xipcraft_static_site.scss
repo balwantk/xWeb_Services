@@ -2,7 +2,14 @@
 ---------------------------------------- */
 /*
   TODO Print styles
+  TODO Isolate AWD Dependencies
+  TODO Write @media stubs
+  TODO Figure out why css3 animation is framing
 */
+
+  
+
+
 @import "blueprint/reset";
 @import "partials/xipcraft_static_site/base";
 @import "blueprint";
@@ -23,17 +30,24 @@ body {
   height: 100%;
 }
 
+
+/* NO JS and less or equal to than 480px width => One Column fluid width layout:
+---------------------------------------- */
+
+body {width: 98%; margin: 0 auto;}
 #main {
-  @include container;   
-  //@include showgrid;
-  
+  width: 100%;    
   #xipcraft_branding {
-    @include column(24, true); 
-    margin-top: 1.6*($vgh*1.25);   //
+    width: 100%; 
+    margin-top: 1.6*($vgh*1.25);
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   
   #what_and_why {
-    @include column(24, true);
+    width: 100%; 
     margin-top: 0.4*($vgh*1.25); //
     margin-bottom: 15px;     //
     #work_desription {
@@ -42,7 +56,7 @@ body {
   }  
   
   .divider {
-    @include column(24, true);
+    width: 100%;
     div {
       border-bottom: 3px dashed #741b47;  //
       height: 16px; //
@@ -51,32 +65,39 @@ body {
   }
   
   nav.main {
-    @include column(24, true);
+    width: 100%;
   }
   
   #produce_team_contact {
-    @include column(24, true);
     margin-top: 1.3*($vgh*1.25);  //
-    @include border-radius(($vgh*1.25)/2);
     @include single-box-shadow(#c9c9c9, 0px, 1px, 2px, 2px, true);   
+    @include border-radius(($vgh*1.25)/2);
     background: #fff;
     
-    div.showcase { 
-      #produce {      
+    div.showcase {
+       
+      #produce {    
+          
         #produce_mascot {
-          @include column(12);
-          height: 495px; //
+          width: 50%;
+          margin: 5% 25% -10% 25%;
           img {
-            margin-top: 20px; //
-            margin-left: 38px; //
-          }
+            width: 100%;
+            height: auto;
+          }        
         }
         
         #produce_description {  
-          @include column(12, true);
+          
+          width: 90%;
+          margin: 0% 5%;
+          h2 {
+            width: 90%;
+            margin-right: 5%;
+          }
           padding-top: 2.2*($vgh);     // 
           nav {
-            @include column(12, true);
+            width: 100%;
           }
         }     
       }
@@ -84,8 +105,12 @@ body {
       #team {
         #motto {
           padding-top: 4px;  //
+          width: 90%;
+          margin: 0% 5%;
+          h2 {
+            width: 100%;
+          }
           margin-bottom: 2*$vgh;  //
-          @include column(24, true);
         }
   
         .pic {
@@ -93,86 +118,387 @@ body {
           @include wrapper(160px);
           @include single-box-shadow(#c9c9c9, 1px, 1px, 4px, 1px, false);
           border: 5px solid white;  //
-          height: 8*($vgh);  //
         }
-        
-        .bio {
-          height: 9.5*($vgh); //
-          @include column(12, true);
-        }
-      
+             
         #bk {
-          @include column(12);
-        }
-        
+          width: 100%;
+        }        
         #du {
-          @include column(12, true);
-        }
-      
+          width: 100%;
+          margin: 24px 0px;
+        }      
         nav {
-          padding-top: 18px;  //
-          @include column(24, true);
+          width: 90%;
+          margin: 0% 5%;
         }
       
       }
            
       #contact {
-        #magic_location {          
-          padding-top: 4px;         //
-          margin-bottom: 2*$vgh;   //
-          @include column(24, true);
-        }       
-        
+        #magic_location {   
+          padding-top: 4px;  //
+          width: 90%;
+          margin: 0% 5%;
+          margin-bottom: 2*$vgh;
+          h2 {
+            width: 100%;
+          }
+        }      
+                
         #map_to_xipcraft {
-          @include column(13);
+          width: 100%;
           #the_map {
             overflow: hidden;
-            width: 400px;
-            margin-left: 80px;      
-            border: 5px solid white;   //
-            height: 320px;   //
-            @include single-box-shadow(#c9c9c9, 1px, 1px, 8px, 3px, false);
+            width: 70%;
+            margin: 0 auto;
+            border: 5px solid white;
+            @include single-box-shadow(#c9c9c9, 1px, 1px, 8px, 3px, false);   //
+            
+            img {
+              width: 100%;
+              height: auto;             
+            }
           }
         }
         
         #call_to_talk {
-          @include column(11, true);
-          div {
-            overflow: hidden;
-            width: 400px;
-            margin-left: 15px;
+          width: 90%;
+          margin: 0% 5%;
+          margin-top: 40px;
+          h3, p {
+            text-align: center;
+          }
+        }
+        
+        nav {
+          padding-top:12px;
+          padding-bottom:12px;
+          width: 90%;
+          margin: 0% 5%;
+        }
+      }          
+    }
+  }    
+  #the_end {
+    margin-top: 13.5px; //
+    width: 100%;
+  }
+}
+
+
+/* END: =<480
+---------------------------------------- */
+
+/* 
+---------------------------------------- */
+/* 
+---------------------------------------- */
+
+/* START: 2 Col fluid.. For everything in between real 960px and 480px
+---------------------------------------- */
+@include xCarousel("#produce_team_contact","100%","#main_showcase","300%",".show","33.333333333332%",false,"0.3s","ease-in-out"); // No JS
+
+@media screen and (min-width:480px), handheld and (min-width:480px){
+
+  #main {   
+    #xipcraft_branding {
+      img {
+        width: 205px;
+        height: 82px;
+      }
+    } 
+
+    #produce_team_contact {
+      div.showcase {
+        #produce {    
+          #produce_mascot {
+            float:left;
+            width: 50%;
+            margin: 0px 0px 0px 0px;
+            img {
+              width: 80%;
+              padding: 20% 10% 10% 10%;
+              height: auto;
+            }        
+          }
+
+          #produce_description {  
+            float:left;
+            width: 50%;
+            margin: 0% 0%;
+            margin-bottom: 10px;
+          }     
+        }
+
+        #team {
+          #motto {
+            float: left;
+          }
+
+          #bk {
+            float: left;
+            width: 50%;
+          }
+
+          #du {
+            float: left;
+            width: 50%;
+            margin: 0px 0px;
+          }
+
+
+
+          nav {
+            float: left;
+            display: block; 
+            visibility: visible; 
+            p {
+              margin-top: 39px;
+            }
           }
         }
 
-        nav {
-          padding-top:12px;
-          @include column(24, true);
+        #contact {
+          #magic_location {   
+            float: left;
+          }      
+
+          #map_to_xipcraft {
+            width: 50%;
+            float: left;
+            #the_map {
+              overflow: hidden;
+              width: 70%;
+              margin: 0 auto;
+              border: 5px solid white;
+              @include single-box-shadow(#c9c9c9, 1px, 1px, 8px, 3px, false);   //
+              
+              img {
+                width: 100%;
+                height: auto;             
+              }
+            }
+          }
+
+          #call_to_talk {
+            float: left;
+            width: 50%;
+            margin: 0px;
+            margin-top: -16px;
+            h3, p {
+              text-align: center;
+              width:80%;
+            }
+          }
+
+          nav {
+            float: left;
+            margin-top: 35px;
+          }
+        }         
+      }
+    }
+  } 
+}
+
+/* Mid range tweak for mascot image
+---------------------------------------- */
+@media screen and (min-width:760px) and (max-width:960px), handheld and (min-width:760px) and (max-width:960px){
+
+  #main {
+    #produce_team_contact {
+      div.showcase {
+        #produce {    
+          #produce_mascot {
+            img {
+              width: 60%;
+              padding: 7% 20% 8% 20%;
+              height: auto;
+            }        
+          }
         }
-      }      
+      }
     }
   }
-    
-  #the_end {
-    margin-top: 13.5px; //
-    @include column(24, true);
-  }
 }
-/*
-  TODO Isolate AWD Dependencies
+
+/* END 2 Col fluid.. For everything in between real 960px and 480px
+---------------------------------------- */
+/* 
+---------------------------------------- */
+/* 
+---------------------------------------- */
+/* Start: FIXED WIDTH LAYOUT FOR BIGGER SCREENS
+----------------------------------------  */
+@media screen and (min-width:960px), handheld and (min-width:960px){
+  
+  #main {
+    @include container;   
+    //@include showgrid;
+
+    #xipcraft_branding {
+      @include column(24, true); 
+    }
+
+    #what_and_why {
+      @include column(24, true);
+      margin-top: 0.4*($vgh*1.25); //
+      margin-bottom: 15px;     //
+      #work_desription {
+        margin-top: 15px; //
+      }
+    }  
+
+    .divider {
+      @include column(24, true);
+    }
+
+    nav.main {
+      @include column(24, true);
+    }
+
+    #produce_team_contact {
+      @include column(24, true);
+      height: 495px;
+      div.showcase {        
+        #produce {      
+          #produce_mascot {
+            @include column(12);
+            height: 495px; //
+            overflow: hidden;
+            margin: 0px;
+            img {
+              margin-top: 20px; //
+              margin-left: 38px;
+              width:400px;
+              height:628px;
+              padding: 0px;
+            }
+          }
+
+          #produce_description {  
+            margin: 0px;
+            margin-top: 3px;
+            @include column(12, true);    // 
+            nav {
+              @include column(12, true);
+            }           
+            
+            h2 {
+              margin-right: 0px;
+              width: 415px;
+            }
+
+          }     
+        }
+
+        #team {
+          #motto {
+            margin: 0px;
+            margin-top: 3px;
+            @include column(24, true);
+            h2 {
+              @include wrapper(640px);
+            }//
+          }
+
+          .pic {
+            height: 8*($vgh);  //
+            margin-top:42px;
+            
+          }
+
+          .bio {
+            height: 9.5*($vgh); //
+            @include column(12, true);
+          }
+
+          #bk {
+            @include column(12);
+          }
+
+          #du {
+            @include column(12, true);
+            margin: 0px;
+          }
+
+          nav {
+            float: left;
+            display: block; 
+            visibility: visible; 
+            p {margin:0px;}
+            margin: 0px;
+            padding-top: 18px;  //
+            @include column(24, true);
+          }
+
+        }
+
+        #contact {
+          #magic_location { 
+            margin:0px;
+            margin-top: 3px;    //
+            @include column(24, true);
+            h2 {
+              @include wrapper(400px);
+            }//
+             //
+            margin-bottom:42px;
+          }       
+
+          #map_to_xipcraft {
+            @include column(13);
+            #the_map {
+              width: 400px; 
+              height: 282px;               
+            }
+          }
+
+          #call_to_talk {
+            @include column(11, true);
+            div {
+              overflow: hidden;
+              width: 400px;
+              margin-left: 15px;
+              h3, p {
+                text-align: left;
+              }
+            }
+          }
+
+          nav {
+            margin:0px;
+            margin-top: 31px;
+            @include column(24, true);
+            p {margin:0px;}
+          }
+        }      
+      }
+    }
+
+    #the_end {
+      margin-top: 13.5px; //
+      @include column(24, true);
+    }
+  }
+  @include xCarousel("#produce_team_contact","auto","#main_showcase","2880px",".show","960px",true,"0.3s","ease-in-out");  //
+}
+ 
+
+
+/* End: FIXED WIDTH LAYOUT FOR BIGGER SCREENS
+---------------------------------------- */
+
+
+/* NO JS Settings
+---------------------------------------- 
+margin-bottom: 48px;
+@include xCarousel("#produce_team_contact","100%","#main_showcase","100%",".show","100%",false,"0.3s","ease-in-out"); // No JS
+
+#produce {margin-bottom: 20px;}
+#team nav {@include hidden;}
+#contact {margin-top: 0px;}
 */
-/*
-  TODO Write @media stubs
-*/
-/*
-  TODO Figure out why css3 animation is framing
-*/
-
-@include xCarousel("#produce_team_contact","960px","#main_showcase","2880px",".show","960px",true,"0.3s","ease-in-out");  //
-
-
-
-
-
 
 
 
