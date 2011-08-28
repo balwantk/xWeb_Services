@@ -3,7 +3,7 @@ var xValidate = {
   email:function(email_id_to_validate){
    
         var result_hash = {};
-        email_id_to_validate = xHelper.stripStartEndSpaces(email_id_to_validate);
+        email_id_to_validate = xHelp.stripStartEndSpaces(email_id_to_validate);
         
         //validates length
         if(email_id_to_validate.length < 6){
@@ -111,7 +111,7 @@ var xValidate = {
     
     name:function(name_to_validate) {
       var result_hash = {};
-      name_to_validate = xHelper.stripStartEndSpaces(name_to_validate);
+      name_to_validate = xHelp.stripStartEndSpaces(name_to_validate);
       if(name_to_validate.length < 1){
           result_hash.result = false;
           result_hash.error = "too short";
@@ -138,7 +138,7 @@ var xValidate = {
     },
     cellNumber:function(cell_number_to_validate){
       result_hash = {};
-      cell_number_to_validate = xHelper.stripStartEndSpaces(cell_number_to_validate);
+      cell_number_to_validate = xHelp.stripStartEndSpaces(cell_number_to_validate);
       cell_number_to_validate = cell_number_to_validate.replace(/-/gi,"");
       cell_number_to_validate = cell_number_to_validate.replace(/,/gi,"");
       cell_number_to_validate = cell_number_to_validate.replace(/\[/gi,"");
@@ -203,7 +203,7 @@ var xValidate = {
     },
     request:function(request_to_validate) {
       var result_hash = {};
-      request_to_validate =  xHelper.stripStartEndSpaces(request_to_validate);
+      request_to_validate =  xHelp.stripStartEndSpaces(request_to_validate);
       if(request_to_validate.length < 1){
         result_hash.result = false;
         result_hash.error = "should not be empty";
