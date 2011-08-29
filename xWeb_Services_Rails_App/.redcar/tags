@@ -1,4 +1,4 @@
-1314004582
+1314615917
 ActiveXObject	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/sinon.js	function ActiveXObject(objId)
 Application	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/config/application.rb	  class Application 
 ApplicationController	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/controllers/application_controller.rb	class ApplicationController 
@@ -9,16 +9,16 @@ Config	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/spec/javascripts/s
 CreateMessages	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/db/migrate/20110813074820_create_messages.rb	class CreateMessages 
 F	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/sinon.js	function F()
 FakeXMLHttpRequest	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/sinon.js	function FakeXMLHttpRequest()
-HomeController	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/controllers/home_controller.rb	class HomeController 
-HomeHelper	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/helpers/home_helper.rb	module HomeHelper
+HomeController	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/Stash/home_controller.rb	class HomeController 
+HomeHelper	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/Stash/home_helper.rb	module HomeHelper
 HtmlSelectorsHelpers	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/features/support/selectors.rb	module HtmlSelectorsHelpers
 Jasmine	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/spec/javascripts/support/jasmine_config.rb	module Jasmine
 Jasmine	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/spec/javascripts/support/jasmine_config.rb	module Jasmine
 Kizzy	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function Kizzy(ns)
-Message	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/models/message.rb	class Message 
-MessageController	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/controllers/message_controller.rb	class MessageController 
-MessageHelper	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/helpers/message_helper.rb	module MessageHelper
-MessageMailer	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/mailers/message_mailer.rb	class MessageMailer 
+Message	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/Stash/message.rb	class Message 
+MessageController	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/Stash/message_controller.rb	class MessageController 
+MessageHelper	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/Stash/message_helper.rb	module MessageHelper
+MessageMailer	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/Stash/message_mailer.rb	class MessageMailer 
 NavigationHelpers	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/features/support/paths.rb	module NavigationHelpers
 Reqwest	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function Reqwest(o, fn)
 Server	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/sinon.js	function Server()
@@ -28,6 +28,8 @@ UsersControllerTest	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/test/
 UsersHelperTest	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/test/unit/helpers/admin/users_helper_test.rb	class Admin::UsersHelperTest 
 WithinHelpers	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/features/step_definitions/web_steps.rb	module WithinHelpers
 XWebServicesRailsApp	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/config/application.rb	module XWebServicesRailsApp
+XipcraftStaticSiteController	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/controllers/xipcraft_static_site_controller.rb	class XipcraftStaticSiteController 
+XipcraftStaticSiteHelper	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/helpers/xipcraft_static_site_helper.rb	module XipcraftStaticSiteHelper
 abort	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/sinon.js	function abort()
 add	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/sinon.js	function add(fake)
 addRequest	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/sinon.js	function addRequest(xhr)
@@ -71,7 +73,7 @@ clearTimeout	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/frame
 clearUserData	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function clearUserData()
 complete	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function complete(resp)
 contains	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/modernizr-1.7.min.js	function contains( str, substr )
-create	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/controllers/message_controller.rb	  def create
+create	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/Stash/message_controller.rb	  def create
 create	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function create(node, root)
 create	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function create(path, fn)
 create	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/sinon.js	function create()
@@ -134,7 +136,8 @@ html5clearLocalStorage	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/pu
 html5getLocalStorage	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function html5getLocalStorage(k)
 html5removeLocalStorage	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function html5removeLocalStorage(k)
 html5setLocalStorage	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function html5setLocalStorage(k, v)
-index	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/controllers/home_controller.rb	  def index
+index	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/Stash/home_controller.rb	  def index
+index	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/app/controllers/xipcraft_static_site_controller.rb	  def index
 indexOf	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function indexOf(ar, val)
 init	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/ender.js	function init(o, fn)
 inject	/home/dinesh/web/xWeb_Services/xWeb_Services_Rails_App/public/framework/js/sinon.js	function inject(obj)

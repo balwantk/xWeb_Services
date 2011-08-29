@@ -13,6 +13,10 @@ var xHelp = {
       return str;
     }
   return str;
+  },
+  
+  anchorTagPounder:function(document){ 
+    
   }
 
 }
