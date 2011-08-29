@@ -49,7 +49,7 @@ body {
     @include column(24, true);
   }
   
-  #produce_team_contact {
+  #produce_team_contact_carousel {
     @include column(24, true);
     margin-top: 1.3*($vgh*1.25);  //
     @include border-radius(($vgh*1.25)/2);
@@ -155,4 +155,4 @@ body {
   }
 }
 
-@include xCarousel("#produce_team_contact","960px","#main_showcase","2880px",".show","960px","0.5s","ease-in-out");  //
+@include xCarousel("#produce_team_contact_carousel","960px","#main_carousel_showcase","2880px",".show","960px","0.5s","ease-in-out");  //
