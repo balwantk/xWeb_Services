@@ -3,6 +3,7 @@
 /*
   TODO Print styles
   TODO Testing on IE and Winmo and iOS.
+  TODO Rectify Polaroid Image borders on IE
   Compress HTML and CSS
   Document code?
 */
@@ -27,6 +28,27 @@ body {
   background-image: url('/images/xipcraft_static_site/background_textile2.gif');
   height: 100%;
 }
+
+
+/* Global IE Styles ---------------------------------------- */
+
+.ie6, .ie7, .ie8 { 
+  .pic {
+    img {
+      border: #CECECE 1px solid;
+      padding: 4px;
+    }
+  }
+  
+  #the_map {
+    img {
+      border: #CECECE 2px solid;
+      padding: 8px;
+    }
+  }
+}
+
+/* END Global IE Styles ---------------------------------------- */
 
 /*****************************************************/
 /*****************************************************/
@@ -68,7 +90,7 @@ body {width: 98%; margin: 0 auto;}
     width: 100%;
   }
   
-  #produce_team_contact {
+  #produce_team_contact_carousel {
     margin-top: 1.3*($vgh*1.25);  //
     @include single-box-shadow(#c9c9c9, 0px, 1px, 2px, 2px, true);   
     @include border-radius(($vgh*1.25)/2);
@@ -185,7 +207,7 @@ body {width: 98%; margin: 0 auto;}
   }
 }
 
-@include xCarousel("#produce_team_contact","100%","#main_showcase","300%",".show","33.333333333332%",false,"0.3s","ease-in-out"); // No JS
+@include xCarousel("#produce_team_contact_carousel","100%","#main_carousel_showcase","300%",".show","33.333333333332%",true,"0.5s","ease-in-out"); // No JS
 
 /* End: Default layout for viewports that don't handle media queries as well as those that are less than 480px width..
 ---------------------------------------- */
@@ -207,7 +229,7 @@ body {width: 98%; margin: 0 auto;}
       }
     } 
 
-    #produce_team_contact {
+    #produce_team_contact_carousel {
       div.showcase {
         #produce {    
           #produce_mascot {
@@ -305,7 +327,7 @@ body {width: 98%; margin: 0 auto;}
 @media screen and (min-width:760px) and (max-width:960px), handheld and (min-width:760px) and (max-width:960px){
 
   #main {
-    #produce_team_contact {
+    #produce_team_contact_carousel {
       div.showcase {
         #produce {    
           #produce_mascot {
@@ -358,7 +380,7 @@ body {width: 98%; margin: 0 auto;}
       @include column(24, true);
     }
 
-    #produce_team_contact {
+    #produce_team_contact_carousel {
       @include column(24, true);
       div.showcase {        
         #produce {      
@@ -481,7 +503,25 @@ body {width: 98%; margin: 0 auto;}
       @include column(24, true);
     }
   }
-  @include xCarousel("#produce_team_contact","auto","#main_showcase","2880px",".show","960px",true,"0.3s","ease-in-out");
+  
+  
+  
+  @include xCarousel("#produce_team_contact_carousel","auto","#main_carousel_showcase","2880px",".show","960px",true,"0.5s","ease-in-out");
+  
+  
+  /* Media Query specific IE styles ---------------------------------------- */
+   
+  .ie6, .ie7, .ie8 {
+    #main {
+      width:964px; // Accomodating the border..
+    } //end #main
+    #produce_team_contact_carousel {
+      width:964px;  // Accomodating the border..
+      border: #CECECE 2px solid;  // This border..
+    } //end #produce_team_contact_carousel
+  }
+  
+  /* End Media Query specific IE styles ---------------------------------------- */
 }
 
 /* End: FIXED WIDTH LAYOUT FOR BIGGER SCREENS
@@ -496,7 +536,7 @@ body {width: 98%; margin: 0 auto;}
 ---------------------------------------- */
 
 html.no-js {
-  @include xCarousel("#produce_team_contact","100%","#main_showcase","100%",".show","100%",false,"0.3s","ease-in-out"); // No JS
+  @include xCarousel("#produce_team_contact_carousel","100%","#main_carousel_showcase","100%",".show","100%",true,"0.5s","ease-in-out"); // No JS
   #produce {margin-bottom: 20px;}
   #team nav {@include visuallyhidden;}
   #contact {margin-top: 0px;} 

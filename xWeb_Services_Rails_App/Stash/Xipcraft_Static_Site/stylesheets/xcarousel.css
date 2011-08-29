@@ -260,13 +260,13 @@ body footer p {
 @import xCarouselAdaptiveOverride($stage_id,$stage_width,$showcase_id,$showcase_width,$show_class,$show_width);
 ---------------------------------------- */
 /* line 42, ../sass/partials/_xcarousel.scss */
-#produce_team_contact {
+#produce_team_contact_carousel {
   float: left;
   overflow: hidden;
   width: 960px;
 }
 /* line 47, ../sass/partials/_xcarousel.scss */
-#produce_team_contact #main_showcase {
+#produce_team_contact_carousel #main_carousel_showcase {
   overflow: hidden;
   float: left;
   width: 2880px;
@@ -291,7 +291,7 @@ body footer p {
   transition-delay: 0;
 }
 /* line 56, ../sass/partials/_xcarousel.scss */
-#produce_team_contact #main_showcase .show {
+#produce_team_contact_carousel #main_carousel_showcase .show {
   overflow: hidden;
   float: left;
   width: 960px;

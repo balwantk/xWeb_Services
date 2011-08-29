@@ -392,7 +392,7 @@ body {
   overflow-x: hidden;
 }
 /* line 52, ../sass/screen.scss */
-#main #produce_team_contact {
+#main #produce_team_contact_carousel {
   display: inline;
   float: left;
   margin-right: 0;
@@ -411,11 +411,11 @@ body {
   background: #fff;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact {
+* html #main #produce_team_contact_carousel {
   overflow-x: hidden;
 }
 /* line 61, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #produce #produce_mascot {
+#main #produce_team_contact_carousel div.showcase #produce #produce_mascot {
   display: inline;
   float: left;
   margin-right: 10px;
@@ -423,16 +423,16 @@ body {
   height: 495px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #produce #produce_mascot {
+* html #main #produce_team_contact_carousel div.showcase #produce #produce_mascot {
   overflow-x: hidden;
 }
 /* line 64, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #produce #produce_mascot img {
+#main #produce_team_contact_carousel div.showcase #produce #produce_mascot img {
   margin-top: 20px;
   margin-left: 38px;
 }
 /* line 70, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #produce #produce_description {
+#main #produce_team_contact_carousel div.showcase #produce #produce_description {
   display: inline;
   float: left;
   margin-right: 0;
@@ -440,22 +440,22 @@ body {
   padding-top: 39.6px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #produce #produce_description {
+* html #main #produce_team_contact_carousel div.showcase #produce #produce_description {
   overflow-x: hidden;
 }
 /* line 73, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #produce #produce_description nav {
+#main #produce_team_contact_carousel div.showcase #produce #produce_description nav {
   display: inline;
   float: left;
   margin-right: 0;
   width: 475px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #produce #produce_description nav {
+* html #main #produce_team_contact_carousel div.showcase #produce #produce_description nav {
   overflow-x: hidden;
 }
 /* line 81, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #motto {
+#main #produce_team_contact_carousel div.showcase #team #motto {
   padding-top: 4px;
   margin-bottom: 36px;
   display: inline;
@@ -464,11 +464,11 @@ body {
   width: 960px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #team #motto {
+* html #main #produce_team_contact_carousel div.showcase #team #motto {
   overflow-x: hidden;
 }
 /* line 87, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team .pic {
+#main #produce_team_contact_carousel div.showcase #team .pic {
   overflow: hidden;
   margin: 0 auto;
   width: 160px;
@@ -480,7 +480,7 @@ body {
   height: 144px;
 }
 /* line 95, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team .bio {
+#main #produce_team_contact_carousel div.showcase #team .bio {
   height: 171px;
   display: inline;
   float: left;
@@ -488,33 +488,33 @@ body {
   width: 475px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #team .bio {
+* html #main #produce_team_contact_carousel div.showcase #team .bio {
   overflow-x: hidden;
 }
 /* line 100, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #bk {
+#main #produce_team_contact_carousel div.showcase #team #bk {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 475px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #team #bk {
+* html #main #produce_team_contact_carousel div.showcase #team #bk {
   overflow-x: hidden;
 }
 /* line 104, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team #du {
+#main #produce_team_contact_carousel div.showcase #team #du {
   display: inline;
   float: left;
   margin-right: 0;
   width: 475px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #team #du {
+* html #main #produce_team_contact_carousel div.showcase #team #du {
   overflow-x: hidden;
 }
 /* line 108, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #team nav {
+#main #produce_team_contact_carousel div.showcase #team nav {
   padding-top: 18px;
   display: inline;
   float: left;
@@ -522,11 +522,11 @@ body {
   width: 960px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #team nav {
+* html #main #produce_team_contact_carousel div.showcase #team nav {
   overflow-x: hidden;
 }
 /* line 117, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #magic_location {
+#main #produce_team_contact_carousel div.showcase #contact #magic_location {
   padding-top: 4px;
   margin-bottom: 36px;
   display: inline;
@@ -535,22 +535,22 @@ body {
   width: 960px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #contact #magic_location {
+* html #main #produce_team_contact_carousel div.showcase #contact #magic_location {
   overflow-x: hidden;
 }
 /* line 124, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #map_to_xipcraft {
+#main #produce_team_contact_carousel div.showcase #contact #map_to_xipcraft {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 475px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #contact #map_to_xipcraft {
+* html #main #produce_team_contact_carousel div.showcase #contact #map_to_xipcraft {
   overflow-x: hidden;
 }
 /* line 126, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #map_to_xipcraft #the_map {
+#main #produce_team_contact_carousel div.showcase #contact #map_to_xipcraft #the_map {
   overflow: hidden;
   margin: 0 auto;
   width: 405px;
@@ -562,24 +562,24 @@ body {
   height: 320px;
 }
 /* line 135, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #call_to_talk {
+#main #produce_team_contact_carousel div.showcase #contact #call_to_talk {
   display: inline;
   float: left;
   margin-right: 0;
   width: 475px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #contact #call_to_talk {
+* html #main #produce_team_contact_carousel div.showcase #contact #call_to_talk {
   overflow-x: hidden;
 }
 /* line 137, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact #call_to_talk div {
+#main #produce_team_contact_carousel div.showcase #contact #call_to_talk div {
   overflow: hidden;
   margin: 0 auto;
   width: 420px;
 }
 /* line 143, ../sass/screen.scss */
-#main #produce_team_contact div.showcase #contact nav {
+#main #produce_team_contact_carousel div.showcase #contact nav {
   padding-top: 12px;
   display: inline;
   float: left;
@@ -587,7 +587,7 @@ body {
   width: 960px;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #main #produce_team_contact div.showcase #contact nav {
+* html #main #produce_team_contact_carousel div.showcase #contact nav {
   overflow-x: hidden;
 }
 /* line 152, ../sass/screen.scss */
@@ -604,13 +604,13 @@ body {
 }
 
 /* line 42, ../sass/partials/_xcarousel.scss */
-#produce_team_contact {
+#produce_team_contact_carousel {
   float: left;
   overflow: hidden;
   width: 960px;
 }
 /* line 47, ../sass/partials/_xcarousel.scss */
-#produce_team_contact #main_showcase {
+#produce_team_contact_carousel #main_carousel_showcase {
   overflow: hidden;
   float: left;
   width: 2880px;
@@ -635,7 +635,7 @@ body {
   transition-delay: 0;
 }
 /* line 56, ../sass/partials/_xcarousel.scss */
-#produce_team_contact #main_showcase .show {
+#produce_team_contact_carousel #main_carousel_showcase .show {
   overflow: hidden;
   float: left;
   width: 960px;
