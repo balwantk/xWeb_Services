@@ -3,6 +3,7 @@
 /*
   TODO Print styles
   TODO Testing on IE and Winmo and iOS.
+  TODO Rectify Polaroid Image borders on IE
   Compress HTML and CSS
   Document code?
 */
@@ -27,6 +28,27 @@ body {
   background-image: url('/images/xipcraft_static_site/background_textile2.gif');
   height: 100%;
 }
+
+
+/* Global IE Styles ---------------------------------------- */
+
+.ie6, .ie7, .ie8 { 
+  .pic {
+    img {
+      border: #CECECE 1px solid;
+      padding: 4px;
+    }
+  }
+  
+  #the_map {
+    img {
+      border: #CECECE 2px solid;
+      padding: 8px;
+    }
+  }
+}
+
+/* END Global IE Styles ---------------------------------------- */
 
 /*****************************************************/
 /*****************************************************/
@@ -481,7 +503,25 @@ body {width: 98%; margin: 0 auto;}
       @include column(24, true);
     }
   }
+  
+  
+  
   @include xCarousel("#produce_team_contact","auto","#main_showcase","2880px",".show","960px",true,"0.3s","ease-in-out");
+  
+  
+  /* Media Query specific IE styles ---------------------------------------- */
+   
+  .ie6, .ie7, .ie8 {
+    #main {
+      width:964px; // Accomodating the border..
+    } //end #main
+    #produce_team_contact {
+      width:964px;  // Accomodating the border..
+      border: #CECECE 2px solid;  // This border..
+    } //end #produce_team_contact
+  }
+  
+  /* End Media Query specific IE styles ---------------------------------------- */
 }
 
 /* End: FIXED WIDTH LAYOUT FOR BIGGER SCREENS
