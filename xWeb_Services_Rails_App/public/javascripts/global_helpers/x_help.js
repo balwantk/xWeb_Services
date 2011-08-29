@@ -15,7 +15,13 @@ var xHelp = {
   return str;
   },
   
-  anchorTagPounder:function(document){ 
+  anchorTagPounder:function(){ 
+    var anchorTags = document.getElementsByTagName('a');
+    for(var i = 0;i< anchorTags.length;i++){
+      if(/#/.test(document.getElementsByTagName('a')[i].href)){
+        document.getElementsByTagName('a')[i].href = '#';
+      }
+    }
     
   }
 

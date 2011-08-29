@@ -7,20 +7,26 @@ describe("Global helper", function() {
   describe("helper to replace hrefs of anchor tags to #", function() {
     
     beforeEach(function() {
-      var anchorTag = document.createElement("a");
-      anchorTag.setAttribute('href','#team');
-      anchorTag.setAttribute('id','jasmine_test_team_tag');
-      document.getElementsByTagName("html")[0].appendChild(anchorTag);
-      var anchorTags = document.getElementById('jasmine_test_team_tag');
-      
-      for(var i=0;i<anchorTags.length;i++){
-                 
+    
+      for(var i=0;i<3;i++){
+          var anchorTag = document.createElement("a");
+          anchorTag.setAttribute('href','#test'+i);
+          anchorTag.setAttribute('id','jasmine_test_hash_tag_'+i);
+          document.getElementsByTagName("html")[0].appendChild(anchorTag);
+          anchorTag = document.createElement("a");
+          anchorTag.setAttribute('href','test'+i);
+          anchorTag.setAttribute('id','jasmine_test_unhashed_tag_'+i);
+          document.getElementsByTagName("html")[0].appendChild(anchorTag);
       }
-      //expect(/#team/.test(anchorTags[0].href)).toBeTruthy();
-      //document.write('<a href="http://www.xipcraft.com/team" >');
-      //document.write('<a href="http://www.xipcraft.com/about" >');
-      //document.write('<a href="http://www.xipcraft.com/jobs" >');
-
+            
+      for(var x=0;x<3;x++){
+        var anchorHashTag = document.getElementById('jasmine_test_hash_tag_'+x);
+        expect(/\/#test[0-2]/.test(anchorHashTag.href)).toBeTruthy();
+        
+        var anchorUnhashTag = document.getElementById('jasmine_test_unhashed_tag_'+x);
+        expect(/\/test[0-2]/.test(anchorUnhashTag.href)).toBeTruthy();                 
+      }
+      
     });
     
     it("xHelp.anchorTagPounder should be defined", function(){
@@ -28,16 +34,38 @@ describe("Global helper", function() {
     });
     
     it("should set the href attribute as # for all anchor tags on a document", function() {
-      /*
-        TODO @dinesh
-      */
-      xHelp.anchorTagPounder(document);
+
+      xHelp.anchorTagPounder();
       
-      expect(/\b#\b/.test(document.getElementsByTagName('a')[0].href)).toBeTruthy();
-      //expect(/#/.test(document.getElementsByTagName('a')[1].href)).toBeTruthy();
-      //expect(/#/.test(document.getElementsByTagName('a')[2].href)).toBeTruthy();
-    });    
+       for(var x=0;x<3;x++){
+        var anchorHashTag = document.getElementById('jasmine_test_hash_tag_'+x);
+       
+        expect(/\/#/.test(anchorHashTag.href)).toBeTruthy();
+      }
+      
+    }); 
+    
+    it("should not touch the href attribute without # for all anchor tags on a document", function() {
+      xHelp.anchorTagPounder();
+      
+       for(var x=0;x<3;x++){
+        var anchorUnhashTag = document.getElementById('jasmine_test_unhashed_tag_'+x);
+        expect(/\/test[0-2]/.test(anchorUnhashTag.href)).toBeTruthy();                 
+       }
+      
+    }); 
+    
+    afterEach(function() {
+       for(var x=0;x<3;x++){
+        var anchorHashTag = document.getElementById('jasmine_test_hash_tag_'+x);
+        anchorHashTag.parentNode.removeChild(anchorHashTag); 
+        
+        var anchorUnhashTag = document.getElementById('jasmine_test_unhashed_tag_'+x);
+        anchorUnhashTag.parentNode.removeChild(anchorUnhashTag);                    
+      }
+      });
   });
+  
   
   describe("helper to strip spaces before and after any string", function() {
     it("should be defined", function(){
