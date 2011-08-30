@@ -28,6 +28,8 @@ javascripts:
   - public/framework/js/respond.js
   
   awesomeness_for_xipcraft_static_site:
+  - public/framework/js/bean.js
+  - public/framework/js/morpheus.js
   - public/javascripts/sub_apps/xipcraft_static_site.js
     
 stylesheets: 
