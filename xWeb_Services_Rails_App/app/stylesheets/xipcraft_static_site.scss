@@ -67,7 +67,7 @@ body {width: 98%; margin: 0 auto;}
     width: 100%; 
     margin-top: 0.4*($vgh*1.25); //
     margin-bottom: 15px;     //
-    #work_desription {
+    #description {
       margin-top: 15px; //
     }
   }  
@@ -372,7 +372,7 @@ body {width: 98%; margin: 0 auto;}
       @include column(24, true);
       margin-top: 0.4*($vgh*1.25); //
       margin-bottom: 15px;     //
-      #work_desription {
+      #description {
         margin-top: 15px; //
       }
     }  

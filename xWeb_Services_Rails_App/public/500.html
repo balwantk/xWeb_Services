@@ -1,26 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-  </style>
-</head>
+  
+  <title>Something went wrong! (500)</title>  
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="shortcut icon" href="images/xipcraft_static_site/favicon.ico"> 
+  <link href="stylesheets/xipcraft_static_site.css" media="screen" rel="stylesheet" type="text/css" /> 
 
+</head>
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
-    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
-  </div>
+  <section id="main">
+    <header id="xipcraft_branding">
+      <h1>Xipcraft</h1>
+      <p><a href="/"><img src="images/xipcraft_static_site/xipcraft-logo-small.png" width="205" height="82" alt="Xipcraft Logo"></a></p>
+    </header>
+    <section id="what_and_why">
+      <hgroup>
+        <h2>Oops, looks like something went wrong here!</h2>
+        <div id="description">
+          <h3>We've been notified of the issue and are looking into the matter. If you need help with something, we're happy to help! Just contact us at the link below.</h3>
+        </div>
+      </hgroup>
+    </section>
+    <div class="divider"><div></div></div>     
+    <nav class="main">
+      <ul>
+        <li><span><a href="/">Home</a></span></li>
+        <li><a href="jobs">Jobs</a></li>
+        <li><a href="mailto:info@xipcraft.com">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="divider"><div></div></div>
+    <footer id="the_end">
+      <p id="copyright"><strong>&copy; Xipcraft Systems Pvt. Ltd.</strong></p>
+    </footer>
+  </section>
+  <!--[if lt IE 7 ]><%= include_javascripts :hot_ping %><![endif]-->
 </body>
 </html>
