@@ -1,3 +1,4 @@
+@manual
 Feature: Adaptive Design
   As a site visitor
   I want the site to resize to  browser
