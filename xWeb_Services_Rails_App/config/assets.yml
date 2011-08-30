@@ -2,16 +2,11 @@
 javascripts: 
   # COMMON STACK:
   hot_ping:
-  - public/framework/js/dd_belatedpng.js
-  
-  power_extreme:
-  - public/framework/js/html5shim.js
-  
-  give_us_media_queries:
-  - public/framework/js/respond.js
+  - public/framework/js/dd_belatedpng.js 
   
   prep_for_awesome: 
   - public/framework/js/modernizr-1.7.min.js
+  - public/framework/js/respond.js
   
   awesome: 
   - public/framework/js/ender.js
@@ -24,7 +19,7 @@ javascripts:
   
   # CUSTOM PACKAGES:
   prep_for_xipcraft_static_site:
-  - public/javascripts/global_helpers/x_check.js
+  - public/javascripts/global_helpers/modernizr.xipcraft_static_site.js
   - public/framework/js/respond.js
   
   awesomeness_for_xipcraft_static_site:
