@@ -19,6 +19,7 @@ javascripts:
   
   # CUSTOM PACKAGES:
   prep_for_xipcraft_static_site:
+  #- public/framework/js/html5shim.js
   - public/javascripts/global_helpers/modernizr.xipcraft_static_site.js
   - public/framework/js/respond.js
   

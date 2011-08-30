@@ -49,30 +49,7 @@ body {
 ---------------------------------------- */
 
 
-/* Global IE Styles (Noboxshadow?) ---------------------------------------- */
 
-.ie6, .ie7, .ie8 { 
-  
-  #produce_team_contact_carousel {
-    border: #CECECE 2px solid;  // This border..
-  } //end #produce_team_contact_carousel
-  
-  .pic {
-    img {
-      border: #CECECE 1px solid;
-      padding: 4px;
-    }
-  }
-  
-  #the_map {
-    img {
-      border: #CECECE 2px solid;
-      padding: 8px;
-    }
-  }
-}
-
-/* END Global IE Styles ---------------------------------------- */
 
 /*****************************************************/
 /*****************************************************/
@@ -237,7 +214,25 @@ body {width: 98%; margin: 0 auto;}
 }
 
 @include xCarousel("#produce_team_contact_carousel","100%","#main_carousel_showcase","300%",".show","33.333333333332%",true,"0.5s","ease-in-out"); // No JS
+/* Global IE Styles (Noboxshadow?) ---------------------------------------- */
 
+.ie6, .ie7, .ie8 { 
+  
+  #produce_team_contact_carousel {
+    border: #CECECE 2px solid;  // This border..
+  } //end #produce_team_contact_carousel
+  
+  .pic {
+    img {
+      border: #CECECE 1px solid;
+      padding: 4px;
+      width: 130px;
+      margin-left: 5px;
+    }
+  }
+}
+
+/* END Global IE Styles ---------------------------------------- */
 
 /* End: Default layout for viewports that don't handle media queries as well as those that are less than 480px width..
 ---------------------------------------- */
@@ -491,7 +486,7 @@ body {width: 98%; margin: 0 auto;}
             @include column(13);
             #the_map {
               width: 400px; 
-              height: 282px;               
+              height: 282px;                            
             }
           }
 
