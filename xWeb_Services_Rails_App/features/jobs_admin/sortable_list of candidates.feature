@@ -1,3 +1,4 @@
+@wip
 Feature: Sortable list of candidates
   As a job admin
   I want to visit admin's candidates list view

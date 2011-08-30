@@ -1,3 +1,4 @@
+@wip
 Feature: Information about Jobs at Xipcraft
   As an employment candidate
   I want to see the list of available jobs at xipcraft

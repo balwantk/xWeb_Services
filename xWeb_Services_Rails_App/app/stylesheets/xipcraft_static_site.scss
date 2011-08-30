@@ -1,11 +1,20 @@
 /* @author: Balwant K.
 ---------------------------------------- */
 /*
+  Session1
+  TODO Put all JS together
+  
+  Session2
+
+  TODO Directions href to map
+  
+  Session3
+  Document code
+  Compress HTML
+  Go live.
+  Check google analytics is functioning
+  
   TODO Print styles
-  TODO Testing on IE and Winmo and iOS.
-  TODO Rectify Polaroid Image borders on IE
-  Compress HTML and CSS
-  Document code?
 */
 
   
@@ -25,30 +34,16 @@
 html{height: 100%;}
 body {
   background-color: #fafafa;
-  background-image: url('/images/xipcraft_static_site/background_textile2.gif');
+  background-image: url('/images/xipcraft_static_site/background_textile.gif');
   height: 100%;
 }
 
 
-/* Global IE Styles ---------------------------------------- */
+/* 
+---------------------------------------- */
 
-.ie6, .ie7, .ie8 { 
-  .pic {
-    img {
-      border: #CECECE 1px solid;
-      padding: 4px;
-    }
-  }
-  
-  #the_map {
-    img {
-      border: #CECECE 2px solid;
-      padding: 8px;
-    }
-  }
-}
 
-/* END Global IE Styles ---------------------------------------- */
+
 
 /*****************************************************/
 /*****************************************************/
@@ -76,6 +71,11 @@ body {width: 98%; margin: 0 auto;}
       margin-top: 15px; //
     }
   }  
+  
+  #home_view {
+    width:100%;
+    overflow: hidden;
+  }
   
   .divider {
     width: 100%;
@@ -208,6 +208,25 @@ body {width: 98%; margin: 0 auto;}
 }
 
 @include xCarousel("#produce_team_contact_carousel","100%","#main_carousel_showcase","300%",".show","33.333333333332%",true,"0.5s","ease-in-out"); // No JS
+/* Global IE Styles (Noboxshadow?) ---------------------------------------- */
+
+.ie6, .ie7, .ie8 { 
+  
+  #produce_team_contact_carousel {
+    border: #CECECE 2px solid;  // This border..
+  } //end #produce_team_contact_carousel
+  
+  .pic {
+    img {
+      border: #CECECE 1px solid;
+      padding: 4px;
+      width: 130px;
+      margin-left: 5px;
+    }
+  }
+}
+
+/* END Global IE Styles ---------------------------------------- */
 
 /* End: Default layout for viewports that don't handle media queries as well as those that are less than 480px width..
 ---------------------------------------- */
@@ -267,8 +286,6 @@ body {width: 98%; margin: 0 auto;}
             margin: 0px 0px;
           }
 
-
-
           nav {
             float: left;
             display: block; 
@@ -287,18 +304,6 @@ body {width: 98%; margin: 0 auto;}
           #map_to_xipcraft {
             width: 50%;
             float: left;
-            #the_map {
-              overflow: hidden;
-              width: 70%;
-              margin: 0 auto;
-              border: 5px solid white;
-              @include single-box-shadow(#c9c9c9, 1px, 1px, 8px, 3px, false);   //
-              
-              img {
-                width: 100%;
-                height: auto;             
-              }
-            }
           }
 
           #call_to_talk {
@@ -354,7 +359,7 @@ body {width: 98%; margin: 0 auto;}
 ----------------------------------------  */
 
 @media screen and (min-width:960px), handheld and (min-width:960px){
-  
+  body {width: 100%; margin: 0 auto;}
   #main {
     @include container;   
     //@include showgrid;
@@ -371,7 +376,11 @@ body {width: 98%; margin: 0 auto;}
         margin-top: 15px; //
       }
     }  
-
+    
+    #home_view {
+      @include column(24, true);
+    }
+    
     .divider {
       @include column(24, true);
     }
@@ -379,7 +388,7 @@ body {width: 98%; margin: 0 auto;}
     nav.main {
       @include column(24, true);
     }
-
+    
     #produce_team_contact_carousel {
       @include column(24, true);
       div.showcase {        
@@ -426,8 +435,7 @@ body {width: 98%; margin: 0 auto;}
 
           .pic {
             height: 8*($vgh);  //
-            margin-top:42px;
-            
+            margin-top:42px;            
           }
 
           .bio {
@@ -472,7 +480,7 @@ body {width: 98%; margin: 0 auto;}
             @include column(13);
             #the_map {
               width: 400px; 
-              height: 282px;               
+              height: 282px;                            
             }
           }
 
@@ -517,7 +525,6 @@ body {width: 98%; margin: 0 auto;}
     } //end #main
     #produce_team_contact_carousel {
       width:964px;  // Accomodating the border..
-      border: #CECECE 2px solid;  // This border..
     } //end #produce_team_contact_carousel
   }
   
@@ -537,6 +544,7 @@ body {width: 98%; margin: 0 auto;}
 
 html.no-js {
   @include xCarousel("#produce_team_contact_carousel","100%","#main_carousel_showcase","100%",".show","100%",true,"0.5s","ease-in-out"); // No JS
+
   #produce {margin-bottom: 20px;}
   #team nav {@include visuallyhidden;}
   #contact {margin-top: 0px;} 
@@ -545,6 +553,7 @@ html.no-js {
 ---------------------------------------- */
 /*****************************************************/
 /*****************************************************/
+
 
 
 
