@@ -9,6 +9,8 @@ describe("General javascript that powers the Xipcraft static site", function() {
       expect(XipcraftStaticSiteSubApp.init).toBeDefined();
       expect(XipcraftStaticSiteSubApp.navToCarouselPane).toBeDefined();
       expect(XipcraftStaticSiteSubApp.navToHomeView).toBeDefined();
+      expect(XipcraftStaticSiteSubApp.setElementHeight).toBeDefined();
+      expect(XipcraftStaticSiteSubApp.setElementLeftPosition).toBeDefined();
     });
     
     beforeEach(function() {
@@ -17,37 +19,48 @@ describe("General javascript that powers the Xipcraft static site", function() {
       //  - home view div
       //  - carousel container
       //  - footer
-      // Verify presence of dummy DOM elements
-      
+      //   Verify presence of dummy DOM elements
+        
        var anchorTag = document.createElement("a");
-       anchorTag.setAttribute('href','#test');
+       anchorTag.setAttribute('href','#produce');
+       anchorTag.setAttribute('id','test_product_anchor_tag');
+       document.getElementsByTagName("html")[0].appendChild(anchorTag);
+      
+       anchorTag = document.createElement("a");
+       anchorTag.setAttribute('href','#team');
        anchorTag.setAttribute('id','test_team_anchor_tag');
        document.getElementsByTagName("html")[0].appendChild(anchorTag);
       
+       anchorTag = document.createElement("a");
+       anchorTag.setAttribute('href','#contact');
+       anchorTag.setAttribute('id','test_contact_anchor_tag');
+       document.getElementsByTagName("html")[0].appendChild(anchorTag);
+
+
+
        var homeDivTag = document.createElement("div");
-       homeDivTag.setAttribute('id','test_home_view');
+       homeDivTag.setAttribute('id','home_view');
        document.getElementsByTagName("html")[0].appendChild(homeDivTag);
       
        var carouselDivTag = document.createElement("div");
-       carouselDivTag.setAttribute('id','test_main_carousel_showcase');
-       carouselDivTag.setAttribute('class','test_showcase');
+       carouselDivTag.setAttribute('id','produce_team_contact_carousel');
        document.getElementsByTagName("html")[0].appendChild(carouselDivTag);
       
        var footerTag = document.createElement("footer");
-       footerTag.setAttribute('id','test_the_end');
+       footerTag.setAttribute('id','the_end');
        document.getElementsByTagName("html")[0].appendChild(footerTag);
        
        //expect
        anchorTag = document.getElementById('test_team_anchor_tag');
        expect(anchorTag).not.toBeNull();
       
-       homeDivTag = document.getElementById('test_home_view');
+       homeDivTag = document.getElementById('home_view');
        expect(homeDivTag).not.toBeNull();
        
-       carouselDivTag = document.getElementById('test_main_carousel_showcase');
+       carouselDivTag = document.getElementById('produce_team_contact_carousel');
        expect(carouselDivTag).not.toBeNull();
       
-       footerTag = document.getElementById('test_the_end');
+       footerTag = document.getElementById('the_end');
        expect(footerTag).not.toBeNull();
       
     });
@@ -61,21 +74,21 @@ describe("General javascript that powers the Xipcraft static site", function() {
        anchorTag = document.getElementById('test_team_anchor_tag');
        expect(anchorTag).toBeNull();
        
-       var homeDivTag = document.getElementById('test_home_view');
+       var homeDivTag = document.getElementById('home_view');
        homeDivTag.parentNode.removeChild(homeDivTag); 
-       homeDivTag = document.getElementById('test_home_view');
+       homeDivTag = document.getElementById('home_view');
        expect(homeDivTag).toBeNull();
       
-       var carouselDivTag = document.getElementById('test_main_carousel_showcase');
+       var carouselDivTag = document.getElementById('produce_team_contact_carousel');
        carouselDivTag.parentNode.removeChild(carouselDivTag); 
-       carouselDivTag = document.getElementById('test_main_carousel_showcase');
+       carouselDivTag = document.getElementById('produce_team_contact_carousel');
        expect(carouselDivTag).toBeNull();
       
-       var footerTag = document.getElementById('test_the_end');
+       var footerTag = document.getElementById('the_end');
        footerTag.parentNode.removeChild(footerTag); 
-       footerTag = document.getElementById('test_the_end');
+       footerTag = document.getElementById('the_end');
        expect(footerTag).toBeNull();
-    });
+     });
     
     describe("XipcraftStaticSiteSubApp.init", function() {
       
@@ -84,13 +97,20 @@ describe("General javascript that powers the Xipcraft static site", function() {
         // Instantiate App object App.init() or app()
         // Manually trigger event on DOM object
         // Expect spy to be called with given args
-        // Delete App object to prep for the next test.
 
         var spy = sinon.spy(XipcraftStaticSiteSubApp, "navToCarouselPane");
         XipcraftStaticSiteSubApp.init();
-        var anchorTag = document.getElementById('test_team_anchor_tag');
-        //anchorTag.click();
+        var anchorTag = document.getElementById('test_product_anchor_tag');
+        bean.fire(anchorTag,'click');
         expect(spy.called).toBeTruthy();
+        
+        anchorTag = document.getElementById('test_team_anchor_tag');
+        bean.fire(anchorTag,'click');
+        expect(spy.calledTwice).toBeTruthy();
+        
+        anchorTag = document.getElementById('test_contact_anchor_tag');
+        bean.fire(anchorTag,'click');
+        expect(spy.calledThrice).toBeTruthy();
          
         
       });
@@ -100,6 +120,11 @@ describe("General javascript that powers the Xipcraft static site", function() {
         // Instantiate App object App.init() or app()
         // Expect anchorTagPounder() to be called
         // Delete App object to prep for the next test.
+        
+        var spy = sinon.spy(xHelp, "anchorTagPounder");
+        XipcraftStaticSiteSubApp.init();
+        expect(spy.called).toBeTruthy();
+        
       });
       
       it("should create arrays of elements to be animated", function() {
@@ -109,6 +134,11 @@ describe("General javascript that powers the Xipcraft static site", function() {
         // Expect CarouselAndFooter[0] to be == document.getElementById("produce_team_contact_carousel")
         // Expect CarouselAndFooter[1] to be == document.getElementById("the_end")
         // Delete App object to prep for the next test.
+        XipcraftStaticSiteSubApp.init();
+        expect(XipcraftStaticSiteSubApp.HomeAndFooter[0]).toBe(document.getElementById("home_view"));
+        expect(XipcraftStaticSiteSubApp.HomeAndFooter[1]).toBe(document.getElementById("the_end"));
+        expect(XipcraftStaticSiteSubApp.CarouselAndFooter[0]).toBe(document.getElementById("produce_team_contact_carousel"));
+        expect(XipcraftStaticSiteSubApp.CarouselAndFooter[1]).toBe(document.getElementById("the_end"));
       });
     });
     
@@ -119,11 +149,36 @@ describe("General javascript that powers the Xipcraft static site", function() {
 
         it("Should first hide the headlines, nav and dividers i.e. div#home_view", function() {         
           // Spy on HomeAndFooter[0].style.height() (i.e. the home view)
-          // Fire functionXipcraftStaticSiteSubApp.navToCarouselPane(any_arg);
+          // Fire function XipcraftStaticSiteSubApp.navToCarouselPane(any_arg);
           // expect morpheus to be called with HomeAndFooter, {opacity:"0", callback: .style.height:"0px"}) 
           // expect HomeSpy to be called with "0px"
           
           // Actual CSS position verification and end-to-end testing done by capibara
+         //var morpheusSpy = sinon.spy(morpheus);
+        /*
+         jasmine.Clock.installMock();
+          spyOn(window,"morpheus").andCallThrough();
+          
+          XipcraftStaticSiteSubApp.init();
+            
+          XipcraftStaticSiteSubApp.navToCarouselPane("produce");
+          jasmine.Clock.tick(10000);
+          
+          expect(window.morpheus).toHaveBeenCalled();
+          */
+          //expect(foo.not).toHaveBeenCalledWith(true);
+          //expect(morpheusSpy.called).toBeTruthy();
+          /*
+          expect(morpheusSpy).toHaveBeenCalledWith(XipcraftStaticSiteSubApp.HomeAndFooter, {    
+              opacity: 0,
+              duration:700,
+              complete: function () {
+                  XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height = "0px";
+              }
+              });*/
+              
+          //expect(XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height).toEqual("0px");
+          
         });
 
         it("should then show the carousel", function() {
@@ -131,8 +186,24 @@ describe("General javascript that powers the Xipcraft static site", function() {
           // Fire XipcraftStaticSiteSubApp.navToCarouselPane(any_arg);
           // expect CarouselSpy to be called with "100%"
           // expect morpheus to be called with CarouselAndFooter, {opacity:"100",})
-             
           // Actual CSS position verification and end-to-end testing done by capibara
+          
+          /*
+          XipcraftStaticSiteSubApp.init();
+            
+          XipcraftStaticSiteSubApp.navToCarouselPane("produce");
+          
+          var morpheusSpy = sinon.spy(morpheus);
+          
+          expect(XipcraftStaticSiteSubApp.CarouselAndFooter[0].style.height).toEqual("100px");
+          
+          expect(morpheusSpy).toHaveBeenCalledWith(XipcraftStaticSiteSubApp.CarouselAndFooter, {    
+              opacity: 100,
+              duration: 700,
+              complete: function () {
+                  XipcraftStaticSiteSubApp.CarouselAndFooter[0].style.height = "100px";
+              }                                                                       
+              });*/
         });
 
         it("should then animate the carousel", function() {

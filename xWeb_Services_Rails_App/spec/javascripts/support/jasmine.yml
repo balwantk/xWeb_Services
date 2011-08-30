@@ -20,7 +20,9 @@ src_files:
   - public/framework/js/x_backbone.js
   - public/framework/js/drag-drop.js
   - public/framework/js/sinon.js
-  - public/framework/js/jasmine-sinon.js
+  #- public/framework/js/jasmine-sinon.js
+  - public/framework/js/bean.js
+  - public/framework/js/morpheus.js
   - public/javascripts/**/*.js
 
 # stylesheets
