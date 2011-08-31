@@ -13,7 +13,7 @@ Feature: No JS support
         |<li><span><a href="#produce">Product</a></span></li>|
         |<li><a href="#team">Team</a></li>|
         |<li><a href="#contact">Contact</a></li>|
-        |<li><a href="jobs">Jobs</a></li>|
+        #|<li><a href="jobs">Jobs</a></li>|
       And I should see the copyright notice as "© Xipcraft Systems Pvt. Ltd.".
   
   Scenario: no-js class applied on html tag

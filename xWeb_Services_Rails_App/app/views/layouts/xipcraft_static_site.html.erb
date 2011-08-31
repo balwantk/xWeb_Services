@@ -14,7 +14,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="shortcut icon" href="images/xipcraft_static_site/favicon.ico">
-  
   <%= include_stylesheets :make_xipcraft_static_site_gorgeous %>
   <%= include_javascripts :prep_for_xipcraft_static_site %>
   <%= csrf_meta_tag %>
@@ -24,6 +23,9 @@
   <%= yield %>
   <!--[if lt IE 7 ]><%= include_javascripts :hot_ping %><![endif]-->
   <%= include_javascripts :awesomeness_for_xipcraft_static_site %>
+  <script type="text/javascript" charset="utf-8">
+    XipcraftStaticSiteSubApp.init();
+  </script>
   <script>
     var _gaq=[["_setAccount","UA-25360290-1"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;

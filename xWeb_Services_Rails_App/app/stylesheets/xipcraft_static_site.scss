@@ -38,6 +38,9 @@ body {
   height: 100%;
 }
 
+#home_view, #produce_team_contact_carousel, #the_end {
+  @include single-transition(opacity, 1s, ease-in-out, 0);
+}
 
 /* 
 ---------------------------------------- */
@@ -96,6 +99,7 @@ body {width: 98%; margin: 0 auto;}
     @include border-radius(($vgh*1.25)/2);
     background: #fff;
     height: 0px;
+    opacity:0;
     div.showcase {
        
       #produce {    
@@ -546,6 +550,7 @@ html.no-js {
   @include xCarousel("#produce_team_contact_carousel","100%","#main_carousel_showcase","100%",".show","100%",true,"0.5s","ease-in-out"); // No JS
   #produce_team_contact_carousel {
     height: 100%;
+    opacity:100;
   }
   #produce {margin-bottom: 20px;}
   #team nav {@include visuallyhidden;}

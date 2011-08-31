@@ -3,7 +3,6 @@ Feature: Information Views
   I want information about Xipcraft
   So that I may work with them in the future
   
-  @wip
   @javascript
   Scenario: Landing View
   When i go to Xipcraft's home page
@@ -14,7 +13,7 @@ Feature: Information Views
     |<li><span><a href="#">Product</a></span></li>|
     |<li><a href="#">Team</a></li>|
     |<li><a href="#">Contact</a></li>|
-    |<li><a href="jobs">Jobs</a></li>|
+    #|<li><a href="jobs">Jobs</a></li>|
     And I should see the copyright notice as "© Xipcraft Systems Pvt. Ltd.".
 
 
