@@ -7,7 +7,10 @@ var XipcraftStaticSiteSubApp = {
   CarouselAndFooter:[],
   
   init:function(){
-  
+    // Check window.location.hash
+    // If it is #team or #contact
+    // redirect window to "http://www.xipcraft.com/" or "/"
+    
     var anchors = document.getElementsByTagName('a');
     for(var i=0;i<anchors.length;i++) {
       if(/\/#produce/.test(anchors[i].href)) {
@@ -48,7 +51,7 @@ var XipcraftStaticSiteSubApp = {
       
     });
     var animateShowcase = document.getElementById("main_carousel_showcase");  
-
+    
     if(option == 'produce'){
        animateShowcase.style.left = '0%';
     }else if(option == 'team'){
