@@ -1,6 +1,3 @@
-var easeIn = function (t) {
-    return t * t;
-}
 
 var XipcraftStaticSiteSubApp = {
   HomeAndFooter: [],
@@ -10,6 +7,14 @@ var XipcraftStaticSiteSubApp = {
     // Check window.location.hash
     // If it is #team or #contact
     // redirect window to "http://www.xipcraft.com/" or "/"
+    
+    // @manual
+    if(window.location.hash == '#team' ){
+      window.location.href = window.location.href.replace("#team","") ;
+    }else if(window.location.hash == '#contact'){
+      window.location.href = window.location.href.replace("#contact","") ;
+    }
+    
     
     var anchors = document.getElementsByTagName('a');
     for(var i=0;i<anchors.length;i++) {
@@ -38,13 +43,11 @@ var XipcraftStaticSiteSubApp = {
     morpheus(XipcraftStaticSiteSubApp.HomeAndFooter, {    
       opacity: "0%",
       duration: 1,
-      easing: easeIn,
       complete: function () {
         XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height = '0px';
         XipcraftStaticSiteSubApp.CarouselAndFooter[0].style.height = '100%';
         window.morpheus(XipcraftStaticSiteSubApp.CarouselAndFooter, {    
           opacity: "100%",
-          easing: easeIn,
           duration: 1 // Seems to be the only way to show the animation down..
         });    
       }
@@ -66,14 +69,12 @@ var XipcraftStaticSiteSubApp = {
       morpheus(XipcraftStaticSiteSubApp.CarouselAndFooter, {    
       opacity: "0%",
       duration: 1,
-      easing: easeIn,
       complete: function () {
         XipcraftStaticSiteSubApp.CarouselAndFooter[0].style.height = '0px';
         XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height = '100%';
         window.morpheus(XipcraftStaticSiteSubApp.HomeAndFooter, {    
          opacity: "100%",
-         duration: 1,
-         easing: easeIn
+         duration: 1
         });
       }
      });  
