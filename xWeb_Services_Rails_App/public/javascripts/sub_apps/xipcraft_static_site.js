@@ -24,37 +24,47 @@ var XipcraftStaticSiteSubApp = {
     
   },  
   navToCarouselPane:function(option){
-    //XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height = "100px"
-    morpheus(XipcraftStaticSiteSubApp.HomeAndFooter, {    
+ 
+    morpheus(this.HomeAndFooter, {    
       opacity: 0,
       duration: 700,
       complete: function () {
-        XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height = "0px";
-
+        XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height = '0%';
       }
     });
-    /*  
-    morpheus(CarouselAndFooter, {    
-      opacity: 100,
-      duration: 700,
-      complete: function () {
-        this.CarouselAndFooter[0].style.height = "100px";
-      }
-      });*/
     
-    return true;
+    this.CarouselAndFooter[0].style.height = '100%';
+    
+    morpheus(this.CarouselAndFooter, {    
+      opacity: 100,
+      duration: 700
+    });    
+    
+    var animateShowcase = document.getElementById("main_carousel_showcase");  
+    
+    if(option == 'produce'){
+       animateShowcase.style.left = '0%';
+    }else if(option == 'team'){
+       animateShowcase.style.left = '-100%';
+      
+    }else if(option == 'contact'){
+      animateShowcase.style.left = '-200%';  
+    }
+    
   },
   navToHomeView:function(){
-  
-  },
-
-  setElementHeight: function(element,height){
-
-  },
-
-  setElementLeftPosition: function(element, left_position){
+      morpheus(this.CarouselAndFooter, {    
+      opacity: 0,
+      duration: 700,
+      complete: function () {
+        XipcraftStaticSiteSubApp.CarouselAndFooter[0].style.height = '0%';
+      }
+     });
     
+     this.HomeAndFooter[0].style.height = '100%';
+     morpheus(this.HomeAndFooter, {    
+      opacity: 100,
+      duration: 700
+     });    
   }
-
-
 };
