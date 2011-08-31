@@ -95,7 +95,7 @@ body {width: 98%; margin: 0 auto;}
     @include single-box-shadow(#c9c9c9, 0px, 1px, 2px, 2px, true);   
     @include border-radius(($vgh*1.25)/2);
     background: #fff;
-    
+    height: 0px;
     div.showcase {
        
       #produce {    
@@ -138,7 +138,7 @@ body {width: 98%; margin: 0 auto;}
         .pic {
           overflow: hidden;
           @include wrapper(160px);
-          @include single-box-shadow(#c9c9c9, 1px, 1px, 4px, 1px, false);
+          @include single-box-shadow(#c9c9c9, 1px, 1px, 4px, 2px, false);
           border: 5px solid white;  //
         }
              
@@ -544,7 +544,9 @@ body {width: 98%; margin: 0 auto;}
 
 html.no-js {
   @include xCarousel("#produce_team_contact_carousel","100%","#main_carousel_showcase","100%",".show","100%",true,"0.5s","ease-in-out"); // No JS
-
+  #produce_team_contact_carousel {
+    height: 100%;
+  }
   #produce {margin-bottom: 20px;}
   #team nav {@include visuallyhidden;}
   #contact {margin-top: 0px;} 
