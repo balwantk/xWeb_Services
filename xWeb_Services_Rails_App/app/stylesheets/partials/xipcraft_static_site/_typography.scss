@@ -24,7 +24,7 @@ body {
     &:hover {  
       color: #222; 
       background:#ffffa7;
-      border-bottom: 2px solid #666;
+      border-bottom: 2px solid #545454;
     }
     &:active {
       position: relative;
@@ -51,7 +51,7 @@ body {
       font-size: $vgh*0.875;
       font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
       margin-top:13px;
-      color: #555;
+      color: #545454;
       @include single-text-shadow(#FFFFFF, 1px, 1px, 0px);
     }
   }
@@ -87,13 +87,14 @@ body {
         line-height: 2.3;
         @include single-text-shadow(#FFFFFF, 1px, 1px, 0px);
         a {
-          color: #666;
+          color: #545454;
           &:hover {
             color: #222;
           }
         }
         span {
           a {
+            border-bottom: 2px solid #545454;
             color: #333;
             font-weight: bold;
           }
@@ -117,7 +118,7 @@ body {
       font-size: 0.7*($vgh);
       font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
       margin-top:16px;
-      color: #555;
+      color: #545454;
     }
     
     h2+p {
