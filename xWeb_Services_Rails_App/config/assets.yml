@@ -1,4 +1,6 @@
 --- 
+embed_assets:on
+
 javascripts: 
   # COMMON STACK:
   hot_ping:
