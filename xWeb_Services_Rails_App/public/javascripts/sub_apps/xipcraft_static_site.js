@@ -1,3 +1,6 @@
+/*!
+  Xipcraft StaticSite
+*/
 var XipcraftStaticSite = {
   MainEl: "",
   BrandingEl: "",
@@ -56,31 +59,31 @@ var XipcraftStaticSite = {
     
     // 0] Margin top reset
     // TODO* - Needs a dummy el to be made and test to be written..
-    this.BrandingEl.style.marginTop = "18px"
+    this.BrandingEl.style.marginTop = "18px";
     
     // 1] Home Opacity 0%
-    this.HomeEl.style.opacity = "0"
+    this.HomeEl.style.opacity = "0";
 
     // 2] Footer Opacity 0%
-    this.FooterEl.style.opacity = "0"
+    this.FooterEl.style.opacity = "0";
 
     // 3] Home Height 0px
-    this.HomeEl.style.height = "0px"
+    this.HomeEl.style.height = "0px";
 
     // 4] Footer Height 0px
-    this.FooterEl.style.height = "0px"
+    this.FooterEl.style.height = "0px";
 
     // 5] Carousel Height 100%
-    this.CarouselEl.style.height = "100%"
+    this.CarouselEl.style.height = "100%";
 
     // 6] Footer Height 100%
-    this.FooterEl.style.height = "100%"
+    this.FooterEl.style.height = "100%";
 
     // 7] Carousel Opacity 100%
-    this.CarouselEl.style.opacity = "1"
+    this.CarouselEl.style.opacity = "1";
 
     // 8] Footer Opacity 100%
-    this.FooterEl.style.opacity = "1"
+    this.FooterEl.style.opacity = "1";
     
     // 9] Transition to correct carousel pane
     if(option == 'produce'){
@@ -99,27 +102,27 @@ var XipcraftStaticSite = {
     // 0] Remove class "js" from #produce_team_contact_carousel element
     
     // 1] Carousel Opacity 0
-    this.CarouselEl.style.opacity = "0"
+    this.CarouselEl.style.opacity = "0";
 
     // 2] Footer Opacity 0
-    this.FooterEl.style.opacity = "0"
+    this.FooterEl.style.opacity = "0";
 
     // 3] Carousel Height 0px
-    this.CarouselEl.style.height = "0px"
+    this.CarouselEl.style.height = "0px";
 
     // 4] Footer Height 0px
-    this.FooterEl.style.height = "0px"
+    this.FooterEl.style.height = "0px";
 
     // 5] Home Height 100%
-    this.HomeEl.style.height = "100%"
+    this.HomeEl.style.height = "100%";
 
     // 6] Footer Height 100%
-    this.FooterEl.style.height = "100%"
+    this.FooterEl.style.height = "100%";
 
     // 7] Home Opacity 1
-    this.HomeEl.style.opacity = "1"
+    this.HomeEl.style.opacity = "1";
 
     // 8] Footer Opacity 1
-    this.FooterEl.style.opacity = "1"
+    this.FooterEl.style.opacity = "1";
   }
 };
