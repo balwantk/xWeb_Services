@@ -39,7 +39,11 @@ body {
   height: 100%;
 }
 
-#home_view, #produce_team_contact_carousel, #the_end {
+#main {
+  opacity: 0;
+}
+
+#main, #home_view, #produce_team_contact_carousel, #the_end {
   @include single-transition(opacity, 1s, ease-in-out, 0);
 }
 
@@ -55,7 +59,7 @@ body {
 body {width: 98%; margin: 0 auto;}
 
 #main {
-  width: 100%;    
+  width: 100%;  
   #xipcraft_branding {
     width: 100%; 
     @include single-transition(margin, 1s, ease-in-out, 0);
@@ -341,7 +345,21 @@ body {width: 98%; margin: 0 auto;}
   #main {   
     #xipcraft_branding {
       @include single-transition(margin, 1s, ease-in-out, 0);
-      margin-top: 4.8*($vgh*1.25);
+      margin-top: 6.4*($vgh*1.25);
+    }
+  }
+}
+
+@media screen   and (min-width:480px)
+                and (min-height:900px), 
+       handheld and (min-width:480px)
+                and (min-height:600px){
+  
+  body {width: 98%; margin: 0 auto;}
+  #main {   
+    #xipcraft_branding {
+      @include single-transition(margin, 1s, ease-in-out, 0);
+      margin-top: 9.6*($vgh*1.25);
     }
   }
 }
@@ -580,6 +598,7 @@ body {width: 98%; margin: 0 auto;}
 
 
 html.no-js {
+  #main { opacity: 1;}
   @include xCarousel("#produce_team_contact_carousel","100%","#main_carousel_showcase","100%",".show","100%",true,"0.5s","ease-in-out"); // No JS
   #produce_team_contact_carousel {
     height: 100%;

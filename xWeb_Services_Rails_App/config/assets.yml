@@ -1,5 +1,5 @@
---- 
-embed_assets:on
+---
+embed_assets: on
 
 javascripts: 
   # COMMON STACK:
@@ -21,7 +21,6 @@ javascripts:
   
   # CUSTOM PACKAGES:
   prep_for_xipcraft_static_site:
-  #- public/framework/js/html5shim.js
   - public/javascripts/global_helpers/modernizr.xipcraft_static_site.js
   - public/javascripts/global_helpers/x_help.js
   - public/framework/js/respond.js
