@@ -8,6 +8,16 @@ var XipcraftStaticSite = {
   
   init:function(){
     
+    // TODO
+    // If html class != ie6 || html class != ie7 {
+    //   this.reallyInit();
+    // }
+
+    
+
+  },
+  
+  reallyInit: function () {
     // Check window.location.hash
     // If it is #team or #contact
     // redirect window to "http://www.xipcraft.com/" or "/"
@@ -42,10 +52,13 @@ var XipcraftStaticSite = {
     this.FooterEl   = document.getElementById("the_end");
     
     this.MainEl.style.opacity = "1";
-  },  
+  },
   
   navToCarouselPane:function(option){
     // Animation Sequence Powered by CSS3 Animations
+    
+    //  TODO 
+    // -1] Add class "js" to #produce_team_contact_carousel element
     
     // 0] Margin top reset
     // TODO - Needs a dummy el to be made and test to be written..
@@ -87,7 +100,10 @@ var XipcraftStaticSite = {
   
   navToHomeEl:function(){
     // Animation Sequence Powered by CSS3 Animations
-
+    
+    // TODO 
+    // 0] Remove class "js" from #produce_team_contact_carousel element
+    
     // 1] Carousel Opacity 0
     this.CarouselEl.style.opacity = "0"
 
@@ -111,6 +127,5 @@ var XipcraftStaticSite = {
 
     // 8] Footer Opacity 1
     this.FooterEl.style.opacity = "1"
-
   }
 };

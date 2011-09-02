@@ -7,6 +7,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
     
     it("shoud have essential functions defined", function() {
       expect(XipcraftStaticSite.init).toBeDefined();
+      expect(XipcraftStaticSite.reallyInit).toBeDefined(); // TODO - Watch this test fail
       expect(XipcraftStaticSite.navToCarouselPane).toBeDefined();
       expect(XipcraftStaticSite.navToHomeEl).toBeDefined();
     });
@@ -106,6 +107,48 @@ describe("General javascript that powers the Xipcraft static site", function() {
     });
     
     describe("XipcraftStaticSite.init", function() {
+      it("should ignore init code if it detects IE6", function() {
+        // TODO
+        // spy on XipcraftStaticSite.reallyInit()
+        // set html class as ie6
+        // verify html class is ie6
+        
+        // XipcraftStaticSite.init()
+        // expect reallyInitSpy to NOT have been called
+        
+        // remove html class as ie6
+        // verify removal of html class as ie6
+      });
+      
+      it("should ignore init code if it detects IE7", function() {
+        // TODO
+        // spy on XipcraftStaticSite.reallyInit()
+        // set html class as ie7
+        // verify html class is ie7
+        
+        // XipcraftStaticSite.init()
+        // expect reallyInitSpy to NOT have been called
+        
+        // remove html class as ie7
+        // verify removal of html class as ie7
+      });
+      
+      it("should go ahead with executing the code in any other case", function() {
+        // TODO
+        // spy on XipcraftStaticSite.reallyInit()
+        // set html class as ie8
+        // verify html class is ie8
+        
+        // XipcraftStaticSite.init()
+        // expect reallyInitSpy to have been called
+        
+        // remove html class as ie8
+        // verify removal of html class as ie8
+        
+        // Checking for non IE browsers..
+        // XipcraftStaticSite.init()
+        // expect reallyInitSpy to have been called
+      });
        
       it("should check hash fragment for team or contact and redirect to home", function() {
          
