@@ -1,5 +1,6 @@
 
 var XipcraftStaticSite = {
+  BrandingEl: "",
   HomeEl: "",
   CarouselEl: "",
   FooterEl: "",
@@ -32,6 +33,7 @@ var XipcraftStaticSite = {
     
     xHelper.poundHashAnchorTags();
     
+    this.BrandingEl = document.getElementById("xipcraft_branding");
     this.HomeEl     = document.getElementById("home_view");
     this.CarouselEl = document.getElementById("produce_team_contact_carousel");
     this.ShowcaseEl = document.getElementById("main_carousel_showcase");  
@@ -41,6 +43,9 @@ var XipcraftStaticSite = {
   
   navToCarouselPane:function(option){
     // Animation Sequence Powered by CSS3 Animations
+    
+    // 0] Margin top reset
+    this.BrandingEl.style.marginTop = "18px"
     
     // 1] Home Opacity 0%
     this.HomeEl.style.opacity = "0"

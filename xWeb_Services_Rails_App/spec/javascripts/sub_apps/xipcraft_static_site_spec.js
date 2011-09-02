@@ -18,7 +18,11 @@ describe("General javascript that powers the Xipcraft static site", function() {
       //  - carousel container
       //  - footer
       //   Verify presence of dummy DOM elements
-        
+      
+      /*
+        TODO @dinesh - Add dummy element for #xipcraft_branding
+      */
+      
        var anchorTag = document.createElement("a");
        anchorTag.setAttribute('href','#produce');
        anchorTag.setAttribute('id','test_product_anchor_tag');
@@ -71,7 +75,9 @@ describe("General javascript that powers the Xipcraft static site", function() {
     afterEach(function() {
       // Destroy dummy DOM elements for test
       // Verify destruction of dummy DOM elements
-      
+      /*
+        TODO @dinesh - Destroy dummy element for #xipcraft_branding
+      */
        var anchorTag = document.getElementById('test_team_anchor_tag');
        anchorTag.parentNode.removeChild(anchorTag); 
        anchorTag = document.getElementById('test_team_anchor_tag');
@@ -154,7 +160,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
       it("should create arrays of elements to be animated", function() {
         
         XipcraftStaticSite.init();
-        
+        expect(XipcraftStaticSite.BrandingEl).toBe(document.getElementById("xipcraft_branding"));
         expect(XipcraftStaticSite.HomeEl).toBe(document.getElementById("home_view"));
         expect(XipcraftStaticSite.CarouselEl).toBe(document.getElementById("produce_team_contact_carousel"));
         expect(XipcraftStaticSite.ShowcaseEl).toBe(document.getElementById("main_carousel_showcase"));
@@ -173,6 +179,9 @@ describe("General javascript that powers the Xipcraft static site", function() {
           */
           
           // XipcraftStaticSite.navToCarouselPane('produce');
+          //           
+          // // 0] Margin top reset
+          // expect(this.BrandingEl.style.marginTop).toBe("18px")
           // 
           // // 1] Home Opacity 0%
           // expect(XipcraftStaticSite.HomeEl.style.opacity).toBe("0")
@@ -190,7 +199,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
 
         it("should then show the carousel", function() {
           /*
-            TODO Need to delay expectations by 1 sec or so.. 
+            TODO 
           */
           // 
           // XipcraftStaticSite.navToCarouselPane('produce');

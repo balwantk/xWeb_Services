@@ -32,9 +32,10 @@
 /* Base styling
 ---------------------------------------- */
 html{height: 100%;}
+
 body {
   background-color: #fafafa;
-  background-image: url('/images/xipcraft_static_site/background_textile.gif');
+  background-image: url('/images/xipcraft_static_site/embed/background_textile.gif');
   height: 100%;
 }
 
@@ -42,11 +43,8 @@ body {
   @include single-transition(opacity, 1s, ease-in-out, 0);
 }
 
-
 /* 
 ---------------------------------------- */
-
-
 
 
 /*****************************************************/
@@ -61,9 +59,9 @@ body {width: 98%; margin: 0 auto;}
   #xipcraft_branding {
     width: 100%; 
     @include single-transition(margin, 1s, ease-in-out, 0);
-    margin-top: 0.8*($vgh*1.25);
+    margin-top: $vgh;
     img {
-      width: 100%;
+      width: 44%;
       height: auto;
     }
   }
@@ -243,12 +241,12 @@ body {width: 98%; margin: 0 auto;}
 /* Start: 2 Col fluid.. For everything in between real 960px and 480px
 ---------------------------------------- */
 
-@media screen and (min-width:480px), handheld and (min-width:480px){
+@media screen   and (min-width:480px), 
+       handheld and (min-width:480px){
+         
   body {width: 98%; margin: 0 auto;}
   #main {   
     #xipcraft_branding {
-      @include single-transition(margin, 1s, ease-in-out, 0);
-      margin-top: 1.6*($vgh*1.25);
       img {
         width: 205px;
         height: 82px;
@@ -334,9 +332,27 @@ body {width: 98%; margin: 0 auto;}
   } 
 }
 
+@media screen   and (min-width:480px)
+                and (min-height:660px), 
+       handheld and (min-width:480px)
+                and (min-height:660px){
+  
+  body {width: 98%; margin: 0 auto;}
+  #main {   
+    #xipcraft_branding {
+      @include single-transition(margin, 1s, ease-in-out, 0);
+      margin-top: 4.8*($vgh*1.25);
+    }
+  }
+}
+
+
 /* Mid range tweak for mascot image
 ---------------------------------------- */
-@media screen and (min-width:760px) and (max-width:960px), handheld and (min-width:760px) and (max-width:960px){
+@media screen   and (min-width:760px) 
+                and (max-width:960px), 
+       handheld and (min-width:760px) 
+                and (max-width:960px){
 
   #main {
     #produce_team_contact_carousel {
@@ -365,7 +381,9 @@ body {width: 98%; margin: 0 auto;}
 /* Start: FIXED WIDTH LAYOUT FOR BIGGER SCREENS
 ----------------------------------------  */
 
-@media screen and (min-width:960px), handheld and (min-width:960px){
+@media screen  and (min-width:960px), 
+      handheld and (min-width:960px){
+        
   body {width: 100%; margin: 0 auto;}
   #main {
     //@include showgrid;
@@ -373,8 +391,6 @@ body {width: 98%; margin: 0 auto;}
 
     #xipcraft_branding {
       @include column(24, true); 
-      @include single-transition(margin, 1s, ease-in-out, 0); 
-      margin-top: 4.8*($vgh*1.25);
     }
 
     #what_and_why {
@@ -537,6 +553,13 @@ body {width: 98%; margin: 0 auto;}
   }
   
   /* End Media Query specific IE styles ---------------------------------------- */
+}
+
+@media screen   and (min-width:960px) 
+                and (min-height: 600px), 
+       handheld and (min-width:960px)
+                and (min-height: 600px){
+  
 }
 
 /* End: FIXED WIDTH LAYOUT FOR BIGGER SCREENS
