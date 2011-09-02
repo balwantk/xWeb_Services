@@ -7,16 +7,13 @@ var XipcraftStaticSite = {
   FooterEl: "",
   
   init:function(){
-    
-    // TODO*
-    // If html class != ie6 || html class != ie7 {
-    //   this.reallyInit();
-    // }
+    var htmlClass = document.getElementsByTagName("html")[0].class;
 
-    
-
+    if( htmlClass != 'ie6' && htmlClass != 'ie7') {
+       
+       this.reallyInit();
+    }
   },
-  
   reallyInit: function () {
     // Check window.location.hash
     // If it is #team or #contact

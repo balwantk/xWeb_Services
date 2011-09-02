@@ -7,7 +7,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
     
     it("shoud have essential functions defined", function() {
       expect(XipcraftStaticSite.init).toBeDefined();
-      expect(XipcraftStaticSite.reallyInit).toBeDefined(); // TODO* - Watch this test fail
+      expect(XipcraftStaticSite.reallyInit).toBeDefined(); 
       expect(XipcraftStaticSite.navToCarouselPane).toBeDefined();
       expect(XipcraftStaticSite.navToHomeEl).toBeDefined();
     });
@@ -128,47 +128,70 @@ describe("General javascript that powers the Xipcraft static site", function() {
     
     describe("XipcraftStaticSite.init", function() {
       it("should ignore init code if it detects IE6", function() {
-        // TODO*
-        // spy on XipcraftStaticSite.reallyInit()
-        // set html class as ie6
-        // verify html class is ie6
+
+         var spy = sinon.spy(XipcraftStaticSite, "reallyInit");
+         
+         var tempClass = document.getElementsByTagName("html")[0].class;
+         document.getElementsByTagName("html")[0].class = "ie6";
         
-        // XipcraftStaticSite.init()
-        // expect reallyInitSpy to NOT have been called
+         expect(document.getElementsByTagName("html")[0].class).toEqual("ie6");
+         
+         XipcraftStaticSite.init(); 
+         expect(spy.called).toBeFalsy();
+          
+         document.getElementsByTagName("html")[0].class = tempClass;
+         expect(document.getElementsByTagName("html")[0].class).toEqual(tempClass);
+           
         
-        // remove html class as ie6
-        // verify removal of html class as ie6
       });
       
       it("should ignore init code if it detects IE7", function() {
-        // TODO*
-        // spy on XipcraftStaticSite.reallyInit()
-        // set html class as ie7
-        // verify html class is ie7
         
-        // XipcraftStaticSite.init()
-        // expect reallyInitSpy to NOT have been called
+         XipcraftStaticSite.reallyInit.restore();
+         var spy = sinon.spy(XipcraftStaticSite, "reallyInit");
+         
+         var tempClass = document.getElementsByTagName("html")[0].class;
+         document.getElementsByTagName("html")[0].class = "ie7";
+         expect(document.getElementsByTagName("html")[0].class).toEqual("ie7");
         
-        // remove html class as ie7
-        // verify removal of html class as ie7
+         XipcraftStaticSite.init(); 
+         expect(spy.called).toBeFalsy();
+          
+         document.getElementsByTagName("html")[0].class = tempClass;
+         expect(document.getElementsByTagName("html")[0].class).toEqual(tempClass);
+      });
+       
+      describe("XipcraftStaticSite.init", function() {
+        
+        var tempClass;
+        beforeEach(function() {
+          tempClass = document.getElementsByTagName("html")[0].class;
+          document.getElementsByTagName("html")[0].class = "other";
+          expect(document.getElementsByTagName("html")[0].class).toEqual("other");
+           
+        });
+        
+        it("should go ahead with executing the code if !ie6 && !ie7", function() {
+  
+           XipcraftStaticSite.reallyInit.restore();
+           var spy = sinon.spy(XipcraftStaticSite, "reallyInit");
+           XipcraftStaticSite.init(); 
+           expect(spy.called).toBeTruthy();
+   
+        });
+        
+        it("should show all the page elements", function() {
+          XipcraftStaticSite.init(); 
+          expect(XipcraftStaticSite.MainEl.style.opacity).toBe("1");
+        });
+        
+        afterEach(function() {
+           document.getElementsByTagName("html")[0].class = tempClass;
+           expect(document.getElementsByTagName("html")[0].class).toEqual(tempClass);
+        });
+
       });
       
-      it("should go ahead with executing the code in any other case", function() {
-        // TODO*
-        // spy on XipcraftStaticSite.reallyInit()
-        // set html class as ie8
-        // verify html class is ie8
-        
-        // XipcraftStaticSite.init()
-        // expect reallyInitSpy to have been called
-        
-        // remove html class as ie8
-        // verify removal of html class as ie8
-        
-        // Checking for non IE browsers..
-        // XipcraftStaticSite.init()
-        // expect reallyInitSpy to have been called
-      });
        
       it("should check hash fragment for team or contact and redirect to home", function() {
          
@@ -228,15 +251,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
          expect(XipcraftStaticSite.CarouselEl).toBe(document.getElementById("produce_team_contact_carousel"));
          expect(XipcraftStaticSite.ShowcaseEl).toBe(document.getElementById("main_carousel_showcase"));
          expect(XipcraftStaticSite.FooterEl).toBe(document.getElementById("the_end"));
-       });
-    
-      it("should show all the page elements", function() {
-        /*
-          TODO* Watch this one fail please..
-        */
-        
-        expect(this.MainEl.style.opacity).toBe("1");
-      });
+      });    
     });
      
  
