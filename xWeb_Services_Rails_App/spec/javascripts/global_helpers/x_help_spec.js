@@ -1,7 +1,7 @@
 
 describe("Global helper", function() {
   it("should be defined", function(){
-        expect(xHelp).toBeDefined();
+        expect(xHelper).toBeDefined();
   });
   
   describe("helper to replace hrefs of anchor tags to #", function() {
@@ -29,13 +29,13 @@ describe("Global helper", function() {
       
     });
     
-    it("xHelp.anchorTagPounder should be defined", function(){
-        expect(xHelp.anchorTagPounder).toBeDefined();
+    it("xHelper.poundHashAnchorTags should be defined", function(){
+        expect(xHelper.poundHashAnchorTags).toBeDefined();
     });
     
     it("should set the href attribute as # for all anchor tags on a document", function() {
 
-      xHelp.anchorTagPounder();
+      xHelper.poundHashAnchorTags();
       
        for(var x=0;x<3;x++){
         var anchorHashTag = document.getElementById('jasmine_test_hash_tag_'+x);
@@ -46,7 +46,7 @@ describe("Global helper", function() {
     }); 
     
     it("should not touch the href attribute without # for all anchor tags on a document", function() {
-      xHelp.anchorTagPounder();
+      xHelper.poundHashAnchorTags();
       
        for(var x=0;x<3;x++){
         var anchorUnhashTag = document.getElementById('jasmine_test_unhashed_tag_'+x);
@@ -69,21 +69,21 @@ describe("Global helper", function() {
   
   describe("helper to strip spaces before and after any string", function() {
     it("should be defined", function(){
-        expect(xHelp.stripStartEndSpaces).toBeDefined();
+        expect(xHelper.stripStartEndSpaces).toBeDefined();
     });
     it("should strip starting spaces", function(){
-        expect(xHelp.stripStartEndSpaces("    x@xipcraft.com")).toEqual("x@xipcraft.com")
+        expect(xHelper.stripStartEndSpaces("    x@xipcraft.com")).toEqual("x@xipcraft.com")
         
     });  
     it("should strip ending spaces", function(){
-      expect(xHelp.stripStartEndSpaces("xyz@#f0f0m976hn754    ")).toEqual("xyz@#f0f0m976hn754")
+      expect(xHelper.stripStartEndSpaces("xyz@#f0f0m976hn754    ")).toEqual("xyz@#f0f0m976hn754")
     });
     it("should strip both starting and ending spaces", function(){
-      expect(xHelp.stripStartEndSpaces("    7{}#e%)(*&^%$#@!^*())xyz@#f0f0m976hn754    ")).toEqual("7{}#e%)(*&^%$#@!^*())xyz@#f0f0m976hn754")
+      expect(xHelper.stripStartEndSpaces("    7{}#e%)(*&^%$#@!^*())xyz@#f0f0m976hn754    ")).toEqual("7{}#e%)(*&^%$#@!^*())xyz@#f0f0m976hn754")
     });  
 
     it("should not strip middle spaces", function(){
-       expect(xHelp.stripStartEndSpaces("     7{}#e%)(*&^%$#@!^*()      )xyz@#f0f0    m976hn754    ")).toEqual("7{}#e%)(*&^%$#@!^*()      )xyz@#f0f0    m976hn754")
+       expect(xHelper.stripStartEndSpaces("     7{}#e%)(*&^%$#@!^*()      )xyz@#f0f0    m976hn754    ")).toEqual("7{}#e%)(*&^%$#@!^*()      )xyz@#f0f0    m976hn754")
     });  
   
   });
