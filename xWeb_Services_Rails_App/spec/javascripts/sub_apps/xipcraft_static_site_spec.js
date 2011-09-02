@@ -2,13 +2,13 @@ describe("General javascript that powers the Xipcraft static site", function() {
   
   describe("application code", function() {
     it("should be defined", function() {
-      expect(XipcraftStaticSiteSubApp).toBeDefined();
+      expect(XipcraftStaticSite).toBeDefined();
     });
     
     it("shoud have essential functions defined", function() {
-      expect(XipcraftStaticSiteSubApp.init).toBeDefined();
-      expect(XipcraftStaticSiteSubApp.navToCarouselPane).toBeDefined();
-      expect(XipcraftStaticSiteSubApp.navToHomeView).toBeDefined();
+      expect(XipcraftStaticSite.init).toBeDefined();
+      expect(XipcraftStaticSite.navToCarouselPane).toBeDefined();
+      expect(XipcraftStaticSite.navToHomeEl).toBeDefined();
     });
     
     beforeEach(function() {
@@ -97,9 +97,9 @@ describe("General javascript that powers the Xipcraft static site", function() {
        footerTag.parentNode.removeChild(footerTag); 
        footerTag = document.getElementById('the_end');
        expect(footerTag).toBeNull();
-     });
+    });
     
-    describe("XipcraftStaticSiteSubApp.init", function() {
+    describe("XipcraftStaticSite.init", function() {
       
       it("should check hash fragment for team or contact and redirect to home", function() {
         
@@ -109,7 +109,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
         /*
         window.location.hash = "#team"
         
-        XipcraftStaticSiteSubApp.init();
+        XipcraftStaticSite.init();
         
         expect(window.location.hash).toEqual("");
         */
@@ -118,182 +118,152 @@ describe("General javascript that powers the Xipcraft static site", function() {
       
       
       it("should add JS navigation event listeners to anchor tags", function() {
-        // Add spy to addEventListener(el,callback) callback functions
-        // Instantiate App object App.init() or app()
-        // Manually trigger event on DOM object
-        // Expect spy to be called with given args
 
-        var spy = sinon.spy(XipcraftStaticSiteSubApp, "navToCarouselPane");
+        var spy = sinon.spy(XipcraftStaticSite, "navToCarouselPane");
         
-        XipcraftStaticSiteSubApp.init();
+        XipcraftStaticSite.init();
         
         var anchorTag = document.getElementById('test_product_anchor_tag');
         bean.fire(anchorTag,'click');
         expect(spy.called).toBeTruthy();
+        //expect(spy).toBeHaveCalledWith('product'); TODO
         
         anchorTag = document.getElementById('test_team_anchor_tag');
         bean.fire(anchorTag,'click');
         expect(spy.calledTwice).toBeTruthy();
+        //expect(spy).toBeHaveCalledWith('team'); TODO
         
         anchorTag = document.getElementById('test_contact_anchor_tag');
         bean.fire(anchorTag,'click');
         expect(spy.calledThrice).toBeTruthy();
+        //expect(spy).toBeHaveCalledWith('team'); TODO
          
         
       });
       
       it("should replace hash linked anchor tags with pounds", function() {
-        // Add spy to anchorTagPounder()
-        // Instantiate App object App.init() or app()
-        // Expect anchorTagPounder() to be called
-        // Delete App object to prep for the next test.
+
+        var spy = sinon.spy(xHelper, "poundHashAnchorTags");
         
-        var spy = sinon.spy(xHelp, "anchorTagPounder");
-        
-        XipcraftStaticSiteSubApp.init();
+        XipcraftStaticSite.init();
         
         expect(spy.called).toBeTruthy();
         
       });
       
       it("should create arrays of elements to be animated", function() {
-        // Instantiate App object App.init() or app()
-        // Expect HomeAndFooter[0] to be == document.getElementById("home_view")
-        // Expect HomeAndFooter[1] to be == document.getElementById("the_end")
-        // Expect CarouselAndFooter[0] to be == document.getElementById("produce_team_contact_carousel")
-        // Expect CarouselAndFooter[1] to be == document.getElementById("the_end")
-        // Delete App object to prep for the next test.
         
-        XipcraftStaticSiteSubApp.init();
+        XipcraftStaticSite.init();
         
-        expect(XipcraftStaticSiteSubApp.HomeAndFooter[0]).toBe(document.getElementById("home_view"));
-        expect(XipcraftStaticSiteSubApp.HomeAndFooter[1]).toBe(document.getElementById("the_end"));
-        expect(XipcraftStaticSiteSubApp.CarouselAndFooter[0]).toBe(document.getElementById("produce_team_contact_carousel"));
-        expect(XipcraftStaticSiteSubApp.CarouselAndFooter[1]).toBe(document.getElementById("the_end"));
+        expect(XipcraftStaticSite.HomeEl).toBe(document.getElementById("home_view"));
+        expect(XipcraftStaticSite.CarouselEl).toBe(document.getElementById("produce_team_contact_carousel"));
+        expect(XipcraftStaticSite.ShowcaseEl).toBe(document.getElementById("main_carousel_showcase"));
+        expect(XipcraftStaticSite.FooterEl).toBe(document.getElementById("the_end"));
       });
     });
     
 
     describe("JS Navigation", function() {
       
-      describe("XipcraftStaticSiteSubApp.navToCarouselPane", function() {
+      describe("XipcraftStaticSite.navToCarouselPane", function() {
 
-        it("Should first hide the headlines, nav and dividers i.e. div#home_view", function() {         
-          // Spy on HomeAndFooter[0].style.height() (i.e. the home view)
-          // Fire function XipcraftStaticSiteSubApp.navToCarouselPane(any_arg);
-          // expect morpheus to be called with HomeAndFooter, {opacity:"0", callback: .style.height:"0px"}) 
-          // expect HomeSpy to be called with "0px"
+        it("Should first hide the headlines, footer, nav and dividers i.e. div#home_view", function() {         
+          /*
+            TODO Need to delay expectations by 1 sec or so.. 
+          */
           
-          // Actual CSS position verification and end-to-end testing done by capibara
-               
-         
-          var spy = sinon.spy(window, "morpheus");
-          
-          XipcraftStaticSiteSubApp.init();       
-          XipcraftStaticSiteSubApp.navToCarouselPane("produce");
-          
-          expect(spy.getCall(0).args).toEqual([XipcraftStaticSiteSubApp.HomeAndFooter, {opacity: '0%'}]);
+          // XipcraftStaticSite.navToCarouselPane('produce');
+          // 
+          // // 1] Home Opacity 0%
+          // expect(XipcraftStaticSite.HomeEl.style.opacity).toBe("0")
+          // 
+          // // 2] Footer Opacity 0%
+          // expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("0")
+          // 
+          // // 3] Home Height 0px
+          // expect(XipcraftStaticSite.HomeEl.style.height).toBe("0px")
+          // 
+          // // 4] Footer Height 0px
+          // expect(XipcraftStaticSite.FooterEl.style.height).toBe("0px")
                   
         });
 
         it("should then show the carousel", function() {
-          // Spy on CarouselAndFooter[0].style.height() (i.e. the carousel)
-          // Fire XipcraftStaticSiteSubApp.navToCarouselPane(any_arg);
-          // expect CarouselSpy to be called with "100%"
-          // expect morpheus to be called with CarouselAndFooter, {opacity:"100",})
-          // Actual CSS position verification and end-to-end testing done by capibara
-          
-            
-          // TODO - Someone please find a clever way to test this..
-          // Currently done @manual
-        
           /*
-          window.morpheus.restore();
-          var spy = sinon.spy(window, "morpheus");
-          
-          XipcraftStaticSiteSubApp.init();
-          XipcraftStaticSiteSubApp.navToCarouselPane("produce");
+            TODO Need to delay expectations by 1 sec or so.. 
           */
-          //expect(XipcraftStaticSiteSubApp.CarouselAndFooter[0].style.height).toEqual("100%");
-          //expect(spy.getCall(1).args).toEqual([XipcraftStaticSiteSubApp.CarouselAndFooter, {opacity: 100}]);
+          // 
+          // XipcraftStaticSite.navToCarouselPane('produce');
+          // // 5] Carousel Height 100%
+          // expect(XipcraftStaticSite.CarouselEl.style.height).toBe("100%")
+          // 
+          // // 6] Footer Height 100%
+          // expect(XipcraftStaticSite.FooterEl.style.height).toBe("100%")
+          // 
+          // // 7] Carousel Opacity 100%
+          // expect(XipcraftStaticSite.CarouselEl.style.opacity).toBe("1")
+          // 
+          // // 8] Footer Opacity 100%
+          // expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("1")
           
         });
 
         it("should then animate the carousel", function() {
-          // Spy on fn: document.getElementById("main_carousel_showcase").style.left()
           
-          //on navToCarouselPane("produce");    
-          //expect Spy to be called with "0%"  // Produce;
-
-          //on navToCarouselPane("team");
-          //expect Spy to be called with "-100%"  // Team
-
-          //on navToCarouselPane("contact");
-          //expect Spy to be called with "-200%"  // Contact
-
- 
-          XipcraftStaticSiteSubApp.init();
+          // 9] Transition to correct carousel pane
             
-          XipcraftStaticSiteSubApp.navToCarouselPane("produce");
-          var animateShowcase = document.getElementById("main_carousel_showcase");  
-          expect(animateShowcase.style.left).toEqual('0%');
+          XipcraftStaticSite.navToCarouselPane("produce");  
+          expect(XipcraftStaticSite.ShowcaseEl.style.left).toEqual('0%');
           
 
-          XipcraftStaticSiteSubApp.navToCarouselPane("team");
-          animateShowcase = document.getElementById("main_carousel_showcase"); 
-          expect(animateShowcase.style.left).toEqual('-100%');
+          XipcraftStaticSite.navToCarouselPane("team");
+          expect(XipcraftStaticSite.ShowcaseEl.style.left).toEqual('-100%');
 
 
-          XipcraftStaticSiteSubApp.navToCarouselPane("contact");
-          animateShowcase = document.getElementById("main_carousel_showcase");
-          expect(animateShowcase.style.left).toEqual('-200%');
+          XipcraftStaticSite.navToCarouselPane("contact");
+          expect(XipcraftStaticSite.ShowcaseEl.style.left).toEqual('-200%');
 
         });
       });
 
-      describe("XipcraftStaticSiteSubApp.navToHomeView", function() { 
+      describe("XipcraftStaticSite.navToHomeEl", function() { 
         it("should first hide the carousel", function() {    
-          // Spy on CarouselAndFooter[0].style.height() (i.e. the carousel)
-          // on App.navToHomeView();
-          // expect morpheus to be called with CarouselAndFooter, {opacity:"0",})
-          // expect CarouselSpy to be called with "0px"
+          /*
+            TODO Need to delay expectations by 1 sec or so.. 
+          */
           
-          // Actual CSS position verification and end-to-end testing done by capibara
-          
-          window.morpheus.restore();
-          var spy = sinon.spy(window, "morpheus");
-          
-          XipcraftStaticSiteSubApp.init();       
-          XipcraftStaticSiteSubApp.navToHomeView();
-          
-          expect(spy.getCall(0).args).toEqual([XipcraftStaticSiteSubApp.CarouselAndFooter, {opacity: '0%'}]);
-          
+          // // 1] Carousel Opacity 0
+          // expect(XipcraftStaticSite.CarouselEl.style.opacity).toBe("0")
+          // 
+          // // 2] Footer Opacity 0
+          // expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("0")
+          // 
+          // // 3] Carousel Height 0px
+          // expect(XipcraftStaticSite.CarouselEl.style.height).toBe("0px")
+          // 
+          // // 4] Footer Height 0px
+          // expect(XipcraftStaticSite.FooterEl.style.height).toBe("0px")
+
         });
         
         it("should then show the headlines, nav and dividers", function() {         
-          // Spy on HomeAndFooter[0].style.height() (i.e. the home view)
-          // on App.navToHomeView();  
-          // expect HomeSpy to be called with "100%"
-          // expect morpheus to be called with HomeAndFooter, {opacity:"100"})
-          
-          // Actual CSS position verification and end-to-end testing done by capibara
-          
-          // TODO - Someone please find a clever way to test this..
-          // Currently done @manual
           /*
-          window.morpheus.restore();
-          var spy = sinon.spy(window, "morpheus");
-          
-          XipcraftStaticSiteSubApp.init();       
-          XipcraftStaticSiteSubApp.navToHomeView();
+            TODO Need to delay expectations by 1 sec or so.. 
           */
-
-          //expect(XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height).toEqual("100%");
-          //expect(spy.getCall(1).args).toEqual([XipcraftStaticSiteSubApp.HomeAndFooter, {opacity: 100}]);
-          
+          // 
+          // // 5] Home Height 100%
+          // expect(XipcraftStaticSite.HomeEl.style.height).toBe("100%")
+          // 
+          // // 6] Footer Height 100%
+          // expect(XipcraftStaticSite.FooterEl.style.height).toBe("100%")
+          // 
+          // // 7] Home Opacity 1
+          // expect(XipcraftStaticSite.HomeEl.style.opacity).toBe("1")
+          // 
+          // // 8] Footer Opacity 1
+          // expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("1")
         });
       });
-    });
-    
+    });  
   });
 });
