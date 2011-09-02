@@ -106,69 +106,76 @@ describe("General javascript that powers the Xipcraft static site", function() {
     });
     
     describe("XipcraftStaticSite.init", function() {
-      
+       
       it("should check hash fragment for team or contact and redirect to home", function() {
-        
-        // TODO - Someone please find a clever way to test this..
-        // Currently done @manual
-        
-        /*
-        window.location.hash = "#team"
-        
-        XipcraftStaticSite.init();
-        
-        expect(window.location.hash).toEqual("");
-        */
-
-      });
-      
-      
-      it("should add JS navigation event listeners to anchor tags", function() {
-
-        var spy = sinon.spy(XipcraftStaticSite, "navToCarouselPane");
-        
-        XipcraftStaticSite.init();
-        
-        var anchorTag = document.getElementById('test_product_anchor_tag');
-        bean.fire(anchorTag,'click');
-        expect(spy.called).toBeTruthy();
-        //expect(spy).toBeHaveCalledWith('product'); TODO
-        
-        anchorTag = document.getElementById('test_team_anchor_tag');
-        bean.fire(anchorTag,'click');
-        expect(spy.calledTwice).toBeTruthy();
-        //expect(spy).toBeHaveCalledWith('team'); TODO
-        
-        anchorTag = document.getElementById('test_contact_anchor_tag');
-        bean.fire(anchorTag,'click');
-        expect(spy.calledThrice).toBeTruthy();
-        //expect(spy).toBeHaveCalledWith('team'); TODO
          
-        
-      });
-      
+         // TODO - Someone please find a clever way to test this..
+         // Currently done @manual
+         
+         /*
+         window.location.hash = "#team"
+         
+         XipcraftStaticSite.init();
+         
+         expect(window.location.hash).toEqual("");
+         */
+    
+       });
+       
+       
+      it("should add JS navigation event listeners to anchor tags", function() {
+    
+         var spy = sinon.spy(XipcraftStaticSite, "navToCarouselPane");
+         
+         XipcraftStaticSite.init();
+         
+         var anchorTag = document.getElementById('test_product_anchor_tag');
+         bean.fire(anchorTag,'click');
+         expect(spy.called).toBeTruthy();
+         //expect(spy).toBeHaveCalledWith('product'); TODO
+         
+         anchorTag = document.getElementById('test_team_anchor_tag');
+         bean.fire(anchorTag,'click');
+         expect(spy.calledTwice).toBeTruthy();
+         //expect(spy).toBeHaveCalledWith('team'); TODO
+         
+         anchorTag = document.getElementById('test_contact_anchor_tag');
+         bean.fire(anchorTag,'click');
+         expect(spy.calledThrice).toBeTruthy();
+         //expect(spy).toBeHaveCalledWith('team'); TODO
+          
+         
+       });
+       
       it("should replace hash linked anchor tags with pounds", function() {
-
-        var spy = sinon.spy(xHelper, "poundHashAnchorTags");
-        
-        XipcraftStaticSite.init();
-        
-        expect(spy.called).toBeTruthy();
-        
-      });
-      
+    
+         var spy = sinon.spy(xHelper, "poundHashAnchorTags");
+         
+         XipcraftStaticSite.init();
+         
+         expect(spy.called).toBeTruthy();
+         
+       });
+       
       it("should create arrays of elements to be animated", function() {
-        
-        XipcraftStaticSite.init();
-        expect(XipcraftStaticSite.BrandingEl).toBe(document.getElementById("xipcraft_branding"));
-        expect(XipcraftStaticSite.HomeEl).toBe(document.getElementById("home_view"));
-        expect(XipcraftStaticSite.CarouselEl).toBe(document.getElementById("produce_team_contact_carousel"));
-        expect(XipcraftStaticSite.ShowcaseEl).toBe(document.getElementById("main_carousel_showcase"));
-        expect(XipcraftStaticSite.FooterEl).toBe(document.getElementById("the_end"));
+         
+         XipcraftStaticSite.init();
+         expect(XipcraftStaticSite.MainEl).toBe(document.getElementById("main"));
+         expect(XipcraftStaticSite.BrandingEl).toBe(document.getElementById("xipcraft_branding"));
+         expect(XipcraftStaticSite.HomeEl).toBe(document.getElementById("home_view"));
+         expect(XipcraftStaticSite.CarouselEl).toBe(document.getElementById("produce_team_contact_carousel"));
+         expect(XipcraftStaticSite.ShowcaseEl).toBe(document.getElementById("main_carousel_showcase"));
+         expect(XipcraftStaticSite.FooterEl).toBe(document.getElementById("the_end"));
+       });
+    
+      it("should show all the page elements", function() {
+        /*
+          TODO #main ka opacity make = 1
+        */
       });
     });
-    
-
+     
+ 
     describe("JS Navigation", function() {
       
       describe("XipcraftStaticSite.navToCarouselPane", function() {
@@ -220,18 +227,21 @@ describe("General javascript that powers the Xipcraft static site", function() {
         it("should then animate the carousel", function() {
           
           // 9] Transition to correct carousel pane
-            
+          //TODO - Needs a dummy el to be made and test to be written..
+          
+          XipcraftStaticSite.init();
+          
           XipcraftStaticSite.navToCarouselPane("produce");  
           expect(XipcraftStaticSite.ShowcaseEl.style.left).toEqual('0%');
           
-
+        
           XipcraftStaticSite.navToCarouselPane("team");
           expect(XipcraftStaticSite.ShowcaseEl.style.left).toEqual('-100%');
-
-
+        
+        
           XipcraftStaticSite.navToCarouselPane("contact");
           expect(XipcraftStaticSite.ShowcaseEl.style.left).toEqual('-200%');
-
+        
         });
       });
 
