@@ -218,11 +218,7 @@ body {width: 98%; margin: 0 auto;}
 /* Global IE Styles (Noboxshadow?) ---------------------------------------- */
 
 .ie6, .ie7, .ie8 { 
-  
-  #produce_team_contact_carousel {
-    border: #CECECE 2px solid;  // This border..
-  } //end #produce_team_contact_carousel
-  
+
   .pic {
     img {
       border: #CECECE 1px solid;
@@ -231,6 +227,18 @@ body {width: 98%; margin: 0 auto;}
       margin-left: 5px;
     }
   }
+}
+
+.ie8 { 
+  #produce_team_contact_carousel.js  {
+    border: #CECECE 2px solid;  // This border..
+  } //end #produce_team_contact_carousel  
+}
+
+.ie6, .ie7 { 
+  #produce_team_contact_carousel {
+    border: #CECECE 2px solid;  // This border..
+  } //end #produce_team_contact_carousel  
 }
 
 /* END Global IE Styles ---------------------------------------- */
@@ -360,6 +368,17 @@ body {width: 98%; margin: 0 auto;}
     #xipcraft_branding {
       @include single-transition(margin, 1s, ease-in-out, 0);
       margin-top: 9.6*($vgh*1.25);
+    }
+  }
+}
+
+.ie6, .ie7, .ie8 {
+  #main {   
+    #xipcraft_branding {
+      margin-top: $vgh;
+    }
+    * img {
+      height: auto;
     }
   }
 }
@@ -573,13 +592,6 @@ body {width: 98%; margin: 0 auto;}
   /* End Media Query specific IE styles ---------------------------------------- */
 }
 
-@media screen   and (min-width:960px) 
-                and (min-height: 600px), 
-       handheld and (min-width:960px)
-                and (min-height: 600px){
-  
-}
-
 /* End: FIXED WIDTH LAYOUT FOR BIGGER SCREENS
 ---------------------------------------- */
 /*****************************************************/
@@ -597,7 +609,7 @@ body {width: 98%; margin: 0 auto;}
 }
 
 
-html.no-js {
+html.no-js, html.ie6, html.ie7 {
   #main { opacity: 1;}
   @include xCarousel("#produce_team_contact_carousel","100%","#main_carousel_showcase","100%",".show","100%",true,"0.5s","ease-in-out"); // No JS
   #produce_team_contact_carousel {
