@@ -42,6 +42,7 @@ body {
   @include single-transition(opacity, 1s, ease-in-out, 0);
 }
 
+
 /* 
 ---------------------------------------- */
 
@@ -59,7 +60,8 @@ body {width: 98%; margin: 0 auto;}
   width: 100%;    
   #xipcraft_branding {
     width: 100%; 
-    margin-top: 1.6*($vgh*1.25);
+    @include single-transition(margin, 1s, ease-in-out, 0);
+    margin-top: 0.8*($vgh*1.25);
     img {
       width: 100%;
       height: auto;
@@ -204,7 +206,8 @@ body {width: 98%; margin: 0 auto;}
     }
   }    
   #the_end {
-    margin-top: 13.5px; //
+    display: inline;
+    float: left;
     width: 100%;
   }
 }
@@ -241,9 +244,11 @@ body {width: 98%; margin: 0 auto;}
 ---------------------------------------- */
 
 @media screen and (min-width:480px), handheld and (min-width:480px){
-
+  body {width: 98%; margin: 0 auto;}
   #main {   
     #xipcraft_branding {
+      @include single-transition(margin, 1s, ease-in-out, 0);
+      margin-top: 1.6*($vgh*1.25);
       img {
         width: 205px;
         height: 82px;
@@ -363,11 +368,13 @@ body {width: 98%; margin: 0 auto;}
 @media screen and (min-width:960px), handheld and (min-width:960px){
   body {width: 100%; margin: 0 auto;}
   #main {
-    @include container;   
     //@include showgrid;
+    @include container;
 
     #xipcraft_branding {
       @include column(24, true); 
+      @include single-transition(margin, 1s, ease-in-out, 0); 
+      margin-top: 4.8*($vgh*1.25);
     }
 
     #what_and_why {
@@ -509,7 +516,6 @@ body {width: 98%; margin: 0 auto;}
     }
 
     #the_end {
-      margin-top: 13.5px; //
       @include column(24, true);
     }
   }
