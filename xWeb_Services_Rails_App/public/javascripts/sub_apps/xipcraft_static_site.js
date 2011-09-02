@@ -1,9 +1,11 @@
 
-var XipcraftStaticSiteSubApp = {
-  HomeAndFooter: [],
-  CarouselAndFooter:[],
+var XipcraftStaticSite = {
+  HomeEl: "",
+  CarouselEl: "",
+  FooterEl: "",
   
   init:function(){
+    
     // Check window.location.hash
     // If it is #team or #contact
     // redirect window to "http://www.xipcraft.com/" or "/"
@@ -14,69 +16,92 @@ var XipcraftStaticSiteSubApp = {
     }else if(window.location.hash == '#contact'){
       window.location.href = window.location.href.replace("#contact","") ;
     }
-    
-    
+     
     var anchors = document.getElementsByTagName('a');
     for(var i=0;i<anchors.length;i++) {
       if(/\/#produce/.test(anchors[i].href)) {
-        bean.add(anchors[i],'click', function() {XipcraftStaticSiteSubApp.navToCarouselPane('produce')} );
+        bean.add(anchors[i],'click', function() {XipcraftStaticSite.navToCarouselPane('produce')} );
       }else if(/\/#team/.test(anchors[i].href)) {
-        bean.add(anchors[i],'click', function() {XipcraftStaticSiteSubApp.navToCarouselPane('team')} );
+        bean.add(anchors[i],'click', function() {XipcraftStaticSite.navToCarouselPane('team')} );
       }else if(/\/#contact/.test(anchors[i].href)) {
-        bean.add(anchors[i],'click', function() {XipcraftStaticSiteSubApp.navToCarouselPane('contact')} );
+        bean.add(anchors[i],'click', function() {XipcraftStaticSite.navToCarouselPane('contact')} );
       }else if(/\/#main/.test(anchors[i].href)) {
-        bean.add(anchors[i],'click', function() {XipcraftStaticSiteSubApp.navToHomeView()} );
+        bean.add(anchors[i],'click', function() {XipcraftStaticSite.navToHomeEl()} );
       }
     }
     
-    xHelp.anchorTagPounder();
+    xHelper.poundHashAnchorTags();
     
-    XipcraftStaticSiteSubApp.HomeAndFooter[0] = document.getElementById("home_view");
-    XipcraftStaticSiteSubApp.HomeAndFooter[1] = document.getElementById("the_end");
-    XipcraftStaticSiteSubApp.CarouselAndFooter[0] = document.getElementById("produce_team_contact_carousel");
-    XipcraftStaticSiteSubApp.CarouselAndFooter[1] = document.getElementById("the_end");
+    this.HomeEl     = document.getElementById("home_view");
+    this.CarouselEl = document.getElementById("produce_team_contact_carousel");
+    this.ShowcaseEl = document.getElementById("main_carousel_showcase");  
+    this.FooterEl   = document.getElementById("the_end");
     
   },  
   
   navToCarouselPane:function(option){
- 
-    morpheus(XipcraftStaticSiteSubApp.HomeAndFooter, {    
-      opacity: "0%",
-      duration: 1,
-      complete: function () {
-        XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height = '0px';
-        XipcraftStaticSiteSubApp.CarouselAndFooter[0].style.height = '100%';
-        window.morpheus(XipcraftStaticSiteSubApp.CarouselAndFooter, {    
-          opacity: "100%",
-          duration: 1 // Seems to be the only way to show the animation down..
-        });    
-      }
-      
-    });
-    var animateShowcase = document.getElementById("main_carousel_showcase");  
+    // Animation Sequence Powered by CSS3 Animations
     
-    if(option == 'produce'){
-       animateShowcase.style.left = '0%';
-    }else if(option == 'team'){
-       animateShowcase.style.left = '-100%';
+    // 1] Home Opacity 0%
+    this.HomeEl.style.opacity = "0"
 
+    // 2] Footer Opacity 0%
+    this.FooterEl.style.opacity = "0"
+
+    // 3] Home Height 0px
+    this.HomeEl.style.height = "0px"
+
+    // 4] Footer Height 0px
+    this.FooterEl.style.height = "0px"
+
+    // 5] Carousel Height 100%
+    this.CarouselEl.style.height = "100%"
+
+    // 6] Footer Height 100%
+    this.FooterEl.style.height = "100%"
+
+    // 7] Carousel Opacity 100%
+    this.CarouselEl.style.opacity = "1"
+
+    // 8] Footer Opacity 100%
+    this.FooterEl.style.opacity = "1"
+    
+    // 9] Transition to correct carousel pane
+    if(option == 'produce'){
+       this.ShowcaseEl.style.left = '0%';
+    }else if(option == 'team'){
+       this.ShowcaseEl.style.left = '-100%';
     }else if(option == 'contact'){
-      animateShowcase.style.left = '-200%';  
+      this.ShowcaseEl.style.left = '-200%';  
     }
   },
   
-  navToHomeView:function(){
-      morpheus(XipcraftStaticSiteSubApp.CarouselAndFooter, {    
-      opacity: "0%",
-      duration: 1,
-      complete: function () {
-        XipcraftStaticSiteSubApp.CarouselAndFooter[0].style.height = '0px';
-        XipcraftStaticSiteSubApp.HomeAndFooter[0].style.height = '100%';
-        window.morpheus(XipcraftStaticSiteSubApp.HomeAndFooter, {    
-         opacity: "100%",
-         duration: 1
-        });
-      }
-     });  
+  navToHomeEl:function(){
+    // Animation Sequence Powered by CSS3 Animations
+
+    // 1] Carousel Opacity 0
+    this.CarouselEl.style.opacity = "0"
+
+    // 2] Footer Opacity 0
+    this.FooterEl.style.opacity = "0"
+
+    // 3] Carousel Height 0px
+    this.CarouselEl.style.height = "0px"
+
+    // 4] Footer Height 0px
+    this.FooterEl.style.height = "0px"
+
+    // 5] Home Height 100%
+    this.HomeEl.style.height = "100%"
+
+    // 6] Footer Height 100%
+    this.FooterEl.style.height = "100%"
+
+    // 7] Home Opacity 1
+    this.HomeEl.style.opacity = "1"
+
+    // 8] Footer Opacity 1
+    this.FooterEl.style.opacity = "1"
+
   }
 };
