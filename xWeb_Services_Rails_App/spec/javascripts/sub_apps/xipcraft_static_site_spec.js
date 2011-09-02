@@ -7,7 +7,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
     
     it("shoud have essential functions defined", function() {
       expect(XipcraftStaticSite.init).toBeDefined();
-      expect(XipcraftStaticSite.reallyInit).toBeDefined(); // TODO - Watch this test fail
+      expect(XipcraftStaticSite.reallyInit).toBeDefined(); // TODO* - Watch this test fail
       expect(XipcraftStaticSite.navToCarouselPane).toBeDefined();
       expect(XipcraftStaticSite.navToHomeEl).toBeDefined();
     });
@@ -128,7 +128,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
     
     describe("XipcraftStaticSite.init", function() {
       it("should ignore init code if it detects IE6", function() {
-        // TODO
+        // TODO*
         // spy on XipcraftStaticSite.reallyInit()
         // set html class as ie6
         // verify html class is ie6
@@ -141,7 +141,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
       });
       
       it("should ignore init code if it detects IE7", function() {
-        // TODO
+        // TODO*
         // spy on XipcraftStaticSite.reallyInit()
         // set html class as ie7
         // verify html class is ie7
@@ -154,7 +154,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
       });
       
       it("should go ahead with executing the code in any other case", function() {
-        // TODO
+        // TODO*
         // spy on XipcraftStaticSite.reallyInit()
         // set html class as ie8
         // verify html class is ie8
@@ -232,8 +232,10 @@ describe("General javascript that powers the Xipcraft static site", function() {
     
       it("should show all the page elements", function() {
         /*
-          TODO #main ka opacity make = 1
+          TODO* Watch this one fail please..
         */
+        
+        expect(this.MainEl.style.opacity).toBe("1");
       });
     });
      
@@ -243,8 +245,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
       describe("XipcraftStaticSite.navToCarouselPane", function() {
 
         it("Should first hide the headlines, footer, nav and dividers i.e. div#home_view", function() {         
-      
-          // XipcraftStaticSite.init();
+
           
            XipcraftStaticSite.navToCarouselPane('produce');
           
@@ -286,7 +287,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
         it("should then animate the carousel", function() {
           
           // 9] Transition to correct carousel pane
-          //TODO - Needs a dummy el to be made and test to be written..
+          //TODO* - Needs a dummy el to be made and test to be written..
           
           XipcraftStaticSite.init();
           
@@ -307,7 +308,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
       describe("XipcraftStaticSite.navToHomeEl", function() { 
         it("should first hide the carousel", function() {    
        
-          //XipcraftStaticSite.init();
+          
           XipcraftStaticSite.navToHomeEl();
           // // 1] Carousel Opacity 0
           expect(XipcraftStaticSite.CarouselEl.style.opacity).toBe("0");

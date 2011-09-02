@@ -8,7 +8,7 @@ var XipcraftStaticSite = {
   
   init:function(){
     
-    // TODO
+    // TODO*
     // If html class != ie6 || html class != ie7 {
     //   this.reallyInit();
     // }
@@ -57,11 +57,11 @@ var XipcraftStaticSite = {
   navToCarouselPane:function(option){
     // Animation Sequence Powered by CSS3 Animations
     
-    //  TODO 
+    //  TODO* 
     // -1] Add class "js" to #produce_team_contact_carousel element
     
     // 0] Margin top reset
-    // TODO - Needs a dummy el to be made and test to be written..
+    // TODO* - Needs a dummy el to be made and test to be written..
     this.BrandingEl.style.marginTop = "18px"
     
     // 1] Home Opacity 0%
@@ -101,7 +101,7 @@ var XipcraftStaticSite = {
   navToHomeEl:function(){
     // Animation Sequence Powered by CSS3 Animations
     
-    // TODO 
+    // TODO* 
     // 0] Remove class "js" from #produce_team_contact_carousel element
     
     // 1] Carousel Opacity 0
