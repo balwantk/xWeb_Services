@@ -1,19 +1,16 @@
-
 var XipcraftStaticSite = {
   MainEl: "",
   BrandingEl: "",
   HomeEl: "",
   CarouselEl: "",
   FooterEl: "",
-  
-  init:function(){
-    var htmlClass = document.getElementsByTagName("html")[0].class;
-
-    if( htmlClass != 'ie6' && htmlClass != 'ie7') {
-       
+  init: function(){
+    var htmlClass = document.getElementsByTagName("html")[0].className;
+    if(!(/\bie6\b/.test(htmlClass)) && !(/\bie7\b/.test(htmlClass)) ) {
        this.reallyInit();
-    }
+    } 
   },
+  
   reallyInit: function () {
     // Check window.location.hash
     // If it is #team or #contact
@@ -25,7 +22,7 @@ var XipcraftStaticSite = {
     }else if(window.location.hash == '#contact'){
       window.location.href = window.location.href.replace("#contact","") ;
     }
-     
+    
     var anchors = document.getElementsByTagName('a');
     for(var i=0;i<anchors.length;i++) {
       if(/\/#produce/.test(anchors[i].href)) {
@@ -50,8 +47,8 @@ var XipcraftStaticSite = {
     
     this.MainEl.style.opacity = "1";
   },
-  
-  navToCarouselPane:function(option){
+    
+  navToCarouselPane: function(option){
     // Animation Sequence Powered by CSS3 Animations
     
     //  TODO* 

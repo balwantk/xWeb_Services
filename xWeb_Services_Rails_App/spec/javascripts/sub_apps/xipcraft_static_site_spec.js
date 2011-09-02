@@ -128,46 +128,49 @@ describe("General javascript that powers the Xipcraft static site", function() {
     
     describe("XipcraftStaticSite.init", function() {
       it("should ignore init code if it detects IE6", function() {
-
-         var spy = sinon.spy(XipcraftStaticSite, "reallyInit");
-         
-         var tempClass = document.getElementsByTagName("html")[0].class;
-         document.getElementsByTagName("html")[0].class = "ie6";
+        /*
+          TODO Watch this one fail - Its not failing on removing target code blocks
+        */
+        var spy = sinon.spy(XipcraftStaticSite, "reallyInit");
+       
+        var tempClass = document.getElementsByTagName("html")[0].className;
+        document.getElementsByTagName("html")[0].className = "ie6";
+      
+        expect(document.getElementsByTagName("html")[0].className).toEqual("ie6");
+       
+        XipcraftStaticSite.init(); 
+        expect(spy.called).toBeFalsy();
         
-         expect(document.getElementsByTagName("html")[0].class).toEqual("ie6");
-         
-         XipcraftStaticSite.init(); 
-         expect(spy.called).toBeFalsy();
-          
-         document.getElementsByTagName("html")[0].class = tempClass;
-         expect(document.getElementsByTagName("html")[0].class).toEqual(tempClass);
-           
-        
+        document.getElementsByTagName("html")[0].className = tempClass;
+        expect(document.getElementsByTagName("html")[0].className).toEqual(tempClass);
+             
       });
       
       it("should ignore init code if it detects IE7", function() {
-        
-         XipcraftStaticSite.reallyInit.restore();
-         var spy = sinon.spy(XipcraftStaticSite, "reallyInit");
+        /*
+          TODO Watch this one fail - Its not failing on removing target code blocks
+        */
+        XipcraftStaticSite.reallyInit.restore();
+        var spy = sinon.spy(XipcraftStaticSite, "reallyInit");
          
-         var tempClass = document.getElementsByTagName("html")[0].class;
-         document.getElementsByTagName("html")[0].class = "ie7";
-         expect(document.getElementsByTagName("html")[0].class).toEqual("ie7");
+        var tempClass = document.getElementsByTagName("html")[0].className;
+        document.getElementsByTagName("html")[0].className = "ie7";
+        expect(document.getElementsByTagName("html")[0].className).toEqual("ie7");
         
-         XipcraftStaticSite.init(); 
-         expect(spy.called).toBeFalsy();
+        XipcraftStaticSite.init(); 
+        expect(spy.called).toBeFalsy();
           
-         document.getElementsByTagName("html")[0].class = tempClass;
-         expect(document.getElementsByTagName("html")[0].class).toEqual(tempClass);
+        document.getElementsByTagName("html")[0].className = tempClass;
+        expect(document.getElementsByTagName("html")[0].className).toEqual(tempClass);
       });
        
-      describe("XipcraftStaticSite.init", function() {
+      describe("XipcraftStaticSite.init non IE html class", function() {
         
         var tempClass;
         beforeEach(function() {
-          tempClass = document.getElementsByTagName("html")[0].class;
-          document.getElementsByTagName("html")[0].class = "other";
-          expect(document.getElementsByTagName("html")[0].class).toEqual("other");
+          tempClass = document.getElementsByTagName("html")[0].className;
+          document.getElementsByTagName("html")[0].className = "other";
+          expect(document.getElementsByTagName("html")[0].className).toEqual("other");
            
         });
         
@@ -186,8 +189,8 @@ describe("General javascript that powers the Xipcraft static site", function() {
         });
         
         afterEach(function() {
-           document.getElementsByTagName("html")[0].class = tempClass;
-           expect(document.getElementsByTagName("html")[0].class).toEqual(tempClass);
+           document.getElementsByTagName("html")[0].className = tempClass;
+           expect(document.getElementsByTagName("html")[0].className).toEqual(tempClass);
         });
 
       });
@@ -206,7 +209,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
          expect(window.location.hash).toEqual("");
          */
     
-       });
+      });
        
        
       it("should add JS navigation event listeners to anchor tags", function() {
@@ -230,7 +233,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
         expect(spy.calledThrice).toBeTruthy();
         //expect(spy).toBeHaveCalledWith('contact'); TODO
          
-       });
+      });
        
       it("should replace hash linked anchor tags with pounds", function() {
     
@@ -240,7 +243,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
          
          expect(spy.called).toBeTruthy();
          
-       });
+      });
        
       it("should create arrays of elements to be animated", function() {
          
