@@ -20,9 +20,14 @@ describe("General javascript that powers the Xipcraft static site", function() {
       //  - footer
       //   Verify presence of dummy DOM elements
       
-      /*
-        TODO @dinesh - Add dummy element for #xipcraft_branding
-      */
+      
+       var mainDivTag = document.createElement("div");
+       mainDivTag.setAttribute('id','main');
+       document.getElementsByTagName("html")[0].appendChild(mainDivTag);
+      
+       var brandingDivTag = document.createElement("div");
+       brandingDivTag.setAttribute('id','xipcraft_branding');
+       document.getElementsByTagName("html")[0].appendChild(brandingDivTag);
       
        var anchorTag = document.createElement("a");
        anchorTag.setAttribute('href','#produce');
@@ -38,7 +43,7 @@ describe("General javascript that powers the Xipcraft static site", function() {
        anchorTag.setAttribute('href','#contact');
        anchorTag.setAttribute('id','test_contact_anchor_tag');
        document.getElementsByTagName("html")[0].appendChild(anchorTag);
-
+      
        var homeDivTag = document.createElement("div");
        homeDivTag.setAttribute('id','home_view');
        document.getElementsByTagName("html")[0].appendChild(homeDivTag);
@@ -56,6 +61,13 @@ describe("General javascript that powers the Xipcraft static site", function() {
        document.getElementsByTagName("html")[0].appendChild(footerTag);
        
        //expect
+       
+       mainDivTag = document.getElementById('main');
+       expect(mainDivTag).not.toBeNull();
+       
+       brandingDivTag = document.getElementById('xipcraft_branding');
+       expect(brandingDivTag).not.toBeNull();
+       
        anchorTag = document.getElementById('test_team_anchor_tag');
        expect(anchorTag).not.toBeNull();
       
@@ -76,9 +88,17 @@ describe("General javascript that powers the Xipcraft static site", function() {
     afterEach(function() {
       // Destroy dummy DOM elements for test
       // Verify destruction of dummy DOM elements
-      /*
-        TODO @dinesh - Destroy dummy element for #xipcraft_branding
-      */
+
+       var mainDivTag = document.getElementById('main');
+       mainDivTag.parentNode.removeChild(mainDivTag); 
+       mainDivTag = document.getElementById('main');
+       expect(mainDivTag).toBeNull();
+      
+       var brandingDivTag = document.getElementById('xipcraft_branding');
+       brandingDivTag.parentNode.removeChild(brandingDivTag); 
+       brandingDivTag = document.getElementById('xipcraft_branding');
+       expect(brandingDivTag).toBeNull();
+  
        var anchorTag = document.getElementById('test_team_anchor_tag');
        anchorTag.parentNode.removeChild(anchorTag); 
        anchorTag = document.getElementById('test_team_anchor_tag');
@@ -167,26 +187,25 @@ describe("General javascript that powers the Xipcraft static site", function() {
        
        
       it("should add JS navigation event listeners to anchor tags", function() {
-    
-         var spy = sinon.spy(XipcraftStaticSite, "navToCarouselPane");
-         
-         XipcraftStaticSite.init();
-         
-         var anchorTag = document.getElementById('test_product_anchor_tag');
-         bean.fire(anchorTag,'click');
-         expect(spy.called).toBeTruthy();
-         //expect(spy).toBeHaveCalledWith('product'); TODO
-         
-         anchorTag = document.getElementById('test_team_anchor_tag');
-         bean.fire(anchorTag,'click');
-         expect(spy.calledTwice).toBeTruthy();
-         //expect(spy).toBeHaveCalledWith('team'); TODO
-         
-         anchorTag = document.getElementById('test_contact_anchor_tag');
-         bean.fire(anchorTag,'click');
-         expect(spy.calledThrice).toBeTruthy();
-         //expect(spy).toBeHaveCalledWith('team'); TODO
-          
+
+        var spy = sinon.spy(XipcraftStaticSite, "navToCarouselPane");
+        
+        XipcraftStaticSite.init();
+        
+        var anchorTag = document.getElementById('test_product_anchor_tag');
+        bean.fire(anchorTag,'click');
+        expect(spy.called).toBeTruthy();
+        //expect(spy).toBeHaveCalledWith('product'); TODO
+        
+        anchorTag = document.getElementById('test_team_anchor_tag');
+        bean.fire(anchorTag,'click');
+        expect(spy.calledTwice).toBeTruthy();
+        //expect(spy).toBeHaveCalledWith('team'); TODO
+        
+        anchorTag = document.getElementById('test_contact_anchor_tag');
+        bean.fire(anchorTag,'click');
+        expect(spy.calledThrice).toBeTruthy();
+        //expect(spy).toBeHaveCalledWith('contact'); TODO
          
        });
        
@@ -224,46 +243,43 @@ describe("General javascript that powers the Xipcraft static site", function() {
       describe("XipcraftStaticSite.navToCarouselPane", function() {
 
         it("Should first hide the headlines, footer, nav and dividers i.e. div#home_view", function() {         
-          /*
-            TODO Need to delay expectations by 1 sec or so.. 
-          */
+      
+          // XipcraftStaticSite.init();
           
-          // XipcraftStaticSite.navToCarouselPane('produce');
-          //           
+           XipcraftStaticSite.navToCarouselPane('produce');
+          
           // // 0] Margin top reset
-          // expect(this.BrandingEl.style.marginTop).toBe("18px")
-          // 
+           expect(XipcraftStaticSite.BrandingEl.style.marginTop).toBe("18px");
+  
           // // 1] Home Opacity 0%
-          // expect(XipcraftStaticSite.HomeEl.style.opacity).toBe("0")
-          // 
+           expect(XipcraftStaticSite.HomeEl.style.opacity).toBe("0");
+
           // // 2] Footer Opacity 0%
-          // expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("0")
-          // 
+           expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("1");
+
           // // 3] Home Height 0px
-          // expect(XipcraftStaticSite.HomeEl.style.height).toBe("0px")
-          // 
+          expect(XipcraftStaticSite.HomeEl.style.height).toBe("0px");
+
           // // 4] Footer Height 0px
-          // expect(XipcraftStaticSite.FooterEl.style.height).toBe("0px")
+           expect(XipcraftStaticSite.FooterEl.style.height).toBe("100%");
                   
         });
 
         it("should then show the carousel", function() {
-          /*
-            TODO 
-          */
-          // 
-          // XipcraftStaticSite.navToCarouselPane('produce');
+        
+           //XipcraftStaticSite.init();
+           XipcraftStaticSite.navToCarouselPane('produce');
           // // 5] Carousel Height 100%
-          // expect(XipcraftStaticSite.CarouselEl.style.height).toBe("100%")
-          // 
+           expect(XipcraftStaticSite.CarouselEl.style.height).toBe("100%")
+
           // // 6] Footer Height 100%
-          // expect(XipcraftStaticSite.FooterEl.style.height).toBe("100%")
+           expect(XipcraftStaticSite.FooterEl.style.height).toBe("100%")
           // 
           // // 7] Carousel Opacity 100%
-          // expect(XipcraftStaticSite.CarouselEl.style.opacity).toBe("1")
-          // 
+           expect(XipcraftStaticSite.CarouselEl.style.opacity).toBe("1")
+ 
           // // 8] Footer Opacity 100%
-          // expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("1")
+           expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("1")
           
         });
 
@@ -290,40 +306,36 @@ describe("General javascript that powers the Xipcraft static site", function() {
 
       describe("XipcraftStaticSite.navToHomeEl", function() { 
         it("should first hide the carousel", function() {    
-          /*
-            TODO Need to delay expectations by 1 sec or so.. 
-          */
-          
+       
+          //XipcraftStaticSite.init();
+          XipcraftStaticSite.navToHomeEl();
           // // 1] Carousel Opacity 0
-          // expect(XipcraftStaticSite.CarouselEl.style.opacity).toBe("0")
+          expect(XipcraftStaticSite.CarouselEl.style.opacity).toBe("0");
           // 
           // // 2] Footer Opacity 0
-          // expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("0")
+          expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("1");
           // 
           // // 3] Carousel Height 0px
-          // expect(XipcraftStaticSite.CarouselEl.style.height).toBe("0px")
+          expect(XipcraftStaticSite.CarouselEl.style.height).toBe("0px");
           // 
           // // 4] Footer Height 0px
-          // expect(XipcraftStaticSite.FooterEl.style.height).toBe("0px")
+          expect(XipcraftStaticSite.FooterEl.style.height).toBe("100%");
 
         });
         
         it("should then show the headlines, nav and dividers", function() {         
-          /*
-            TODO Need to delay expectations by 1 sec or so.. 
-          */
-          // 
+        
           // // 5] Home Height 100%
-          // expect(XipcraftStaticSite.HomeEl.style.height).toBe("100%")
+          expect(XipcraftStaticSite.HomeEl.style.height).toBe("100%");
           // 
           // // 6] Footer Height 100%
-          // expect(XipcraftStaticSite.FooterEl.style.height).toBe("100%")
+          expect(XipcraftStaticSite.FooterEl.style.height).toBe("100%");
           // 
           // // 7] Home Opacity 1
-          // expect(XipcraftStaticSite.HomeEl.style.opacity).toBe("1")
+          expect(XipcraftStaticSite.HomeEl.style.opacity).toBe("1")
           // 
           // // 8] Footer Opacity 1
-          // expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("1")
+          expect(XipcraftStaticSite.FooterEl.style.opacity).toBe("1")
         });
       });
     });  
