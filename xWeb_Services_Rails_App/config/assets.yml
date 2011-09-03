@@ -1,6 +1,6 @@
 ---
 embed_assets: on
-package_assets: off
+package_assets: on
 compress_assets: on
 
 javascripts: 
