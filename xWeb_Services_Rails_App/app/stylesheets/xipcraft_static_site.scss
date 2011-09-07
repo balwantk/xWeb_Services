@@ -542,7 +542,7 @@ body {width: 98%; margin: 0 auto;}
             @include column(13);
             #the_map {
               img {
-                @include visuallyhidden;
+                @include hidden;
               }
               background: url("http://maps.googleapis.com/maps/api/staticmap?center=18.529208,73.831&zoom=15&size=400x300&maptype=roadmap&format=jpg&sensor=false&markers=18.529259,73.830947") center no-repeat;
               width: 400px; 
