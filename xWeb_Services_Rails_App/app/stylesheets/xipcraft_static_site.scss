@@ -1,19 +1,6 @@
 /* @author: Balwant K.
 ---------------------------------------- */
 /*
-  Session1
-  TODO Put all JS together
-  
-  Session2
-
-  TODO Directions href to map
-  
-  Session3
-  Document code
-  Compress HTML
-  Go live.
-  Check google analytics is functioning
-  
   TODO Print styles
 */
 
@@ -253,8 +240,8 @@ body {width: 98%; margin: 0 auto;}
 /* Start: 2 Col fluid.. For everything in between real 960px and 480px
 ---------------------------------------- */
 
-@media screen   and (min-width:480px), 
-       handheld and (min-width:480px){
+@media screen   and (min-width:481px), 
+       handheld and (min-width:481px){
          
   body {width: 98%; margin: 0 auto;}
   #main {   

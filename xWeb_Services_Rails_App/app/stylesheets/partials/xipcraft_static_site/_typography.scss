@@ -23,7 +23,8 @@ body {
     }
     &:hover {  
       color: #222; 
-      background:#ffffa7;
+      // On ASG suggestion
+      //background:#ffffa7;
       border-bottom: 2px solid #545454;
     }
     &:active {
@@ -106,11 +107,11 @@ body {
     p {      
       a {
         color: #741b47;
-        border-bottom: 2px solid #741b47;
+        //border-bottom: 2px solid #741b47;
         cursor: pointer;
         &:hover {
           color: #222;
-          border-bottom: 2px solid #222;
+          //border-bottom: 2px solid #222;
         }
       }
       line-height: 1.86;
